@@ -13,8 +13,8 @@ public class RPGGameManager : MonoBehaviour
     [SerializeField] private float respawnDelay = 1.5f;
     [SerializeField] private bool respawnPlayerOnDeath = true;
 
-    [Header("Optional Camera")]
-    [SerializeField] private Transform cameraFollowTarget;
+    [Header("Camera")]
+    [SerializeField] private RPGCameraManager cameraManager;
 
     private Coroutine respawnCoroutine;
 
@@ -61,7 +61,8 @@ public class RPGGameManager : MonoBehaviour
             return;
         }
 
-        cameraFollowTarget = player.transform;
+        EnsureCameraManager();
+        UpdateCameraFollowTarget();
     }
 
     public void NotifyPlayerDied()
@@ -129,8 +130,49 @@ public class RPGGameManager : MonoBehaviour
 
         player.RespawnAt(playerSpawnPoint.transform);
 
-        cameraFollowTarget = player.transform;
+        UpdateCameraFollowTarget();
 
         Debug.Log("Player respawned at spawn point.");
+    }
+
+
+    private bool EnsureCameraManager()
+    {
+        if (cameraManager != null)
+        {
+            return true;
+        }
+
+        cameraManager = RPGCameraManager.sharedInstance;
+
+        if (cameraManager != null)
+        {
+            return true;
+        }
+
+        cameraManager = FindFirstObjectByType<RPGCameraManager>();
+
+        if (cameraManager == null)
+        {
+            Debug.LogWarning("RPGGameManager could not find an RPGCameraManager. Camera follow will not be updated.");
+            return false;
+        }
+
+        return true;
+    }
+
+    private void UpdateCameraFollowTarget()
+    {
+        if (player == null)
+        {
+            return;
+        }
+
+        if (!EnsureCameraManager())
+        {
+            return;
+        }
+
+        cameraManager.SetFollowTarget(player.transform);
     }
 }

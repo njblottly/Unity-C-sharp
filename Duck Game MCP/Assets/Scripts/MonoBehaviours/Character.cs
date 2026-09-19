@@ -7,15 +7,8 @@ public abstract class Character : MonoBehaviour
     public float maxHitPoints;
     public float startingHitPoints;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public virtual void KillCharacter()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Destroy(gameObject);
     }
 }

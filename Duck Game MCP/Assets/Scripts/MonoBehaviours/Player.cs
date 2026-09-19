@@ -172,7 +172,7 @@ public class Player : Character
 
         if (hitPoints.value <= 0f)
         {
-            Die();
+            KillCharacter();
         }
     }
 
