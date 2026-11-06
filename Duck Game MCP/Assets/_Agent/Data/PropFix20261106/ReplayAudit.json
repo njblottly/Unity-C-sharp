@@ -1,0 +1,55 @@
+{
+  "state": "Intro",
+  "bells": 0,
+  "checkpoint": 0,
+  "coins": 0,
+  "swords": 0,
+  "recoverable": 3,
+  "borrowed": 0,
+  "modelVisible": false,
+  "enemies": [
+    {
+      "name": "MarshMite_3",
+      "hp": 3
+    },
+    {
+      "name": "MarshMite_2",
+      "hp": 3
+    },
+    {
+      "name": "MarshMite_1",
+      "hp": 3
+    },
+    {
+      "name": "MarshMite_4",
+      "hp": 3
+    }
+  ],
+  "returns": [
+    {
+      "owner": "relay-reed-tray",
+      "height": 48
+    },
+    {
+      "owner": "tray-0",
+      "height": 48
+    },
+    {
+      "owner": "tray-1",
+      "height": 48
+    },
+    {
+      "owner": "relay-exit-tray",
+      "height": 48
+    },
+    {
+      "owner": "relay-spill-tray",
+      "height": 48
+    },
+    {
+      "owner": "tray-2",
+      "height": 48
+    }
+  ],
+  "legacyCropReferences": 0
+}

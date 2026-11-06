@@ -1,0 +1,118 @@
+{
+  "report": {
+    "startedUtc": "2026-11-03T20:47:54.3365410Z",
+    "status": "Passed",
+    "capture": "win",
+    "step": 49,
+    "totalSteps": 49,
+    "walkedDistance": 133.6522674560547,
+    "passed": [
+      "Existing player spawns alive",
+      "Existing duck spawns",
+      "One of each existing singleton manager",
+      "One inventory and one health UI",
+      "Title screen freezes movement and simulation",
+      "Inventory hides behind title menus",
+      "Fresh inventory starts empty",
+      "Unaffordable inventory spend is rejected atomically",
+      "Intro text advances into gameplay",
+      "Existing five-slot inventory becomes visible in gameplay",
+      "Pause freezes gameplay",
+      "Resume restores gameplay",
+      "Spawn landing checkpoint fires",
+      "World interaction fires: keeper-note",
+      "First real trigger pickup reaches inventory",
+      "Moving enemy trigger damages the existing Player health system",
+      "Second trigger pickup stacks in the same inventory",
+      "Third real pickup completes the reusable coin set",
+      "Set up two-coin negative case using inventory API",
+      "Bell rejects two coins without changing gate, balance or progression",
+      "Restore the one test coin without creating extra currency",
+      "Bell 1 receives the same three coins",
+      "Crossing 1 is physically blocked before payment",
+      "Closed gate 1 blocks the crossing with a real collider",
+      "Bell 1 spends once and opens the gate",
+      "Paid crossing 1 has no blocking collider on its route",
+      "Bell 1 cannot double-charge",
+      "Tray 1 restores three coins",
+      "Tray 1 cannot duplicate coins",
+      "Reedbank trigger updates checkpoint",
+      "Inventory icon and stack quantity show three recovered coins",
+      "Real health depletion reaches defeat without destroying player",
+      "Defeat freezes hazards and simulation",
+      "Defeat menu hides inventory without creating or destroying it",
+      "Checkpoint restart reactivates the same player",
+      "Restart uses the reached checkpoint",
+      "Restart restores full configured health",
+      "Death preserves coins and the open causeway",
+      "Duck returns to the player after restart",
+      "Restart creates no duplicate UI",
+      "World interaction fires: reed-note",
+      "World interaction fires: archive-note",
+      "Bell 2 receives the same three coins",
+      "Crossing 2 is physically blocked before payment",
+      "Closed gate 2 blocks the crossing with a real collider",
+      "Bell 2 spends once and opens the gate",
+      "Paid crossing 2 has no blocking collider on its route",
+      "Bell 2 cannot double-charge",
+      "Tray 2 restores three coins",
+      "Tray 2 cannot duplicate coins",
+      "Old Archive trigger updates checkpoint",
+      "World interaction fires: storm-note",
+      "Bell 3 receives the same three coins",
+      "Crossing 3 is physically blocked before payment",
+      "Closed gate 3 blocks the crossing with a real collider",
+      "Bell 3 spends once and opens the gate",
+      "Paid crossing 3 has no blocking collider on its route",
+      "Bell 3 cannot double-charge",
+      "Tray 3 restores three coins",
+      "Tray 3 cannot duplicate coins",
+      "Haven landing trigger updates checkpoint",
+      "Victory is reachable by the walked route",
+      "Three bells reuse and return exactly the original three coins",
+      "Every story entry fires through its intended interaction or endpoint",
+      "All four checkpoint triggers traversed",
+      "Zero runtime errors and zero gameplay-code warnings during the mechanical run"
+    ],
+    "failures": [],
+    "runtimeErrors": [],
+    "codeWarnings": []
+  },
+  "times": [
+    {
+      "capture": "checkpoint-0",
+      "elapsed": 0.0799999461,
+      "time": 0.0799999461
+    },
+    {
+      "capture": "checkpoint-1",
+      "elapsed": 29.72049,
+      "time": 29.7199783
+    },
+    {
+      "capture": "defeat",
+      "elapsed": 29.78049,
+      "time": 29.77998
+    },
+    {
+      "capture": "checkpoint-2",
+      "elapsed": 57.4811249,
+      "time": 57.4799576
+    },
+    {
+      "capture": "checkpoint-3",
+      "elapsed": 85.09773,
+      "time": 85.09994
+    },
+    {
+      "capture": "win",
+      "elapsed": 88.03724,
+      "time": 88.05994
+    }
+  ],
+  "console": {
+    "errors": 0,
+    "warnings": 0,
+    "logs": 44
+  }
+}

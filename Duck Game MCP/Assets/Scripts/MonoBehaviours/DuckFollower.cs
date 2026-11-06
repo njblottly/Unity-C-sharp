@@ -124,9 +124,20 @@ public class DuckFollower : MonoBehaviour
         UpdateAnim(animationVelocity);
     }
 
+    // Reset follower history as well as position after a checkpoint restart.
+    public void SnapToPlayer()
+    {
+        if (player == null) throw new System.InvalidOperationException("DuckFollower requires its Player reference.");
+        lastPlayerPosition = player.position;
+        lastFollowDirection = Vector2.down;
+        TeleportTo((Vector2)player.position + Vector2.down * followBehindDistance);
+    }
+
     private void TeleportTo(Vector2 targetPosition)
     {
         rb.position = targetPosition;
+        transform.position = targetPosition;
+        rb.linearVelocity = Vector2.zero;
         smoothMoveVelocity = Vector2.zero;
         UpdateAnim(Vector2.zero);
     }

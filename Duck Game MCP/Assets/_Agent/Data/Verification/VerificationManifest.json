@@ -1,0 +1,78 @@
+{
+  "completedDate": "2026-11-03",
+  "scene": "Assets/_Agent/Scenes/Marshlight.unity",
+  "assertions": 66,
+  "mechanicalStatus": "Passed",
+  "mainRouteWalkedDistance": 133.6522674560547,
+  "console": {
+    "errors": 0,
+    "warnings": 0,
+    "logs": 55
+  },
+  "extraTests": "Passed",
+  "sourceScripts": {
+    "unchanged": 10,
+    "targetedExtensions": 6
+  },
+  "captures": [
+    {
+      "path": "Assets/_Agent/Data/Verification/Final_00_title.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 56535,
+      "sha256": "73c0f84eaf1104b69fecccfb80e4a981209322809f9f8d3ef1a01e38b2501a49"
+    },
+    {
+      "path": "Assets/_Agent/Data/Verification/Final_01_checkpoint0.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 122654,
+      "sha256": "87e1517238b60ffc59118daa1cb7684cc09e4d4efd18757a7d233df2d9315c5a"
+    },
+    {
+      "path": "Assets/_Agent/Data/Verification/Final_02_checkpoint1.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 121752,
+      "sha256": "feffc9d0aea800d0589154b26bca194185e42b2a72f624454a77831198bf8cb6"
+    },
+    {
+      "path": "Assets/_Agent/Data/Verification/Final_03_defeat.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 38661,
+      "sha256": "e49786d4e07fc976d2eca00f87380043cb82a202fe1c3de705c4234e99d3c3f6"
+    },
+    {
+      "path": "Assets/_Agent/Data/Verification/Final_04_checkpoint2.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 123306,
+      "sha256": "f9942d623bffe2d3732e4d31f7dab27a4e9f29722f4e72c1400c7b306510b243"
+    },
+    {
+      "path": "Assets/_Agent/Data/Verification/Final_05_checkpoint3.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 117046,
+      "sha256": "fa4bd0cde78604a49b1183dafdfed0eafe5ed2a042ac43e5382aff3f40abc557"
+    },
+    {
+      "path": "Assets/_Agent/Data/Verification/Final_06_win.png",
+      "width": 1280,
+      "height": 720,
+      "bytes": 47997,
+      "sha256": "2d89c9ab2b9b4eb5933a5f7678f53d5f7d5ebf3e602bf3831a7065298c239a40"
+    }
+  ],
+  "buildScenes": [
+    {
+      "path": "Assets/_Agent/Scenes/Marshlight.unity",
+      "enabled": true
+    },
+    {
+      "path": "Assets/Scenes/LevelOne.unity",
+      "enabled": true
+    }
+  ]
+}

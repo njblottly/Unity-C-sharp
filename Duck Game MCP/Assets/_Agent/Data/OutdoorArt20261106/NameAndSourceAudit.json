@@ -1,0 +1,74 @@
+{
+  "storyEntries": 11,
+  "formerNamesInCurrentStory": 0,
+  "newNamesPresent": true,
+  "productionEdits": [
+    {
+      "path": "Assets/_Agent/Scripts/MarshLevel.cs",
+      "onlyRequestedNameReplacements": true
+    },
+    {
+      "path": "Assets/_Agent/Scripts/Editor/MarshBuilder.cs",
+      "onlyRequestedNameReplacements": true
+    },
+    {
+      "path": "Assets/_Agent/Scripts/Editor/MarshIteration1Builder.cs",
+      "onlyRequestedNameReplacements": true
+    }
+  ],
+  "sourceSheets": [
+    {
+      "path": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Bushes 1.1.PNG",
+      "pixelsPerUnit": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "sprites": 120
+    },
+    {
+      "path": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Ground Tileset 1.1.png",
+      "pixelsPerUnit": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "sprites": 133
+    },
+    {
+      "path": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Mushrooms.png",
+      "pixelsPerUnit": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "sprites": 24
+    },
+    {
+      "path": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Nature Details.png",
+      "pixelsPerUnit": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "sprites": 48
+    },
+    {
+      "path": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Rocks 1.1.PNG",
+      "pixelsPerUnit": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "sprites": 24
+    },
+    {
+      "path": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Tree Stumps and Logs.png",
+      "pixelsPerUnit": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "sprites": 24
+    },
+    {
+      "path": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Trees 1.2.PNG",
+      "pixelsPerUnit": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "sprites": 105
+    }
+  ],
+  "artRenderers": 531,
+  "artColliders": 0,
+  "artBehaviours": 0,
+  "movementSpeed": 1.6
+}

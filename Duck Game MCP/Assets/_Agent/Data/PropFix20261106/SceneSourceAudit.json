@@ -1,0 +1,73 @@
+{
+  "scene": "Assets/_Agent/Scenes/Marshlight.unity",
+  "playing": false,
+  "paused": false,
+  "sceneDirty": false,
+  "baselineScripts": 35,
+  "unchanged": 33,
+  "modified": [
+    "Assets/_Agent/Scripts/Editor/MarshSwordBuilder.cs",
+    "Assets/_Agent/Tests/PlayMode/MarshCoinRegressionTests.cs"
+  ],
+  "runtimeSourcesUnchanged": true,
+  "totalSources": 36,
+  "colliders": 59,
+  "missingScripts": 0,
+  "counts": [
+    {
+      "name": "Player",
+      "count": 1
+    },
+    {
+      "name": "DuckFollower",
+      "count": 1
+    },
+    {
+      "name": "RPGGameManager",
+      "count": 1
+    },
+    {
+      "name": "RPGCameraManager",
+      "count": 1
+    },
+    {
+      "name": "Inventory",
+      "count": 1
+    },
+    {
+      "name": "HealthBar",
+      "count": 1
+    },
+    {
+      "name": "DuckAdventure.Agent.MarshLevel",
+      "count": 1
+    },
+    {
+      "name": "DuckAdventure.Agent.Weapon",
+      "count": 1
+    },
+    {
+      "name": "DuckAdventure.Agent.MarshEquipmentHUD",
+      "count": 1
+    }
+  ],
+  "colliderFingerprintsMatch": true,
+  "logicFingerprintsMatch": true,
+  "captures": [
+    "Prop_F6_0.png",
+    "Prop_F6_1.png",
+    "Prop_F6_2.png",
+    "Prop_F6_3.png",
+    "Prop_LandingBell.png",
+    "Prop_Mailbox_Exit.png",
+    "Prop_Mailbox_Reed.png",
+    "Prop_Mailbox_Spill.png",
+    "Prop_Walk_checkpoint-0.png",
+    "Prop_Walk_checkpoint-1.png",
+    "Prop_Walk_checkpoint-2.png",
+    "Prop_Walk_checkpoint-3.png",
+    "Prop_Walk_defeat.png",
+    "Prop_Walk_sword.png",
+    "Prop_Walk_win.png"
+  ]
+}

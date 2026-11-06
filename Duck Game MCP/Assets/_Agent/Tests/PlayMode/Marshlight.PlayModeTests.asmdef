@@ -1,0 +1,9 @@
+{
+  "name": "Marshlight.PlayModeTests",
+  "references": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [],
+  "autoReferenced": false
+}

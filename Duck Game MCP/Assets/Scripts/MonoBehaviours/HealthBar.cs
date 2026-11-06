@@ -23,7 +23,7 @@ public class HealthBar : MonoBehaviour
         if (character != null)
         {
             meterImage.fillAmount = hitPoints.value / maxHitPoints;
-            hpText.text = "HP:" + (meterImage.fillAmount * 100);
+            hpText.text = "HP " + Mathf.CeilToInt(hitPoints.value) + " / " + Mathf.CeilToInt(maxHitPoints);
         }
     }
 }

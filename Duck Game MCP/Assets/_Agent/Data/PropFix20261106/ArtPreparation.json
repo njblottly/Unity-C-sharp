@@ -1,0 +1,116 @@
+[
+  {
+    "name": "BellFrame",
+    "size": [
+      32,
+      48
+    ],
+    "pixelsPerUnit": 32,
+    "palette": [
+      "transparent",
+      "#142E39",
+      "#244653",
+      "#385E4A",
+      "#567546",
+      "#7D914D",
+      "#342F26",
+      "#665039",
+      "#927044",
+      "#B79758",
+      "#E2C57C",
+      "#F4E7C0",
+      "#71858B",
+      "#A8B6B0",
+      "#D45E46",
+      "#FFF7DC"
+    ],
+    "source": "exec-d7af182f-faa6-43b3-bd31-d65d12017dfb.png",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "nontransparentColors": 11,
+    "sourceCrop": [
+      95,
+      175,
+      930,
+      1427
+    ]
+  },
+  {
+    "name": "FieldLetter",
+    "size": [
+      32,
+      32
+    ],
+    "pixelsPerUnit": 32,
+    "palette": [
+      "transparent",
+      "#142E39",
+      "#244653",
+      "#385E4A",
+      "#567546",
+      "#7D914D",
+      "#342F26",
+      "#665039",
+      "#927044",
+      "#B79758",
+      "#E2C57C",
+      "#F4E7C0",
+      "#71858B",
+      "#A8B6B0",
+      "#D45E46",
+      "#FFF7DC"
+    ],
+    "source": "exec-c5c79f5a-1e48-4767-a51d-7d85bd083299.png",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "nontransparentColors": 11,
+    "sourceCrop": [
+      293,
+      335,
+      922,
+      998
+    ]
+  },
+  {
+    "name": "MarshLantern",
+    "size": [
+      32,
+      48
+    ],
+    "pixelsPerUnit": 32,
+    "palette": [
+      "transparent",
+      "#142E39",
+      "#244653",
+      "#385E4A",
+      "#567546",
+      "#7D914D",
+      "#342F26",
+      "#665039",
+      "#927044",
+      "#B79758",
+      "#E2C57C",
+      "#F4E7C0",
+      "#71858B",
+      "#A8B6B0",
+      "#D45E46",
+      "#FFF7DC"
+    ],
+    "source": "exec-20ffc587-1d0d-442d-820d-00eded41c963.png",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "nontransparentColors": 12,
+    "sourceCrop": [
+      323,
+      121,
+      691,
+      1417
+    ]
+  }
+]

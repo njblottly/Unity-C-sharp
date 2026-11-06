@@ -1,0 +1,44 @@
+{
+  "freshRunReset": true,
+  "primaryButtonBinding": true,
+  "developmentTeleport": [
+    {
+      "checkpoint": 0,
+      "playerAtDestination": true,
+      "duckFollows": true,
+      "bells": 0,
+      "coins": 0,
+      "state": "Playing"
+    },
+    {
+      "checkpoint": 1,
+      "playerAtDestination": true,
+      "duckFollows": true,
+      "bells": 0,
+      "coins": 0,
+      "state": "Playing"
+    },
+    {
+      "checkpoint": 2,
+      "playerAtDestination": true,
+      "duckFollows": true,
+      "bells": 0,
+      "coins": 0,
+      "state": "Playing"
+    },
+    {
+      "checkpoint": 3,
+      "playerAtDestination": true,
+      "duckFollows": true,
+      "bells": 0,
+      "coins": 0,
+      "state": "Playing"
+    }
+  ],
+  "teleportCannotBypassProgress": true,
+  "pausePrimaryActionResumes": true,
+  "defeatPrimaryActionRestarts": true,
+  "players": 1,
+  "inventories": 1,
+  "healthBars": 1
+}

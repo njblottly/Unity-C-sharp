@@ -1,0 +1,172 @@
+{
+  "utc": "2026-11-06T00:48:19.7675390Z",
+  "originalColliders": 58,
+  "artRenderers": 531,
+  "replacements": 525,
+  "collisionsUnchanged": true,
+  "sourceFilesUnchanged": true,
+  "collisionSha256": "fd10f6facc4911d78970f7737098c4f3029e6130279b2c25bc059cee208518ee",
+  "assembledSprites": [
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/GrassFill.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Ground Tileset 1.1.png",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 352,
+        "y": 352,
+        "width": 32,
+        "height": 32
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/DirtFill.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Ground Tileset 1.1.png",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 320,
+        "y": 320,
+        "width": 32,
+        "height": 32
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/WaterFill.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Ground Tileset 1.1.png",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 352,
+        "y": 0,
+        "width": 32,
+        "height": 32
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/TrailSlabA.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Rocks 1.1.PNG",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 192,
+        "y": 32,
+        "width": 64,
+        "height": 32
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/TrailSlabB.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Rocks 1.1.PNG",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 192,
+        "y": 0,
+        "width": 64,
+        "height": 32
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/MarshTreeA.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Trees 1.2.PNG",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 0,
+        "y": 192,
+        "width": 96,
+        "height": 128
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/MarshTreeB.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Trees 1.2.PNG",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 96,
+        "y": 192,
+        "width": 96,
+        "height": 128
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/MarshTreeC.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Trees 1.2.PNG",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 192,
+        "y": 192,
+        "width": 96,
+        "height": 128
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/BankBoulder.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Rocks 1.1.PNG",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/BankStump.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Tree Stumps and Logs.png",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 0,
+        "y": 0,
+        "width": 64,
+        "height": 64
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/FallenLog.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Tree Stumps and Logs.png",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 128,
+        "y": 32,
+        "width": 64,
+        "height": 32
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/GrassPatchA.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Ground Tileset 1.1.png",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 256,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "pixelsPerUnit": 32
+    },
+    {
+      "asset": "Assets/_Agent/Sprites/OutdoorReuse/GrassPatchB.asset",
+      "source": "Assets/Sprites/Outdoors/Topdown RPG 32x32 - Ground Tileset 1.1.png",
+      "sourcePixels": {
+        "serializedVersion": "2",
+        "x": 320,
+        "y": 64,
+        "width": 64,
+        "height": 64
+      },
+      "pixelsPerUnit": 32
+    }
+  ],
+  "groundRefinement": {
+    "wholeGrassPatches": true,
+    "duskTint": true,
+    "collisionsUnchanged": true
+  }
+}

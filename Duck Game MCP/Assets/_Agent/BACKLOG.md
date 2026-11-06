@@ -1,0 +1,23 @@
+# Marshlight backlog
+Updated 6 November 2026. Iteration 1, outdoor-art/name pass, and the authorized mailbox/signpost/sword extension are complete and verified.
+
+## Suggested next three
+1. Run a fresh human playtest without F6. Check first-time sword discovery, facing/attack feel, coin-loan clarity, exchange comprehension and section telemetry; time runs with and without the optional ledger page. The 5–10 minute target still needs a timed human result.
+2. Finish the broader art/animation pass: readable player/duck/patrol idle and walk frames, dedicated relay-cup art and optional bell animation, and a complete replacement specification for any newly commissioned animation sheets. ASSETS_NEEDED.md now inventories current placeholders and the new sword/props; existing Outdoors assets remain directly usable.
+3. Add the broader synthesized sound set and pause-menu master volume. Only the sword swish is wired today; footsteps, coin lend/reclaim, bell, dialogue, hit, defeat and victory audio remain to be made.
+
+## Incoming art
+When Josef places replacement art/audio in Assets/_Incoming, validate names, dimensions, pivots, PPU and frame layouts against the manifest before importing. Preserve GUIDs and serialized scene/prefab references. Report missing or mismatched files instead of guessing. No incoming-art import was part of the sword extension.
+
+## Deferred mechanics
+- Shields, a second equipment slot, blocking/parrying and extra sword variants are ideas only. The new panel currently displays the single Reedkeeper Sword.
+- Alternative coin-borrowing tools: a short-range reed clapper, a thrown brass echo, or a temporary lantern ward. Design each separately before implementation; retain three-coin conservation and all crossing/exchange prerequisites.
+- Patrol timing/route-planning variants should complement the established sword rules. Keep coin progression independent of enemy health and never require a particular patrol to remain alive.
+- Consider an explicit telemetry retention/export workflow if development logs accumulate; do not delete existing logs automatically.
+
+## Completed
+- Required archive counterweight exchange, optional story pocket, two story entries, development pacing overlay/logs, permanent coin-state regressions, atomic returns, player/Duckduckgoose teleport fixes and full route verification.
+- Reused original outdoor ground/water/grass, trees, rocks, bushes, tufts, stumps and logs. Current names: Aiken, Duckduckgoose and Ada. Original outdoor textures/importers and LevelOne preserved.
+- Pixel mailbox, four signposts and six coin-return mailboxes; Reedkeeper Sword pickup, data-driven swipe damage through existing EnemyHitPoints, temporary/refundable coin cost, equipment HUD, HP pips/flash, swish, one new story entry and combat/coin regression coverage. See SWORD_AND_PROPS_REPORT.md.
+
+- Bell/field-letter/mailbox grounding follow-up complete: three framed bells, visible paper/seal, seven full posted mailboxes and ten lanterns with live glass markers. Forty cases and ninety-seven route assertions pass; all collision and runtime sources unchanged. See PROP_FINISH_REPORT.md.

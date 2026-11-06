@@ -1,0 +1,136 @@
+{
+    "utc": "2026-11-06T00:36:25.9279190Z",
+    "state": "Passed",
+    "passed": 21,
+    "failed": 0,
+    "skipped": 0,
+    "assertions": 0,
+    "cases": [
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.AtomicReturnDoesNotPartiallyCreditWhenInventoryIsFull",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.CarriedCoinsAndPatrolObjectsCannotBypassExchangeProgress",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.DevelopmentTeleportMarksPacingWithoutGrantingProgress",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(0)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(1)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(2)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EitherInitialFundingOrderIsSafe(True)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EitherInitialFundingOrderIsSafe(False)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(0)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(1)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(2)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(3)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.ExitCupRejectsPrematurePaymentWithoutStrandingCoins",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(0)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(1)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(2)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.RelayPaymentsAndReturnsCannotBeRepeated",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.ReplayAfterVictoryResetsAllLoansAndPickups",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(True)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(False)",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        },
+        {
+            "name": "Marshlight.PlayModeTests.MarshCoinRegressionTests.TelemetryRecordsSectionDeathsAndExcludesPauseTime",
+            "state": "Passed",
+            "assertions": 0,
+            "message": ""
+        }
+    ]
+}

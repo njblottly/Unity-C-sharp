@@ -1,0 +1,23 @@
+# Marshlight backlog
+Updated 6 November 2026. Iteration 1 and the authorized outdoor-art/name pass are complete and verified.
+
+## Next iterations (not built)
+1. Iteration 2 — asset manifest, one limited palette, procedural placeholder silhouettes and idle/walk frames, distinct bell/coin sprites, synthesized audio and pause-menu volume control.
+2. Iteration 3 — data-driven keeper tool introduced in the fiction, with coin borrowing, patrol feedback/recovery, existing inventory integration and tests proving no bell/exchange bypass. Respect the conserved three-coin ledger and the exit-cup dependency.
+3. Iteration 4 — validate Josef's Assets/_Incoming/ files by name/dimensions/pivot/PPU against the manifest, then replace sprite/animation/audio references without guessing missing files.
+
+## Human validation next
+- Time a first-time run without F6 with and without the optional ledger page; compare section telemetry and check the 5–10 minute hypothesis.
+- Check exchange markings and remote-gate links without prior explanation; test both funding/retrieval orders.
+- Check keyboard feel, Duckduckgoose at turns and labels/telemetry at another aspect ratio.
+
+## Deferred ideas
+- Design timing/route-planning patrol variants after the keeper tool's rules are established, so encounters complement that tool.
+- If telemetry accumulates during repeated development runs, consider an explicit retention/export workflow; do not delete existing logs automatically.
+- Additional tool variants (a short-range reed clapper, a thrown brass echo, or a temporary lantern ward) are concepts only. Select one for Iteration 3; do not build variants in this run.
+
+## Completed this run
+Required archive counterweight exchange, optional story pocket, two story entries, development pacing overlay/logs, permanent coin-state regressions, atomic returns, player/Duckduckgoose teleport fixes and full route verification.
+
+## Completed 6 November 2026
+Outdoor environment now reuses existing ground/water/grass, trees, rocks, bushes, tufts, stumps and logs. Current characters are Aiken, Duckduckgoose and Ada. Original source art/importers and all collision/progression systems preserved. Remaining Iteration 2 work includes the full manifest, character/mechanism animation and sound; this pass does not mark those finished. See OUTDOOR_ART_REPORT.md for the new visual checklist.

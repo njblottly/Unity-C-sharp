@@ -1,0 +1,89 @@
+{
+    "entries": [
+        {
+            "id": "intro",
+            "speaker": "Ada's field letter",
+            "pages": [
+                "Aiken — the storm has jammed the three sluices. I took the ducklings to Lantern Haven. Duckduckgoose knows their voices. Bring him east, and bring three brass coins.",
+                "A bell does not take a toll. Lend it three coins to lower the causeway. Its return tray waits on the far bank. Follow the raised stones; avoid the marsh mites on the rust-colored patrol tracks."
+            ]
+        },
+        {
+            "id": "letter",
+            "speaker": "Aiken",
+            "pages": [
+                "Ada's writing leans uphill, even when the water rises. Three coins, three bells, one very determined duck. All right, Duckduckgoose. Let's find your family."
+            ]
+        },
+        {
+            "id": "bell1",
+            "speaker": "The landing bell",
+            "pages": [
+                "Three brass notes roll over the reeds. Beneath the water, wooden steps rise and catch on their latches.",
+                "Duckduckgoose lifts his head. One answering peep comes from far to the east. Cross the causeway, then press E at the brass tray to reclaim your coins."
+            ]
+        },
+        {
+            "id": "ledger",
+            "speaker": "The reed ledger",
+            "pages": [
+                "KEEPER'S RULE: Never keep what a traveler needs for the next crossing. The bell borrows the weight; the latch does the work. — Ada",
+                "Below it, someone has drawn a duck with a crown. Aiken suspects Duckduckgoose has been supervising."
+            ]
+        },
+        {
+            "id": "flood",
+            "speaker": "Ada's flood note",
+            "pages": [
+                "The archive roof held. All four ducklings are dry. I can hear the first bell again. If that's you, Aiken, you're doing well.",
+                "The storm channel is narrow. Wait for a mite to pass, then follow the stones. The lantern landings restore your health. We will keep a light for you."
+            ]
+        },
+        {
+            "id": "bell2",
+            "speaker": "The archive bell",
+            "pages": [
+                "The second bell finds the first bell's note. Duckduckgoose answers with a sound much larger than he is.",
+                "A small chorus answers. They are still together. Aiken checks the far-side tray: the same three coins, warm from the mechanism, ready for one more crossing."
+            ]
+        },
+        {
+            "id": "promise",
+            "speaker": "The keeper's promise",
+            "pages": [
+                "A safe path is a promise made to someone you may never meet. Leave the steps raised. Leave the bells ready. Bring each other home. — Ada "
+            ]
+        },
+        {
+            "id": "bell3",
+            "speaker": "The haven bell",
+            "pages": [
+                "The last bell rings. Across the water, four small shapes gather at the light.",
+                "Duckduckgoose stops listening and starts hurrying. The final causeway is raised. Lantern Haven is just east of the return tray."
+            ]
+        },
+        {
+            "id": "ending",
+            "speaker": "Aiken and Ada",
+            "pages": [
+                "Duckduckgoose disappears into a tumble of wings and delighted peeps. Ada sets down her lantern. 'I knew you would hear us.'",
+                "Aiken leaves the last causeway latched. Three borrowed coins have opened a way for everyone. Behind them, the bells keep speaking across the dark water."
+            ]
+        },
+        {
+            "id": "exchange",
+            "speaker": "Ada's counterweight plate",
+            "pages": [
+                "Two coins in the reed cup lower the distant SOUTH arm. One in the spill cup lowers the nearer NORTH arm. Either cup can be filled first. The brass links show which weight moves which arm.",
+                "Reclaim the reed pair from the middle tray, then lend that same pair to the EXIT cup. Its shutter opens only after the pair has been recovered. Take the spill coin and the exit pair with you. Every latch holds; every coin comes back."
+            ]
+        },
+        {
+            "id": "archive-pocket",
+            "speaker": "A dry page from the ledger",
+            "pages": [
+                "Four names, four dry blankets, four bowls of grain. Beneath Ada's careful count, a damp webbed footprint has become a fifth mark. Aiken smiles. Duckduckgoose had not been counting the flock. He had been making sure Ada had a place, too."
+            ]
+        }
+    ]
+}

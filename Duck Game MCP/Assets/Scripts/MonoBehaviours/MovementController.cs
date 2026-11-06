@@ -5,6 +5,22 @@ using UnityEngine;
 public class MovementController : MonoBehaviour
 {
     public float movementSpeed = 3.0f;
+    public bool InputEnabled { get; private set; } = true;
+    public void SetInputEnabled(bool value)
+    {
+        InputEnabled = value;
+        MoveDir = Vector2.zero;
+        GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
+    }
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+    private bool debugInputActive;
+    private Vector2 debugInput;
+    public void SetDebugInput(Vector2 value, bool active)
+    {
+        debugInput = Vector2.ClampMagnitude(value, 1f);
+        debugInputActive = active;
+    }
+#endif
 
     public Vector2 MoveDir { get; private set; }
     public Vector2 LastMoveDir { get; private set; } = Vector2.down;
@@ -43,6 +59,19 @@ public class MovementController : MonoBehaviour
 
     private void ReadInput()
     {
+        if (!InputEnabled)
+        {
+            MoveDir = Vector2.zero;
+            return;
+        }
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        if (debugInputActive)
+        {
+            MoveDir = debugInput;
+            if (MoveDir.sqrMagnitude > 0.001f) LastMoveDir = MoveDir;
+            return;
+        }
+#endif
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 

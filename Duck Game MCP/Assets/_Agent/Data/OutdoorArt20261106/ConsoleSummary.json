@@ -1,0 +1,122 @@
+{
+  "finalScene": {
+    "scene": "Assets/_Agent/Scenes/Marshlight.unity",
+    "playing": false,
+    "paused": false,
+    "compiling": false,
+    "dirty": false,
+    "errors": 0,
+    "warnings": 0,
+    "missingScripts": 0,
+    "instances": [
+      {
+        "type": "Player",
+        "count": 1
+      },
+      {
+        "type": "DuckFollower",
+        "count": 1
+      },
+      {
+        "type": "RPGGameManager",
+        "count": 1
+      },
+      {
+        "type": "RPGCameraManager",
+        "count": 1
+      },
+      {
+        "type": "Inventory",
+        "count": 1
+      },
+      {
+        "type": "HealthBar",
+        "count": 1
+      },
+      {
+        "type": "EventSystem",
+        "count": 1
+      },
+      {
+        "type": "MarshLevel",
+        "count": 1
+      },
+      {
+        "type": "MarshCoinRelay",
+        "count": 1
+      }
+    ],
+    "assembledSprites": 13,
+    "scriptCount": 30,
+    "temporaryPreferencesCaptured": false
+  },
+  "fullRoute": {
+    "assertions": 89,
+    "errors": 0,
+    "warnings": 0,
+    "teleported": false
+  },
+  "F6": [
+    {
+      "checkpoint": 0,
+      "capture": "Outdoor_F6_0.png",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "checkpoint": 1,
+      "capture": "Outdoor_F6_1.png",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "checkpoint": 2,
+      "capture": "Outdoor_F6_2.png",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "checkpoint": 3,
+      "capture": "Outdoor_F6_3.png",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "walkCaptures": [
+    {
+      "capture": "checkpoint-0",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "capture": "checkpoint-1",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "capture": "defeat",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "capture": "checkpoint-2",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "capture": "checkpoint-3",
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "capture": "win",
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "visualDetailCaptures": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "note": "Native Unity LogEntries counters were read at each capture. A transient MCP reload warning was recorded separately before clean verification; no project compile errors or gameplay warnings remain."
+}

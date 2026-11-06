@@ -1,0 +1,98 @@
+[
+  {
+    "path": "Assets/Scripts/RoundCameraPos.cs",
+    "baseline": "5e733582d5c755e28e59dc81052302519d76da58dea3b1dff4c001ed6e00e64e",
+    "current": "5e733582d5c755e28e59dc81052302519d76da58dea3b1dff4c001ed6e00e64e",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/Managers/RPGCameraManager.cs",
+    "baseline": "cd23ec5ca56619d1c62971a970b3218d6f9aafff244d73ae89dfc3ec7cb702b3",
+    "current": "cd23ec5ca56619d1c62971a970b3218d6f9aafff244d73ae89dfc3ec7cb702b3",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/Managers/RPGGameManager.cs",
+    "baseline": "99fd2c829f8197cf462639590802f1ffcf2096428477865c52282f3ebb28fd11",
+    "current": "99fd2c829f8197cf462639590802f1ffcf2096428477865c52282f3ebb28fd11",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/Character.cs",
+    "baseline": "5e518a92ce4db06e933c19b18d8db3cc508e5f0e68ed6b0341bc000276336039",
+    "current": "5e518a92ce4db06e933c19b18d8db3cc508e5f0e68ed6b0341bc000276336039",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/Consumable.cs",
+    "baseline": "fcf0956f60daef184ae0967353c722dc2799bd7e3723ca10240da1d90128cdf7",
+    "current": "fcf0956f60daef184ae0967353c722dc2799bd7e3723ca10240da1d90128cdf7",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/DuckFollower.cs",
+    "baseline": "de18613d2d008dae2d85dbb012c4175283fd163531acc5dd98da6fae83e27abe",
+    "current": "82adb73be845b0eef812e37d2cc8773ef014fe07b1793b897a9e5a123a2d8d21",
+    "sameIgnoringTrailingWhitespace": false
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/EnemyAnimationDriver.cs",
+    "baseline": "86bc20d87d89aa7af0220ca6f0f98d43878125c10c51ff1ddaa94c9fbeb983be",
+    "current": "86bc20d87d89aa7af0220ca6f0f98d43878125c10c51ff1ddaa94c9fbeb983be",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/EnemyHitPoints.cs",
+    "baseline": "b9f4e6c1ca2ee9ac600837697183e0eeda3be35b2032bd2177a36865e1bbd0ae",
+    "current": "b9f4e6c1ca2ee9ac600837697183e0eeda3be35b2032bd2177a36865e1bbd0ae",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/HealthBar.cs",
+    "baseline": "66c6a5a3f66d74738a8811bad759d7be8625be71942994b2d9dc91cf69df351e",
+    "current": "e7e70d43b5b7caac260c6b0630ed1ff3f37550cc5d187ee7f0ea041abc59a13c",
+    "sameIgnoringTrailingWhitespace": false
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/MovementController.cs",
+    "baseline": "0be226daa6fca93968458be74cd81049960969df375b55c09c69b3425928600e",
+    "current": "f9421df7dc048d576ead9315dbb9d50e8860e05606b6d5899fbd5dd6a63d8523",
+    "sameIgnoringTrailingWhitespace": false
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/Player.cs",
+    "baseline": "215c22abd2920311778cb1d94db30c74dd13b2e996c3179679f94559db6a57ab",
+    "current": "345a1cc54d9e19b8c46747973ee360fa12e8d569b99021001946e6ae1bd33e43",
+    "sameIgnoringTrailingWhitespace": false
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/Slot.cs",
+    "baseline": "5813fefec0b2784559bb2abaee4f7b8a2d33064ec4e957cf6d742a9c28d2753b",
+    "current": "37e85b02061cf13d63f40d162246c79870d5ce8f6326a5fd6520801a584bcf23",
+    "sameIgnoringTrailingWhitespace": false
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/SpawnPoint.cs",
+    "baseline": "f29550e3d0ff57049c7e049ab41ae5191f747002fe08b99840ba7cb792030b1b",
+    "current": "f29550e3d0ff57049c7e049ab41ae5191f747002fe08b99840ba7cb792030b1b",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/ScriptableObjects/HitPoints.cs",
+    "baseline": "afbdad9743e8d7be5d8588e9f310b7aa3272a3dbbfbb93dd60c08b83de78a9b8",
+    "current": "afbdad9743e8d7be5d8588e9f310b7aa3272a3dbbfbb93dd60c08b83de78a9b8",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/ScriptableObjects/Item.cs",
+    "baseline": "94f1f86ce30688df135c1c51707c2f5766ef2f2d769797fb5a368722d3926057",
+    "current": "94f1f86ce30688df135c1c51707c2f5766ef2f2d769797fb5a368722d3926057",
+    "sameIgnoringTrailingWhitespace": true
+  },
+  {
+    "path": "Assets/Scripts/MonoBehaviours/Inventory/Inventory.cs",
+    "baseline": "7a638025ab17b30035a11a38cda1ae5774afd231a2bd9058620d17edcaf2c8a9",
+    "current": "b809a8ed8741678a6ed597de228573bf40b74e8f76305d570501a27e2ebc70c1",
+    "sameIgnoringTrailingWhitespace": false
+  }
+]

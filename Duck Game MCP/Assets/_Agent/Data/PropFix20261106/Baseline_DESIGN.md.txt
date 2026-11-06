@@ -1,0 +1,101 @@
+# Marshlight: The Borrowed Bells
+Design version 4 — 6 November 2026
+
+## Concept
+A top-down 2D marsh rescue using the existing player, duck follower, movement, health, coin collection and five-slot inventory. One level; target first human playthrough 5–10 minutes including exploration and text. This is a target, not a timed human playtest result.
+
+## Core mechanic: borrowed bell weights
+Collect three old brass coins in the existing inventory. At each sluice bell, press E to lend three coins: their weight lowers a reed causeway. Cross to the far-side return tray and press E to reclaim those same coins. A latched causeway stays open. Repeat at three increasingly hazardous crossings. Coins cannot be lost on death; open routes and returned payments persist during a run. No timer or irreversible expenditure can strand the player. An insufficient balance gives explicit feedback and changes nothing.
+
+## Story bible
+Setting: Rill Marsh, after a storm has silenced the three mechanical bells that guide ducklings home.
+Characters:
+- Aiken: the existing human player, a junior marsh keeper.
+- Duckduckgoose: the existing duck companion, following Aiken and listening for the missing flock.
+- Ada: the absent senior keeper, heard through letters and signs; she built the bells to lend coins, never keep them.
+Beats:
+1. At the keeper's landing, Ada's note asks Aiken and Duckduckgoose to reopen the home route before night.
+2. The first bell teaches that a useful coin can be lent and recovered.
+3. At the reed archive, Ada's flood note reveals she crossed to shelter the flock; the second bell restores hope.
+4. The storm channel asks the player to use the same three coins one final time and avoid patrolling marsh mites.
+5. At Lantern Haven, the reunited flock answers Duckduckgoose. Aiken leaves the bells ready for the next traveler.
+
+## Level layout
+A new scene cloned from LevelOne; the original scene is preserved. Three connected marsh islands, each with a clearly marked exploration loop and a narrow causeway. Landing -> Reedbank -> Old Archive -> Storm Reach -> Lantern Haven. Solid banks bound the playable area; raised water/reed barriers leave only the three gated crossings. Coin glints guide side loops. Checkpoints before each crossing and at the haven. Five optional notes deepen Ada's story, including the Iteration 1 ledger pocket. Existing enemy sprites provide visible patrol hazards. Hearts use the existing healing pickup.
+
+## Rules and controls
+WASD/arrows: existing movement. E: bell/return tray/sign interaction. Space/Enter: advance text or start. Esc: pause/resume. J / left click: sword swipe toward the last movement direction. Q: equip/pack sword. R: restart from checkpoint on defeat (coins and gates retained). Win screen supports a fresh run. F6: development-only checkpoint teleport, no progression grant. F7: development-only pacing overlay.
+Win: all three bells latched, all three original trays reclaimed, the archive exchange and sword loan fully settled, and Aiken reaches Lantern Haven with Duckduckgoose.
+Lose: health reaches zero; show defeat screen; restart restores health and positions both characters at the last checkpoint.
+
+## Presentation
+Reuse existing pixel sprites and fonts. The environment reuses Assets/Sprites/Outdoors with assembled Sprite references under Assets/_Agent/Sprites/OutdoorReuse/. Brass mechanisms, lanterns and UI retain readable geometric art under Assets/_Agent/Placeholder/. Muted midnight teal, reed green and warm brass; warm lights signify safety, coral marks hazards. Text-only intro, data-driven dialogue entries, readable objectives, interaction prompt, pause/defeat/ending screens, coin/bell feedback, damage flash and small particles.
+
+## Technical constraints
+Legacy Input Manager only (activeInputHandler=0). No external downloads. Serialized references throughout. Existing single RPGGameManager and RPGCameraManager are reused. Player death must reach its existing Die/RespawnAt flow; UI references must be repaired. Inventory gains count/spend methods; existing add/stack behavior is retained. All public API additions and existing-script edits are recorded in PROGRESS.md.
+
+## Verification plan
+Editor-only debug autopilot drives Rigidbody2D through the actual route, invokes the same public interaction methods used by E, uses real trigger pickups/checkpoints/story entries, checks insufficient funds, spend/return/idempotence, damage/death/restart, pause, and final victory. It records assertions and stops at every checkpoint for an MCP screenshot and console read. It verifies layout reachability separately with collider-aware route probes. Human checklist covers pacing, readability, audio and keyboard feel.
+
+## Deliberate clarification after first playtest
+Win now requires all three return trays to be reclaimed, so the promised borrowed-coin loop is complete. The final objective explicitly directs the player to the last tray. F6 cycles its own development destination without granting story or bell progress. UI uses a readable existing font, responsive anchors, visible five-slot inventory, and hides HUD during full-screen menus. No core mechanic or story changes.
+
+
+## Iteration 1 design — 3 November 2026
+Human baseline: about four minutes for a player who already understood the lend/reclaim mechanic. Keep movement at 1.6, preserve the three bell crossings, and add decisions rather than empty distance or waiting.
+
+### The Old Archive counterweight exchange
+A required relay puzzle occupies the existing Storm Reach reed loop after the Old Archive checkpoint. It uses the same three coins, with three cups and three separate return trays:
+1. Reed cup borrows two coins at (50, 4.5) and opens the downstream/south arm at x=60. Its two-coin return is in the middle arm at (54.8, -5.8).
+2. Spill cup borrows one coin at (50, -4.5) and opens the upstream/north arm at x=53. Its one-coin return is beyond the downstream arm at (61.2, -5.8).
+3. Exit cup at (57, -5.8) unlocks only once the reed pair has been reclaimed. Lend that recovered pair again to open the archive latch at x=62.5. Its return at (64.2, -3) restores the pair before the final bell.
+The first two cups may be funded in either order. The player can retrieve the spill coin before or after funding the exit cup. The unlocked return trays and gates persist through death. Every deposit is refundable exactly once. The exit cup rejects early payment without taking coins, preventing the two carried coins from being stranded in an unreachable exit tray. Three coins remain conserved across carried coins, uncollected pickups, original bell trays and relay escrow.
+The original last bell requires the exchange to be fully settled; the haven still requires all original trays and the complete relay. Gate colliders have no patrol/health component. A future patrol-affecting tool cannot open, fund or bypass them.
+
+### Optional content and story limit
+Add exactly two story entries: exchange (a concise instruction plate shown on first relay use) and archive-pocket (an optional dry ledger page just off the existing upper trail at (57.8, 6.8)). The ledger page is its own exploration reward and does not add currency. All nine existing entries remain. Total: eleven. Aiken, Duckduckgoose and Ada remain the only named characters.
+The exchange has clear two-coin/one-coin markings and colored mechanical links to the affected gates, using existing placeholder art. No art/audio overhaul, palette manifest, weapon, package download or incoming asset import is part of this iteration.
+
+### Pacing and patrol decision
+Target roughly one to two extra minutes: split funding, identifying which remote arm opens, reclaiming/re-lending the pair, and an optional ledger page. No movement slowdown, long empty route, timer, or filler text. Keep patrol behavior; only shift the final patrol track slightly so it does not pass through the new latch. More patrol design is deferred because the coin dependency supplies the new challenge and remains meaningful after Iteration 3's tool.
+
+### Development pacing telemetry
+Editor and development builds only. F7 toggles an overlay showing active/reading seconds and deaths for each interval: Landing to Reedbank; Reedbank to Old Archive; Old Archive to Haven; Haven to reunion. Title, pause and defeat waiting are excluded. Deaths and retry time accumulate in the current section. F6 marks a run as teleported and unsuitable for pace estimates. Logs are JSONL under Application.persistentDataPath/Marshlight/Telemetry. A run label distinguishes human, mechanical and regression runs. No telemetry component, overlay, logger, key handler or file writes are compiled into release builds.
+
+### Regression plan
+Add permanent Unity Test Framework PlayMode tests without moving the existing scripts into new assemblies: a small reflection fixture bridges the project's predefined Assembly-CSharp. Exercise original loans through death, loans at every checkpoint, all relay loan phases, both funding orders, both retrieval orders, early exit-cup rejection, duplicate rejection, atomic returns and victory replay. Every reachable loan state must still reach victory with exactly three coins. Add telemetry timing/overlay checks. Retain every existing mechanical assertion and extend the walker through the new puzzle and optional page. Capture all checkpoints with F6, then finish one entire title-to-victory walk without F6. Use baseline/current section telemetry plus explicit human decision/reading assumptions to estimate time; do not label that estimate as a measured human playtest.
+
+## Iteration 1 delivery reconciliation
+The summary rules, optional-note count and controls above were deliberately updated to match the implemented exchange, ledger page and F7 overlay. The iteration date was corrected to the actual UTC run date. No new fiction or additional content was introduced during reconciliation. Final verification: 89 walker assertions and 21 PlayMode cases pass; see ITERATION_1_REPORT.md and PROGRESS.md for pacing assumptions and human validation still needed.
+
+## Outdoor art and character names — 6 November 2026
+User-authorized visual pass after Iteration 1: rename the keeper to Aiken and the companion to Duckduckgoose; Ada, the fiction, eleven story IDs and all story beats stay intact. Update current story data, menu/objective copy and builder source strings so rebuild/repair cannot restore old names. Retain historical verification evidence unchanged.
+Reuse the project's existing Assets/Sprites/Outdoors sheets at 32 PPU, Point filtering and no compression. Apply grass/dirt/water fills, irregular grass shore edges, stone trail sprites, dense shrubs/grass along the existing reed barriers, and trees/rocks/logs along solid outer banks. Use subdued cool tints to retain the marsh-at-dusk tone. Assemble larger source-sheet regions into Sprite assets under Assets/_Agent/Sprites/OutdoorReuse; leave original PNGs, slicing, GUIDs and importer settings untouched.
+This pass changes visuals and character names only. Preserve every collider, checkpoint, patrol, pickup, gate/escrow dependency, movement speed and menu interaction. New decoration is grouped under 10_OutdoorArt and has no colliders or runtime controller. Keep brass bells, counterweight cups, return trays, mechanical links and lantern markers visually distinct rather than replacing them with unrelated nature art.
+Verification: baseline and final complete PlayMode suites; static before/after collision fingerprints; project-source/importer hashes; name and visual-only regressions; four F6 checkpoint captures/console checks; full no-F6 walker to victory and review of longer dialogue/menu text. This is not the full Iteration 2 audio/animation/manifest scope.
+
+### Outdoor pass delivery reconciliation
+Presentation summary updated deliberately to reflect the original-sheet reuse and the requested character names. Thirteen assembled sprites, 58 unchanged colliders, 23 passing PlayMode cases and 89 passing full-route assertions. Fiction and mechanics otherwise unchanged. Source rectangles and evidence are in Data/OutdoorArt20261106; human visual/aspect-ratio checks remain in OUTDOOR_ART_REPORT.md.
+
+## Mailbox/signposts and Reedkeeper Sword — 6 November 2026
+User-authorized continuation: replace the mailbox/signpost props with matching pixel art, and implement a damaging sword with a dedicated equipped-weapon HUD box. This supersedes the earlier Iteration-1-only run boundary for this newly requested work; it does not authorize extra weapon variants or a shield system.
+
+### Art and UI
+Create transparent, crisp pixel sprites in the existing top-down 32-PPU style: KeeperMailbox (32x48), TrailSignpost (32x48), ReedkeeperSword (32x32). Generate the art, then crop/resize with nearest-neighbor sampling and reduce to a shared limited palette. Preserve original outdoor textures and the scene's existing collision layout. Mailbox replaces keeper-note art; four signposts replace the other story-note art. Node IDs, trigger colliders and serialized marker references remain valid. New art stays in Assets/_Agent/Placeholder/. Add one equipped-hand panel inside the existing HUD (no new Canvas/Inventory/manager). It shows ownership/equip status, a persistent inventory icon and Q/J hints. The world blade and swipe arc appear only during an active swing; no sword remains visible while idle.
+
+### Sword and coin economy
+The Reedkeeper Sword is Ada's marsh-maintenance blade. Its guard borrows one carried brass coin as a counterweight for each 0.20-second swipe, and returns that same coin afterward. Damage 1, enemy HP 3, cooldown 0.50 seconds, range 1.15 world units, a forward 100-degree arc. No carried coin means no swipe; reclaiming coins enables combat again. No currency is permanently spent or created. Weapon escrow joins carried coins, pickups and existing loan trays in the three-coin conservation invariant.
+The sword pickup is placed at (0.55, 2.6) beside the first trail and uses the existing Consumable -> Player -> Inventory pickup flow. Append SWORD to ItemType without changing existing values; emit ItemCollected only after a successful pickup. Pickup auto-equips and introduces one new story entry, sword (twelve total). Q equips/unequips; J or left mouse swipes toward the last movement direction. Equipment survives checkpoint death; replay resets it. WeaponData is a ScriptableObject containing damage, cooldown, range, arc/duration, refundable coin cost, inventory item, sprite, sound and an optional projectile-prefab field (null for this melee sword). Weapon reads that data through serialized scene references.
+Pause, dialogue, defeat, unequip and run restart cancel the visual and refund synchronously. If an artificially full inventory prevents a refund, the coin remains explicitly recoverable in weapon escrow, another swipe is rejected, the HUD reports it, and refund retries when capacity becomes available. No silent failures or duplicated refunds. Victory requires weapon escrow to be settled; scene replay resets the entire old economy rather than carrying a refund into a new run.
+
+### Damage and no bypass
+Use existing EnemyHitPoints.TakeDamage/IsDead/CurrentHitPoints, preserving its health and death rules. Each enemy is hit at most once per swipe, regardless of collider count or frames. Physics queries reject enemies behind the player, outside range, or behind Blocking colliders. Only EnemyHitPoints targets take damage: bells, gates, reeds, trays and other non-enemy objects are unaffected. All original and relay progress prerequisites remain required even if every patrol is defeated.
+Add readable white hit flash, three HP pips and a small particle pulse. Flash clears after 0.12 seconds; HP does not regenerate, patrol movement continues, and zero-HP mites follow their existing death/removal flow until a fresh run. No new stun/knockback system is needed for this damaging sword.
+
+### Verification and scope
+Baseline all 23 PlayMode cases before changes. Extend permanent tests for real pickup/equip, idle/swing visibility, actual HP loss, one hit per target, range/facing/wall blocking, cooldown, refundable cost, insufficient coins, pause/death/unequip refunds, full-inventory recovery, replay and no crossing bypass. Extend the physical no-F6 walker to collect the sword, demonstrate a real hit, settle its loan, read the twelfth story and finish all crossings. Capture every F6 destination and each normal checkpoint plus an active swipe and ending; read the console. Add sprites and sound to ASSETS_NEEDED.md. Backlog shields, alternative weapons and a full animation/audio pass. Save scene and PROGRESS.md at milestones, compile before Play, finish with zero errors/warnings.
+
+Mailbox art clarification before building: the full posted mailbox serves keeper-note; a 32x24 head-region Sprite from that same texture also replaces the six original/relay return-box shapes while retaining their coin indicators and cost labels. This covers both the letterbox and the existing mailbox-like coin returns. Shared new-art palette: transparent plus #142E39, #244653, #385E4A, #567546, #7D914D, #342F26, #665039, #927044, #B79758, #E2C57C, #F4E7C0, #71858B, #A8B6B0, #D45E46, #FFF7DC.
+
+### Sword pass delivery reconciliation
+The summary controls and win rule above deliberately include the authorized sword extension. Twelve story entries now include Ada's sword note. One data-driven melee weapon and one equipment panel were added; no shields or variants. New prop/sword art uses the recorded sixteen-entry palette; exact replacement sizes/pivots/PPU and the single swish are in ASSETS_NEEDED.md. All 38 PlayMode cases and 97 no-F6 route assertions pass, with three coins at victory. Fifty-eight original colliders are unchanged; one new pickup trigger. Full art/character animation, broader sound/volume control and incoming-art replacement remain separate backlog work. Human pace and combat feel are not mechanically established.

@@ -1,0 +1,40 @@
+{
+    "utc": "2026-11-03T22:15:00.5758150Z",
+    "runId": "20261103-212924-3a33f40e",
+    "runLabel": "mechanical",
+    "eventName": "snapshot",
+    "detail": "",
+    "amount": 0,
+    "section": 3,
+    "teleported": false,
+    "sections": [
+        {
+            "name": "Landing to Reedbank",
+            "activeSeconds": 29.060474395751954,
+            "readingSeconds": 0.0,
+            "deaths": 0,
+            "completed": true
+        },
+        {
+            "name": "Reedbank to Archive",
+            "activeSeconds": 27.76044464111328,
+            "readingSeconds": 0.0,
+            "deaths": 1,
+            "completed": true
+        },
+        {
+            "name": "Archive to Haven",
+            "activeSeconds": 44.90083694458008,
+            "readingSeconds": 0.0,
+            "deaths": 0,
+            "completed": true
+        },
+        {
+            "name": "Haven to reunion",
+            "activeSeconds": 3.59999680519104,
+            "readingSeconds": 0.01999998651444912,
+            "deaths": 0,
+            "completed": true
+        }
+    ]
+}

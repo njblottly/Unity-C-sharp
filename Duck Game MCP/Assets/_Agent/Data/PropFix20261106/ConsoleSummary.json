@@ -1,0 +1,16 @@
+{
+  "errors": 0,
+  "warnings": 0,
+  "walk": {
+    "errors": 0,
+    "warnings": 0,
+    "assertions": 97,
+    "noTeleport": true
+  },
+  "finalTestJob": "cb071d0588434262bd0e4bb358b529ee",
+  "playModeCases": 40,
+  "checkpointCaptures": 8,
+  "totalCaptures": 15,
+  "sceneSavedInEditMode": true,
+  "paused": false
+}

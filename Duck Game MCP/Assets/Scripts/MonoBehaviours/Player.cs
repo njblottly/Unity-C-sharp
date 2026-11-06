@@ -18,14 +18,29 @@ public class Player : Character
     private bool isDead;
 
     public bool IsDead => isDead;
+    public Inventory PlayerInventory => inventory;
+    [SerializeField] private Inventory sceneInventory;
+    [SerializeField] private HealthBar sceneHealthBar;
+    public event System.Action Died;
+    public event System.Action Respawned;
+    public event System.Action<Item> ItemCollected;
+
+    // Reach the existing respawn flow instead of Character's destructive default.
+    public override void KillCharacter()
+    {
+        Die();
+    }
 
     public void Start()
     {
         hitPoints.value = startingHitPoints;
 
-        inventory = Instantiate(inventoryPrefab);
-
-        healthBar = Instantiate(healthBarPrefab);
+        Inventory[] inventories = FindObjectsByType<Inventory>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        HealthBar[] healthBars = FindObjectsByType<HealthBar>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        if (inventories.Length > 1 || healthBars.Length > 1)
+            throw new System.InvalidOperationException("Player requires one Inventory and one HealthBar; remove stale duplicates.");
+        inventory = sceneInventory != null ? sceneInventory : (inventories.Length == 1 ? inventories[0] : Instantiate(inventoryPrefab));
+        healthBar = sceneHealthBar != null ? sceneHealthBar : (healthBars.Length == 1 ? healthBars[0] : Instantiate(healthBarPrefab));
         healthBar.character = this;
 
         isDead = false;
@@ -80,6 +95,7 @@ public class Player : Character
         switch (hitObject.itemType)
         {
             case Item.ItemType.COIN:
+            case Item.ItemType.SWORD:
                 shouldDisappear = inventory.AddItem(hitObject);
                 print("AddItem returned: " + shouldDisappear);
                 break;
@@ -95,6 +111,7 @@ public class Player : Character
         if (shouldDisappear)
         {
             collision.gameObject.SetActive(false);
+            ItemCollected?.Invoke(hitObject);
         }
     }
 
@@ -193,6 +210,9 @@ public class Player : Character
 
         if (rb != null)
         {
+            // Teleport the physics body as well as the interpolated render transform.
+            rb.position = spawnPoint.position;
+            rb.rotation = spawnPoint.eulerAngles.z;
             rb.linearVelocity = Vector2.zero;
             rb.angularVelocity = 0f;
         }
@@ -202,6 +222,7 @@ public class Player : Character
         isDead = false;
 
         print("Player respawned. HP restored to: " + hitPoints.value);
+        Respawned?.Invoke();
     }
 
     private void Die()
@@ -224,6 +245,8 @@ public class Player : Character
             Debug.LogWarning("Player died, but no RPGGameManager.sharedInstance was found.");
         }
 
+        Died?.Invoke();
         gameObject.SetActive(false);
     }
 }
+
