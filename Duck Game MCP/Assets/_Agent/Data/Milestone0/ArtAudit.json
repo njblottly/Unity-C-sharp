@@ -1,0 +1,440 @@
+[
+  {
+    "role": "Player",
+    "actor": "PlayerObject",
+    "texture": "Assets/Sprites/Player/player.png",
+    "textureWidth": 955,
+    "textureHeight": 1453,
+    "sprite": "player_0",
+    "frameWidth": 227,
+    "frameHeight": 358,
+    "ppu": 32,
+    "pivotX": 113.5,
+    "pivotY": 179,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmaps": false,
+    "mesh": "Tight",
+    "alignment": 0,
+    "paletteCount": 15606,
+    "palette": [
+      {
+        "color": "#6A4133",
+        "pixels": 675
+      },
+      {
+        "color": "#161F33",
+        "pixels": 667
+      },
+      {
+        "color": "#161F32",
+        "pixels": 535
+      },
+      {
+        "color": "#161E32",
+        "pixels": 499
+      },
+      {
+        "color": "#6A4134",
+        "pixels": 499
+      },
+      {
+        "color": "#6A4033",
+        "pixels": 499
+      },
+      {
+        "color": "#151E32",
+        "pixels": 491
+      },
+      {
+        "color": "#694033",
+        "pixels": 480
+      },
+      {
+        "color": "#171F33",
+        "pixels": 456
+      },
+      {
+        "color": "#151F32",
+        "pixels": 441
+      },
+      {
+        "color": "#161E33",
+        "pixels": 420
+      },
+      {
+        "color": "#6B4134",
+        "pixels": 407
+      },
+      {
+        "color": "#694133",
+        "pixels": 391
+      },
+      {
+        "color": "#6B4133",
+        "pixels": 390
+      },
+      {
+        "color": "#151F33",
+        "pixels": 369
+      },
+      {
+        "color": "#6B4234",
+        "pixels": 364
+      },
+      {
+        "color": "#171F32",
+        "pixels": 350
+      },
+      {
+        "color": "#151E33",
+        "pixels": 341
+      },
+      {
+        "color": "#694032",
+        "pixels": 325
+      },
+      {
+        "color": "#162033",
+        "pixels": 299
+      },
+      {
+        "color": "#6B4233",
+        "pixels": 286
+      },
+      {
+        "color": "#6A4034",
+        "pixels": 279
+      },
+      {
+        "color": "#6A4233",
+        "pixels": 275
+      },
+      {
+        "color": "#6A4132",
+        "pixels": 274
+      }
+    ],
+    "outlineCandidates": [
+      {
+        "color": "#000006",
+        "edgePixels": 42
+      },
+      {
+        "color": "#00000A",
+        "edgePixels": 35
+      },
+      {
+        "color": "#00000D",
+        "edgePixels": 31
+      },
+      {
+        "color": "#00000C",
+        "edgePixels": 31
+      },
+      {
+        "color": "#00000B",
+        "edgePixels": 30
+      },
+      {
+        "color": "#000009",
+        "edgePixels": 30
+      },
+      {
+        "color": "#000007",
+        "edgePixels": 30
+      },
+      {
+        "color": "#000008",
+        "edgePixels": 29
+      }
+    ],
+    "clips": [
+      {
+        "name": "player-walk-east",
+        "path": "Assets/Animations/Animations/player-walk-east.anim",
+        "frameRate": 12,
+        "length": 0.333333343,
+        "keyframes": 4,
+        "frameSizes": [
+          "227x358 @ 32 PPU",
+          "227x347 @ 32 PPU",
+          "214x347 @ 32 PPU",
+          "226x358 @ 32 PPU"
+        ]
+      },
+      {
+        "name": "player-walk-west",
+        "path": "Assets/Animations/Animations/player-walk-west.anim",
+        "frameRate": 12,
+        "length": 0.333333343,
+        "keyframes": 4,
+        "frameSizes": [
+          "226x358 @ 32 PPU",
+          "214x347 @ 32 PPU",
+          "227x347 @ 32 PPU",
+          "227x358 @ 32 PPU"
+        ]
+      },
+      {
+        "name": "player-walk-north",
+        "path": "Assets/Animations/Animations/player-walk-north.anim",
+        "frameRate": 12,
+        "length": 0.333333343,
+        "keyframes": 4,
+        "frameSizes": [
+          "187x332 @ 32 PPU",
+          "201x319 @ 32 PPU",
+          "186x332 @ 32 PPU"
+        ]
+      },
+      {
+        "name": "player-walk-south",
+        "path": "Assets/Animations/Animations/player-walk-south.anim",
+        "frameRate": 12,
+        "length": 0.166666672,
+        "keyframes": 2,
+        "frameSizes": [
+          "188x288 @ 32 PPU",
+          "187x288 @ 32 PPU"
+        ]
+      },
+      {
+        "name": "player-idle",
+        "path": "Assets/Animations/Animations/player-idle.anim",
+        "frameRate": 12,
+        "length": 0.166666672,
+        "keyframes": 2,
+        "frameSizes": [
+          "188x288 @ 32 PPU",
+          "187x288 @ 32 PPU"
+        ]
+      }
+    ],
+    "actorScaleX": 0.065,
+    "actorScaleY": 0.065,
+    "paletteNote": "Top 24 opaque colors by pixel count in the inspected serialized frame; paletteCount records all unique colors."
+  },
+  {
+    "role": "DuckFollower",
+    "actor": "DuckObject",
+    "texture": "Assets/Sprites/Companions/duck 1.png",
+    "textureWidth": 128,
+    "textureHeight": 160,
+    "sprite": "duck 1_0",
+    "frameWidth": 32,
+    "frameHeight": 32,
+    "ppu": 32,
+    "pivotX": 16,
+    "pivotY": 16,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmaps": false,
+    "mesh": "Tight",
+    "alignment": 0,
+    "paletteCount": 11,
+    "palette": [
+      {
+        "color": "#DCDCDC",
+        "pixels": 50
+      },
+      {
+        "color": "#E1E1E1",
+        "pixels": 37
+      },
+      {
+        "color": "#C5C5C5",
+        "pixels": 29
+      },
+      {
+        "color": "#BCBCBC",
+        "pixels": 26
+      },
+      {
+        "color": "#E3E3E3",
+        "pixels": 20
+      },
+      {
+        "color": "#E3E1E1",
+        "pixels": 17
+      },
+      {
+        "color": "#D6D6D6",
+        "pixels": 11
+      },
+      {
+        "color": "#FF8514",
+        "pixels": 7
+      },
+      {
+        "color": "#FF922C",
+        "pixels": 4
+      },
+      {
+        "color": "#FF7B00",
+        "pixels": 4
+      },
+      {
+        "color": "#0E0E0E",
+        "pixels": 3
+      }
+    ],
+    "outlineCandidates": [
+      {
+        "color": "#E1E1E1",
+        "edgePixels": 31
+      },
+      {
+        "color": "#E3E3E3",
+        "edgePixels": 14
+      },
+      {
+        "color": "#D6D6D6",
+        "edgePixels": 10
+      },
+      {
+        "color": "#DCDCDC",
+        "edgePixels": 9
+      },
+      {
+        "color": "#FF8514",
+        "edgePixels": 7
+      },
+      {
+        "color": "#FF922C",
+        "edgePixels": 4
+      },
+      {
+        "color": "#C5C5C5",
+        "edgePixels": 3
+      },
+      {
+        "color": "#FF7B00",
+        "edgePixels": 3
+      }
+    ],
+    "clips": [
+      {
+        "name": "duck-walk-west",
+        "path": "Assets/Animations/Animations/duck-walk-west.anim",
+        "frameRate": 12,
+        "length": 0.333333343,
+        "keyframes": 4,
+        "frameSizes": [
+          "32x32 @ 32 PPU"
+        ]
+      },
+      {
+        "name": "duck-walk-east",
+        "path": "Assets/Animations/Animations/duck-walk-east.anim",
+        "frameRate": 12,
+        "length": 0.333333343,
+        "keyframes": 4,
+        "frameSizes": [
+          "32x32 @ 32 PPU"
+        ]
+      },
+      {
+        "name": "duck-walk-north",
+        "path": "Assets/Animations/Animations/duck-walk-north.anim",
+        "frameRate": 12,
+        "length": 0.333333343,
+        "keyframes": 4,
+        "frameSizes": [
+          "32x32 @ 32 PPU"
+        ]
+      },
+      {
+        "name": "duck-walk-south",
+        "path": "Assets/Animations/Animations/duck-walk-south.anim",
+        "frameRate": 12,
+        "length": 0.333333343,
+        "keyframes": 4,
+        "frameSizes": [
+          "32x32 @ 32 PPU"
+        ]
+      },
+      {
+        "name": "duck-walk-idle",
+        "path": "Assets/Animations/Animations/duck-walk-idle.anim",
+        "frameRate": 12,
+        "length": 0.166666672,
+        "keyframes": 2,
+        "frameSizes": [
+          "32x32 @ 32 PPU"
+        ]
+      }
+    ],
+    "actorScaleX": 0.48,
+    "actorScaleY": 0.48,
+    "paletteNote": "Top 24 opaque colors by pixel count in the inspected serialized frame; paletteCount records all unique colors."
+  },
+  {
+    "role": "EnemyHitPoints",
+    "actor": "MarshMite_1",
+    "texture": "Assets/Sprites/Enemies/EnemyIdle_1.png",
+    "textureWidth": 160,
+    "textureHeight": 32,
+    "sprite": "EnemyIdle_1_0",
+    "frameWidth": 32,
+    "frameHeight": 32,
+    "ppu": 32,
+    "pivotX": 16,
+    "pivotY": 16,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmaps": false,
+    "mesh": "Tight",
+    "alignment": 0,
+    "paletteCount": 4,
+    "palette": [
+      {
+        "color": "#08FF00",
+        "pixels": 460
+      },
+      {
+        "color": "#000000",
+        "pixels": 192
+      },
+      {
+        "color": "#06BE00",
+        "pixels": 32
+      },
+      {
+        "color": "#FFFFFF",
+        "pixels": 20
+      }
+    ],
+    "outlineCandidates": [
+      {
+        "color": "#000000",
+        "edgePixels": 100
+      }
+    ],
+    "clips": [
+      {
+        "name": "enemy-idle-1",
+        "path": "Assets/Animations/Animations/enemy-idle-1.anim",
+        "frameRate": 12,
+        "length": 0.4166667,
+        "keyframes": 5,
+        "frameSizes": [
+          "32x32 @ 32 PPU"
+        ]
+      },
+      {
+        "name": "enemy-walk-1",
+        "path": "Assets/Animations/Animations/enemy-walk-1.anim",
+        "frameRate": 12,
+        "length": 0.4166667,
+        "keyframes": 5,
+        "frameSizes": [
+          "32x32 @ 32 PPU"
+        ]
+      }
+    ],
+    "actorScaleX": 0.72,
+    "actorScaleY": 0.72,
+    "paletteNote": "Top 24 opaque colors by pixel count in the inspected serialized frame; paletteCount records all unique colors."
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "id": "bell-0",
+    "cp": 0,
+    "state": {
+      "gate": "Latched gate 1",
+      "closed": true,
+      "bells": 0,
+      "checkpoint": 0
+    },
+    "counts": [
+      0,
+      0,
+      60
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 20 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup",
+        "Tag matched",
+        "Item type: SWORD, stackable: False",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_1",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: MarshMite_1",
+        "Player took damage: 1. New HP: 4",
+        "Trigger hit: BrassCoin_2",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_3",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True"
+      ]
+    }
+  },
+  {
+    "id": "bell-1",
+    "cp": 1,
+    "state": {
+      "gate": "Latched gate 2",
+      "closed": true,
+      "bells": 0,
+      "checkpoint": 0
+    },
+    "counts": [
+      0,
+      0,
+      60
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 20 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup",
+        "Tag matched",
+        "Item type: SWORD, stackable: False",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_1",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: MarshMite_1",
+        "Player took damage: 1. New HP: 4",
+        "Trigger hit: BrassCoin_2",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_3",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True"
+      ]
+    }
+  },
+  {
+    "id": "relay-reed-cup",
+    "cp": 2,
+    "state": {
+      "gate": "Latched reed arm",
+      "closed": true,
+      "bells": 0,
+      "checkpoint": 0
+    },
+    "counts": [
+      0,
+      0,
+      60
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 20 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup",
+        "Tag matched",
+        "Item type: SWORD, stackable: False",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_1",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: MarshMite_1",
+        "Player took damage: 1. New HP: 4",
+        "Trigger hit: BrassCoin_2",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_3",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True"
+      ]
+    }
+  },
+  {
+    "id": "relay-spill-cup",
+    "cp": 2,
+    "state": {
+      "gate": "Latched spill arm",
+      "closed": true,
+      "bells": 0,
+      "checkpoint": 0
+    },
+    "counts": [
+      0,
+      0,
+      60
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 20 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup",
+        "Tag matched",
+        "Item type: SWORD, stackable: False",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_1",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: MarshMite_1",
+        "Player took damage: 1. New HP: 4",
+        "Trigger hit: BrassCoin_2",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_3",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True"
+      ]
+    }
+  },
+  {
+    "id": "relay-exit-cup",
+    "cp": 2,
+    "state": {
+      "gate": "Latched exit arm",
+      "closed": true,
+      "bells": 0,
+      "checkpoint": 0
+    },
+    "counts": [
+      0,
+      0,
+      60
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 20 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup",
+        "Tag matched",
+        "Item type: SWORD, stackable: False",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_1",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: MarshMite_1",
+        "Player took damage: 1. New HP: 4",
+        "Trigger hit: BrassCoin_2",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_3",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True"
+      ]
+    }
+  },
+  {
+    "id": "bell-2",
+    "cp": 2,
+    "state": {
+      "gate": "Latched gate 3",
+      "closed": true,
+      "bells": 0,
+      "checkpoint": 0
+    },
+    "counts": [
+      0,
+      0,
+      60
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 20 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup",
+        "Tag matched",
+        "Item type: SWORD, stackable: False",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_1",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: MarshMite_1",
+        "Player took damage: 1. New HP: 4",
+        "Trigger hit: BrassCoin_2",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True",
+        "Trigger hit: BrassCoin_3",
+        "Tag matched",
+        "Item type: COIN, stackable: True",
+        "AddItem returned: True"
+      ]
+    }
+  }
+]

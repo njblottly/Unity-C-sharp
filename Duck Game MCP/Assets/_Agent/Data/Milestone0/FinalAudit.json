@@ -1,0 +1,39 @@
+{
+  "utc": "2026-11-06",
+  "scope": {
+    "changed": "M\tDuck Game MCP/Assets/_Agent/ASSETS_NEEDED.md\nM\tDuck Game MCP/Assets/_Agent/BACKLOG.md\nM\tDuck Game MCP/Assets/_Agent/DESIGN.md\nM\tDuck Game MCP/Assets/_Agent/PROGRESS.md\nM\tDuck Game MCP/Assets/_Agent/Tests/PlayMode/MarshCoinRegressionTests.cs\n",
+    "pending": " M \"Duck Game MCP/Assets/_Agent/ASSETS_NEEDED.md\"\n M \"Duck Game MCP/Assets/_Agent/BACKLOG.md\"\n M \"Duck Game MCP/Assets/_Agent/DESIGN.md\"\n M \"Duck Game MCP/Assets/_Agent/PROGRESS.md\"\n M \"Duck Game MCP/Assets/_Agent/Tests/PlayMode/MarshCoinRegressionTests.cs\"\n?? \"Duck Game MCP/Assets/_Agent/Data/Milestone0.meta\"\n?? \"Duck Game MCP/Assets/_Agent/Data/Milestone0/\"\n?? \"Duck Game MCP/Assets/_Agent/MILESTONE_0_REPORT.md\"\n?? \"Duck Game MCP/Assets/_Agent/MILESTONE_0_REPORT.md.meta\"\n?? \"Duck Game MCP/CHANGELOG.md\"\n",
+    "alreadyStaged": "",
+    "whitespace": "",
+    "settingsDiff": "",
+    "scene": "Assets/_Agent/Scenes/Marshlight.unity",
+    "dirty": false,
+    "play": false,
+    "paused": false,
+    "compiling": false,
+    "counts": [
+      0,
+      0,
+      791
+    ]
+  },
+  "colliders": 59,
+  "missingScripts": 0,
+  "instances": {
+    "HealthBar": 1,
+    "MarshEquipmentHUD": 1,
+    "Player": 1,
+    "Weapon": 1,
+    "DuckFollower": 1,
+    "MarshLevel": 1,
+    "MarshCoinRelay": 1,
+    "RPGGameManager": 1,
+    "RPGCameraManager": 1,
+    "Inventory": 1
+  },
+  "testsBefore": 40,
+  "testsAfter": 41,
+  "walkerAssertions": 97,
+  "physicalRunUsedF6": false,
+  "screenshotCount": 17
+}

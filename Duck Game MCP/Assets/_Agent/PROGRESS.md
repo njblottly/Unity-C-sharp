@@ -1,6 +1,63 @@
 # Progress — Marshlight
 Updated 6 November 2026
 
+## Campaign expansion — Milestone 0
+Status: COMPLETE and verified. Run target Milestone 0 only; Milestone 1 has not started. Starting commit 229d2d757710c14bd9a008a10550b037db0d582a checkpoints the existing playable work. The closing commit records this planning, evidence and one additional test. Current report: MILESTONE_0_REPORT.md. Baseline scene remains Assets/_Agent/Scenes/Marshlight.unity, clean/saved in Edit Mode and unpaused.
+
+### Expansion milestones and acceptance gates
+- [x] 0 — Inventory/art audit, timed route, four-act/five-chapter plan, retained F6, completion regression, gate/checkpoint captures, final tests and closing commit. No gameplay changes.
+- [ ] 1 — Extend MarshStory/MarshLevel with CampaignData/ChapterData/SectionData, stable trigger policy, isolated five-main-gate campaign blockout and Act I/II beats. Keep baseline scene/tests. No new enemies/mechanics/bosses. Ask before build-scene/settings edits.
+- [ ] 2 — Configurable enemy agent composed with EnemyHitPoints/feedback; shared player damage/invincibility path, telegraphs/knockback, Skitter and Crab with safe lessons.
+- [ ] 3 — Wick Moth and Counterweight Sprout; section encounter assets and data-only HP/damage/speed/timing curve.
+- [ ] 4 — Duck Perches, Inspection Lantern, Return Mail Routing, eight unique Reed Marks/journal; tutorials and exhaustive coin-state recovery checks.
+- [ ] 5 — Siltlock Tender and Storm Bell Engine using BossData, safe pre-boss checkpoints, equipment/coin recovery, phases, climax/twist. Boss death cannot pay a coin gate.
+- [ ] 6 — Chapter set pieces, environmental notes/visuals and full resolution/reunion. Handle source frame mismatch with visual-only adapters, preserve physics/references.
+- [ ] 7 — UI/readability, feedback/audio/master volume and data-only balance using fresh chapter timings; human validate the 25–32 minute target.
+
+### Findings and deliberate decisions
+- Read all five requested persistent paths (root CHANGELOG.md was missing), all 36 sources, 14 prefab assets, both scenes/dependencies and serialized connections. Detailed inventory and art audit: Data/Milestone0/ProjectInventory.json and ArtAudit.json. Before-document snapshots preserve prior design/history.
+- Actual movement is top-down XY, not side-view. Three main bells plus three relay gates, four checkpoints/patrols, twelve stories. Preserve controller/camera/input; no perspective conversion assumed.
+- Existing F6 cycles checkpoints only in Editor/development builds; F7 pacing already exists. Reused and verified; no duplicate manager/UI/debug handler added.
+- DESIGN v6 deliberately plans a four-act/five-chapter 25–32 minute campaign: four new normal foes, mini/final boss, three new mechanics and optional Reed Marks. Future definitions/gameplay remain unbuilt. Retain original twelve story IDs and Aiken/Duckduckgoose/Ada.
+- Actor art is mixed: duck/enemy 32x32 at PPU 32; Aiken has irregular large frames (sample 227x358) and many colors. Point/uncompressed/no mipmaps throughout. Duck has no continuous black exterior stroke. No art/importer edits.
+- Reuse Item/HitPoints/MarshStory/WeaponData and existing health/inventory/level composition. New definition schemas belong to their listed later milestones; no second run-state singleton.
+
+### Existing scripts changed / public API
+Only Assets/_Agent/Tests/PlayMode/MarshCoinRegressionTests.cs: appended UnityTest CurrentGameCompletesFromTitleWithAllStoriesAndThreeCoins. Verifies a real fresh title/replay, actual pickups, four checkpoint triggers, all bells/relay, twelve story IDs, victory with three coins/zero escrow and no F6. Existing methods/helpers intact. The test fixture gains this public test method; no production public API change. Fixtures position actors at runtime; the separate walker proves physical reachability without F6.
+
+No production source, scene, prefab, gameplay ScriptableObject, existing image/importer, package or input change. All 59 colliders remain, zero missing scripts, one each existing level/relay/managers/player/duck/inventory/health UI/weapon/equipment HUD. No scene rebuild needed; saved scene bytes unchanged.
+
+### Verification and cleanup
+- Baseline ALL 40 PlayMode cases pass, zero failures/skips; job 702f4e2b464d45cf83c1ce3ed4bad93e, SDK 15.201s.
+- Added completion case compiled cleanly before Play. Final ALL 41 cases pass, zero failures/skips; job 2d0418d12a054ea4b1cf777858b00116, SDK 15.558s. Existing coin/death/restart/replay/sword/art/telemetry cases preserved. Report test case counts; recorder's NUnit assertion count is unavailable (0), not a meaningful total.
+- Fresh physical title-to-victory run:97/97 walker assertions,70 steps,159.57 units; twelve stories/four checkpoints, three coins/zero escrow, no F6. Real movement, pickups, collision, sword hit/refund, contact damage and intentional defeat/restart.
+- Four F6 destinations and six physical gate views captured and console read at each; seventeen PNGs total. Called the same DebugTeleport entry point as the key; gate close-ups use Inspector references. No hardware-key injection or debug progression grants. Hardware F6 remains a human check.
+- Native console0 errors/0 warnings after compilation, during route, at each view and after final tests. Two initial pre-existing HandleUtility font notices recorded; no missing active-scene text font or loaded TMP text object. They did not recur. No suppression/disabled components.
+- MCP TestRunnerService temporarily saves DisableDomainReload; its source was inspected. The one-line persisted option residue was restored to exact starting EditorSettings.asset bytes after tests. No settings policy change; final settings/packages/input diff empty.
+- A temporary ngrok outage held the walker safely at checkpoint 0; resumed and excluded the hold from telemetry. Read-only git audit initially used an unscoped whitespace check and encountered unrelated log whitespace; scoped project checks clean. Unrelated pre-existing repository deletions, logs, layout and connection config are untouched/excluded from commits.
+- Assets/evidence persisted only after exiting Play. Scene clean, Edit Mode unpaused. Final scope audit and closing commit record only docs/evidence/test changes.
+
+### Current timing
+Fresh Milestone 0 route, 6 November 2026: the existing editor walker started at the real title and reached victory without F6. It passed 97/97 assertions across 70 steps and 159.57 world units. Active telemetry was 106.024 seconds (1:46.02); text advanced immediately, giving about 0.04 seconds recorded reading time. One death/restart was deliberate test input.
+
+| Current checkpoint interval | Active time | Deaths |
+| --- | ---: | ---: |
+| Landing to Reedbank | 29.76 s | 0 |
+| Reedbank to Archive | 27.76 s | 1, deliberate |
+| Archive to Haven | 44.90 s | 0 |
+| Haven to reunion | 3.60 s | 0 |
+| Total | 106.02 s | 1 |
+
+These are the current prototype's four intervals, not five campaign chapter timings. Simulation/checkpoint holds, including the MCP outage, are excluded; this is not wall time or a first-time human result. The five proposed chapters have no measured time yet. Time them as they are built, then validate the 25–32 minute campaign target with a human run.
+
+### Known limits / next run
+No known gameplay blocker in tested Editor states. Current short prototype is unchanged; the five campaign chapters and all new gameplay are plans only. Human reading/learning, hardware input feel, other aspect ratios, standalone builds and audio balance remain manual checks. Initial Editor font notices remain a diagnostic if they recur. Actor sources are not stylistically uniform.
+
+Next recommended bounded run: Milestone 1, story/progression data and an isolated campaign blockout. Do not start M2–M7 early. Ask before package/settings/build-scene edits.
+
+## Retained earlier history
+The following entries are historical checkpoints. Their pending states are superseded by the complete current-run status above and their corresponding delivery reports.
+
 ## Bell, letter and mailbox repair — 6 November 2026
 Status: COMPLETE and verified. New matching bell/letter/lantern art; six return mailboxes fixed to use full posts. 40/40 PlayMode cases (38 before), 97/97 no-F6 route assertions, 0 errors/warnings. All 59 colliders and serialized gameplay unchanged; all runtime sources unchanged. Fifteen captures, full route, replay and final scene audit complete. Saved in Edit Mode, unpaused. Current report: PROP_FINISH_REPORT.md; evidence: Data/PropFix20261106.
 
@@ -208,3 +265,6 @@ Full no-F6 title-to-victory walker passed 97/97 assertions over 159.57 world uni
 Pacing unchanged by content: mechanical active telemetry 106.01 seconds, sections 29.75 / 27.76 / 44.90 / 3.60; same 159.57-unit route. Dialogue is advanced immediately and the long held checkpoint during chat interruption is excluded. This is not a human timing result and adds no new pacing claim.
 
 No known gameplay blocker in tested Editor states. Other aspect ratios, hardware input feel, audio balance, human pacing and a standalone build remain manual checks. Broader character animation, relay-cup art and sound/master volume remain backlog. The initial editor guard used read-story count rather than authored-entry count and stopped before scene mutation; corrected before the successful build. Project compilation and final test/route runs are clean. Current report: PROP_FINISH_REPORT.md, including numbered human checks and top three backlog suggestions.
+
+## Campaign Milestone 0 — analysis checkpoint
+RUN TARGET Milestone 0 only. Started from git 229d2d757710c14bd9a008a10550b037db0d582a (scoped Assets/Packages/ProjectSettings checkpoint of the existing playable work; local logs/layout/connection config excluded). Read all five requested persistent paths (root CHANGELOG missing), all 36 sources, 14 prefab assets and both scene dependencies/component wiring. Baseline 40/40 tests pass. Actual game is top-down XY, not side-view: three main bells plus three relay gates, four checkpoints, four patrols, twelve stories. Preserve current controller/input; no viewpoint conversion in this run. Existing development-only F6 already cycles checkpoints; retain and verify it. Art audit recorded before any art work; no art is created this milestone. Two initial Editor HandleUtility font notices recorded; no missing scene/world text fonts or loaded TMP objects; fresh baseline tests clean. Full timed route, five-chapter/four-act design, milestone plan, basic completion regression, final tests and end commit remain.

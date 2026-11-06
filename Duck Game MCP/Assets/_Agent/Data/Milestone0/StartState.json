@@ -1,0 +1,11 @@
+{
+  "startingCommit": "229d2d757710c14bd9a008a10550b037db0d582a",
+  "baselineCases": 40,
+  "baselineTestJob": "702f4e2b464d45cf83c1ce3ed4bad93e",
+  "baselinePassed": 40,
+  "initialWarnings": [
+    "8405504: Can't Generate Mesh, No Font Asset has been assigned.\nUnityEditor.HandleUtility:BeginHandles () (at /Users/bokken/build/output/unity/unity/Editor/Mono/Handles/HandleUtility.cs:760)\n",
+    "8405504: Can't Generate Mesh, No Font Asset has been assigned.\nUnityEditor.HandleUtility:BeginHandles () (at /Users/bokken/build/output/unity/unity/Editor/Mono/Handles/HandleUtility.cs:760)\n"
+  ],
+  "scope": "Milestone 0 only: documents and completion safety test; retain existing F6; no gameplay changes."
+}

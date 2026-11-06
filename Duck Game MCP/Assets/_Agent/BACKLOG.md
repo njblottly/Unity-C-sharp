@@ -1,3 +1,36 @@
+# Marshlight campaign backlog
+Updated 6 November 2026. Only Milestone 0 is authorized in the current run. Milestone 0 is complete and verified. The full chapter/enemy/mechanic/boss designs are proposals for later bounded milestones, not implemented content.
+
+## Recommended next milestone
+Milestone 1: extend existing story/level coordination with chapter/section data, stable trigger policies and an isolated five-gate campaign blockout. Preserve the original scene and all completion/coin/sword regressions. Do not implement the later enemy roster or mechanics during that run. Ask before changing build settings or packages.
+
+## Suggested next three
+1. Milestone 1: chapter/section/story data and isolated five-gate campaign blockout, with ActI/II delivery and the original scene preserved.
+2. A fresh human timed baseline without F6: check sword/coin clarity and confirm the preserved top-down perspective before campaign production.
+3. Plan the visual adapter for Aiken's irregular frames and replacement art specifications; implement art only in its scoped later milestone.
+
+## Decisions/risks to resolve at the relevant milestone
+- Current top-down XY movement differs from the side-view brief. Keep existing input/controller for now; a conversion needs a separate decision before implementation.
+- Source art is mixed: Aiken uses large irregular frames, duck/mite use 32x32. Specify a visual-only adapter before normalizing player art; never change root collider scale to make a sprite fit.
+- EnemyHitPoints and Weapon already own working damage/feedback. Extend their contracts to support data-driven foes and a boss health bar without double damage or twenty tiny boss pips. Preserve legacy contact tests.
+- Boss entry must not strand a player without a sword or carried coin. Make missed equipment and every outstanding loan recoverable before arena lock-in.
+- Build/scene order is Project Settings: prepare the campaign scene and Editor tests before requesting that separate settings change.
+- Initial Editor HandleUtility font notices have no identified missing scene font; investigate if reproducible, without masking errors or changing settings speculatively.
+
+## Planned, not built
+- Three mechanics: Duck Perches, Inspection Lantern and Return Mail Routing.
+- Reed Marks journal collectible (8), four new enemy types, one mini-boss and one final boss.
+- Per-section configuration, boss phases, full Act I–IV delivery, sound set/master volume and chapter visuals.
+- Exhaustive reachable-state checks for the combined lamp/perch/routing coin economy.
+
+## Outside the agreed expansion
+- Shields, parry system, extra weapon variants, crafting/rarities, persistent metaprogression, procedural levels, additional chapters, platforming/jumps and package/input migration are deferred.
+- Do not add these while implementing a named milestone merely because a related system is being edited.
+
+## Human validation
+Time the current prototype and, later, each campaign chapter without F6; assess sword/coin clarity, duck behavior, telegraphs, journal discoverability, other aspect ratios and audio. The proposed 25–32 minute campaign time is not yet a measured result.
+
+## Existing backlog retained for reference
 # Marshlight backlog
 Updated 6 November 2026. Iteration 1, outdoor-art/name pass, and the authorized mailbox/signpost/sword extension are complete and verified.
 

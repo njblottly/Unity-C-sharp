@@ -550,6 +550,39 @@ namespace Marshlight.PlayModeTests
             Check((int)Read(level, "RecoverableCoins") == 3 && ((Array)Read(BoundField(level, "story"), "Entries")).Length == 12, "Prop interactions conserve the existing game state");
         }
 
+        [UnityTest]
+        public IEnumerator CurrentGameCompletesFromTitleWithAllStoriesAndThreeCoins()
+        {
+            // Fast progression contract. Fixture positioning is deliberate; the separate
+            // editor walker proves the actual collidable route without F6.
+            Call(level, "RestartRun"); yield return null; yield return null; Bind();
+            Check(State == "Intro" && Balance == 0 && Escrow == 0, "Completion regression starts at the real title with an empty inventory");
+            Check((int)Read(level, "BellsOpened") == 0 && (int)Read(level, "RecoverableCoins") == 3, "A fresh run has closed bells and only its original three coins");
+            Call(Read(level, "Pacing"), "SetRunLabel", "milestone0-completion");
+            Call(level, "Begin"); Dismiss();
+            MonoBehaviour[] coins = Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None)
+                .Where(b => b.GetType().FullName == "Consumable" && Field(Field(b, "item"), "itemType").ToString() == "COIN").ToArray();
+            Check(coins.Length == 3, "Completion uses the actual three scene pickups");
+            foreach (MonoBehaviour coin in coins) { Warp(coin.transform.position); yield return new WaitForFixedUpdate(); yield return null; }
+            Check(Balance == 3 && Escrow == 0, "All real coin pickups are conserved");
+            yield return PickupSword(); Use("keeper-note");
+            Warp(Node("checkpoint-0").transform.position); yield return new WaitForFixedUpdate(); yield return null;
+            Use("bell-0"); Use("tray-0");
+            Warp(Node("checkpoint-1").transform.position); yield return new WaitForFixedUpdate(); yield return null;
+            Use("reed-note"); Use("archive-note"); Use("bell-1"); Use("tray-1");
+            Warp(Node("checkpoint-2").transform.position); yield return new WaitForFixedUpdate(); yield return null;
+            Use("relay-reed-cup"); Use("relay-spill-cup"); Use("storm-note"); Use("archive-pocket");
+            Use("relay-reed-tray"); Use("relay-exit-cup"); Use("relay-spill-tray"); Use("relay-exit-tray");
+            Use("bell-2"); Use("tray-2");
+            Warp(Node("checkpoint-3").transform.position); yield return new WaitForFixedUpdate(); yield return null;
+            Check((int)Read(level, "CheckpointIndex") == 3, "All four real checkpoint triggers remain usable");
+            FinishWithThreeCoins();
+            string[] ids = { "intro", "letter", "sword", "bell1", "ledger", "flood", "bell2", "exchange", "archive-pocket", "promise", "bell3", "ending" };
+            Check(ids.All(id => (bool)Call(level, "HasRead", id)) && (int)Read(level, "StoryCount") == 12, "Title-to-ending sequence retains all twelve story entries");
+            Check(State == "Won" && Balance == 3 && Escrow == 0 && (int)Read(level, "RecoverableCoins") == 3, "The current game can finish with no missing or duplicated coins");
+            Check(!(bool)Read(Read(level, "Pacing"), "Teleported"), "Completion never invokes F6 or grants debug progression");
+        }
+
 
     }
 }
