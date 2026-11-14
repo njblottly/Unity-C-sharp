@@ -1,0 +1,117 @@
+{
+  "scene": "Assets/_Agent/Scenes/Marshlight_Campaign.unity",
+  "dirty": false,
+  "originalSceneSame": true,
+  "baselineSHA": "024CBE0337605493CF34DDC44398E29EE5CD3F57DA634A6BD0FF2BF25870DA89",
+  "oldScripts": 36,
+  "changedScripts": [
+    "Assets/Scripts/MonoBehaviours/DuckFollower.cs",
+    "Assets/Scripts/MonoBehaviours/EnemyHitPoints.cs",
+    "Assets/Scripts/MonoBehaviours/Player.cs",
+    "Assets/_Agent/Scripts/MarshEnemyFeedback.cs",
+    "Assets/_Agent/Scripts/MarshLevel.cs",
+    "Assets/_Agent/Scripts/MarshNode.cs",
+    "Assets/_Agent/Scripts/MarshPacingTelemetry.cs",
+    "Assets/_Agent/Scripts/MarshPatrol.cs",
+    "Assets/_Agent/Scripts/MarshStory.cs",
+    "Assets/_Agent/Scripts/Weapon.cs"
+  ],
+  "newScriptCount": 35,
+  "missingScripts": 0,
+  "counts": [
+    {
+      "type": "MarshLevel",
+      "count": 1
+    },
+    {
+      "type": "MarshCampaign",
+      "count": 1
+    },
+    {
+      "type": "RPGGameManager",
+      "count": 1
+    },
+    {
+      "type": "RPGCameraManager",
+      "count": 1
+    },
+    {
+      "type": "Player",
+      "count": 1
+    },
+    {
+      "type": "DuckFollower",
+      "count": 1
+    },
+    {
+      "type": "Inventory",
+      "count": 1
+    },
+    {
+      "type": "HealthBar",
+      "count": 1
+    },
+    {
+      "type": "Weapon",
+      "count": 1
+    },
+    {
+      "type": "MarshEquipmentHUD",
+      "count": 1
+    }
+  ],
+  "enemies": 12,
+  "perches": 3,
+  "mechanics": 7,
+  "marks": 8,
+  "stories": 17,
+  "audit": {
+    "states": 203,
+    "transitions": 783,
+    "endingStates": 2,
+    "recoverableStates": 203,
+    "conserved": true,
+    "allCanFinish": true,
+    "stages": [
+      2,
+      2,
+      4,
+      1,
+      78,
+      2,
+      28,
+      4,
+      64,
+      2,
+      16
+    ],
+    "relayPhaseCoverage": [
+      7,
+      7,
+      7
+    ],
+    "routePhaseCoverage": [
+      15,
+      15
+    ],
+    "lampCombinationCoverage": 15,
+    "scope": "All reachable loan/claim/reroute/lamp/sword/perch/death resource states. Marks are independent cosmetic bits; physical geometry checked separately."
+  },
+  "weaponCost": 1,
+  "mainCosts": [
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "relayCosts": [
+    2,
+    1,
+    2
+  ],
+  "temporaryScenes": [],
+  "input": [
+    "  activeInputHandler: 0"
+  ]
+}

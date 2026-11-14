@@ -1,0 +1,31 @@
+{
+  "state": "Intro",
+  "bells": 0,
+  "hasSword": false,
+  "swiping": false,
+  "borrowed": 0,
+  "enemies": [
+    {
+      "name": "MarshMite_2",
+      "hp": 3
+    },
+    {
+      "name": "MarshMite_4",
+      "hp": 3
+    },
+    {
+      "name": "MarshMite_1",
+      "hp": 3
+    },
+    {
+      "name": "MarshMite_3",
+      "hp": 3
+    }
+  ],
+  "pacingFiles": [
+    "Assets/_Agent/Data/OutdoorArt20261106/FullRoutePacing.json",
+    "Assets/_Agent/Data/OutdoorArt20261106/FullRoutePacing.json.meta",
+    "Assets/_Agent/Data/OutdoorArt20261106/MechanicalPacing.jsonl",
+    "Assets/_Agent/Data/OutdoorArt20261106/MechanicalPacing.jsonl.meta"
+  ]
+}

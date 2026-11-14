@@ -18,6 +18,13 @@ public class Player : Character
     private bool isDead;
 
     public bool IsDead => isDead;
+    public float InvulnerabilityRemaining => Mathf.Max(0,nextEnemyDamageTime-Time.time);
+    // All combat sources share this cooldown; TakeDamage retains its direct scripted-damage API.
+    public bool TryTakeEnemyDamage(int amount)
+    {
+        if(isDead||amount<=0||Time.time<nextEnemyDamageTime)return false;
+        nextEnemyDamageTime=Time.time+enemyDamageCooldown;TakeDamage(amount);return true;
+    }
     public Inventory PlayerInventory => inventory;
     [SerializeField] private Inventory sceneInventory;
     [SerializeField] private HealthBar sceneHealthBar;
@@ -52,7 +59,7 @@ public class Player : Character
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TryTakeEnemyContactDamage();
+            TryTakeEnemyContactDamage(collision);
             return;
         }
 
@@ -66,7 +73,7 @@ public class Player : Character
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TryTakeEnemyContactDamage();
+            TryTakeEnemyContactDamage(collision);
         }
     }
 
@@ -115,20 +122,15 @@ public class Player : Character
         }
     }
 
-    private void TryTakeEnemyContactDamage()
+    private void TryTakeEnemyContactDamage(Collider2D source)
     {
-        if (isDead)
-        {
-            return;
-        }
-
-        if (Time.time < nextEnemyDamageTime)
-        {
-            return;
-        }
-
-        TakeDamage(enemyTouchDamage);
-        nextEnemyDamageTime = Time.time + enemyDamageCooldown;
+        EnemyHitPoints health=source.GetComponentInParent<EnemyHitPoints>();
+        if(health==null)throw new System.InvalidOperationException("Enemy contact has no EnemyHitPoints: "+source.name);
+        if(health.IsDead)return;
+        DuckAdventure.Agent.EnemyAgent agent=source.GetComponentInParent<DuckAdventure.Agent.EnemyAgent>();
+        DuckAdventure.Agent.MarshPatrol patrol=source.GetComponentInParent<DuckAdventure.Agent.MarshPatrol>();
+        int damage=agent!=null?agent.Data.contactDamage:patrol!=null&&patrol.Definition!=null?patrol.Definition.contactDamage:enemyTouchDamage;
+        TryTakeEnemyDamage(damage);
     }
 
     public bool AdjustHitPoints(int amount)
@@ -249,4 +251,3 @@ public class Player : Character
         gameObject.SetActive(false);
     }
 }
-

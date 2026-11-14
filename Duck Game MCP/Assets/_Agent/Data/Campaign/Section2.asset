@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97640b36327a649998bbb400236986ea, type: 3}
+  m_Name: Section2
+  m_EditorClassIdentifier: Assembly-CSharp::DuckAdventure.Agent.SectionData
+  mainGate: {fileID: 11400000, guid: c8fe5dce9d9824ae5b36fe710669aba2, type: 2}
+  encounters:
+  - id: skitter-1
+    data: {fileID: 11400000, guid: 7fa45f5d2490e4c509f376ddf3b05631, type: 2}
+    position: {x: 35, y: 1.5}
+    pointA: {x: 34.2, y: 1.5}
+    pointB: {x: 35.8, y: 1.5}
+    resetOnCheckpoint: 1
+  - id: crab-1
+    data: {fileID: 11400000, guid: 133d95ce24f234314a0b132f27d10ba8, type: 2}
+    position: {x: 40, y: 0.8}
+    pointA: {x: 39.5, y: 0.8}
+    pointB: {x: 40.5, y: 0.8}
+    resetOnCheckpoint: 1
+  id: section-2
+  chapter: {fileID: 11400000, guid: 1d8fbeec9a400437a84e08d8bd8329a1, type: 2}
+  objective: Follow the keeper trail. Lend the same three coins to the Reedbank Bell.
+  start: {x: 22, y: 0}
+  end: {x: 50, y: 0}
+  storyIds:
+  - perch-intro
+  - ledger
+  - reedbank-bell
+  mechanicPermissions:
+  - perch

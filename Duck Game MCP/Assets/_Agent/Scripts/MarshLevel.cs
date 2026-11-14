@@ -20,6 +20,8 @@ namespace DuckAdventure.Agent
         [SerializeField] private Item coinItem;
         [Header("Level data")]
         [SerializeField] private MarshStory story;
+        [SerializeField] private MarshCampaign campaign;
+        [SerializeField] private MarshInteraction[] interactions = new MarshInteraction[0];
         [SerializeField] private MarshCoinRelay coinRelay;
         [SerializeField] private Weapon weapon;
         [SerializeField] private Consumable[] coinPickups;
@@ -61,13 +63,20 @@ namespace DuckAdventure.Agent
 #endif
         private readonly HashSet<string> readStories = new HashSet<string>();
         private readonly HashSet<string> reached = new HashSet<string>();
+        public MarshCampaign Campaign => campaign;
+        public MarshInteraction[] Interactions => interactions;
+        public int RequiredBells => campaign == null ? 3 : campaign.Data.sections.Length;
+        public string[] PacingSectionNames => campaign == null
+            ? new[] { "Landing to Reedbank", "Reedbank to Archive", "Archive to Haven", "Haven to reunion" }
+            : new[] { campaign.Data.chapters[0].displayName, campaign.Data.chapters[1].displayName, campaign.Data.chapters[2].displayName, campaign.Data.chapters[3].displayName, campaign.Data.chapters[4].displayName, "Haven reunion" };
+        public bool RequiresArchiveExchange(int sequence) => sequence == (campaign == null ? 2 : campaign.Data.archiveGateIndex);
         public MarshCoinRelay CoinRelay => coinRelay;
         public Weapon Weapon => weapon;
         public int CoinsInEscrow
         {
             get
             {
-                int total = coinRelay.CoinsInEscrow + weapon.BorrowedCoins;
+                int total = coinRelay.CoinsInEscrow + weapon.BorrowedCoins + (campaign==null?0:campaign.ExtraEscrow);
                 foreach (MarshNode node in nodes) total += node.OutstandingCoins;
                 return total;
             }
@@ -100,6 +109,8 @@ namespace DuckAdventure.Agent
         public MarshState State { get; private set; }
         public int BellsOpened { get; private set; }
         public int CheckpointIndex { get; private set; }
+        public bool JournalOpen {get;private set;}
+        public int JournalPage {get;private set;}
         public bool CanExplore => State == MarshState.Playing;
         public int StoryCount => readStories.Count;
         public bool HasRead(string id) => readStories.Contains(id);
@@ -114,7 +125,7 @@ namespace DuckAdventure.Agent
             State = MarshState.Intro;
             dialoguePanel.SetActive(false);
             SetFrozen(true);
-            ShowMenu("A DUCK ADVENTURE", "MARSHLIGHT", "The Borrowed Bells\n\nThe storm has silenced Rill Marsh. Aiken and Duckduckgoose must reopen the old causeways and bring the flock home.\n\nWASD / arrows: move    E: interact    Space / Enter: read\nJ / left click: swipe    Q: equip    Esc: pause\n\nFind Ada's sword and three reusable coins. Every loan comes back.", "BEGIN  /  ENTER");
+            ShowMenu("A DUCK ADVENTURE", "MARSHLIGHT", "The Borrowed Bells\n\nThe storm has silenced Rill Marsh. Aiken and Duckduckgoose must reopen the old causeways and bring the flock home.\n\nWASD / arrows: move    E: interact    Space / Enter: read\nJ / left click: swipe    Q: equip    Tab: journal    Esc: pause\n\nFind Ada's sword and three reusable coins. Every loan comes back.", "BEGIN  /  ENTER");
             UpdateHud();
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
             MarshPacingTelemetry[] existing = FindObjectsByType<MarshPacingTelemetry>(FindObjectsInactive.Include, FindObjectsSortMode.None);
@@ -127,15 +138,30 @@ namespace DuckAdventure.Agent
 
         private void ValidateReferences()
         {
-            if (weapon == null || coinRelay == null || coinPickups == null || coinPickups.Length != 3 || player == null || movement == null || duck == null || gameManager == null || cameraManager == null || coinItem == null || story == null || nodes == null || checkpoints == null || checkpoints.Length != 4)
+            if (weapon == null || coinRelay == null || coinPickups == null || coinPickups.Length != 3 || player == null || movement == null || duck == null || gameManager == null || cameraManager == null || coinItem == null || story == null || nodes == null || checkpoints == null || checkpoints.Length != RequiredBells + 1 || checkpointNames == null || checkpointNames.Length != checkpoints.Length || interactions == null)
                 throw new InvalidOperationException("MarshLevel has missing gameplay references. Run Tools/Duck Adventure/Validate Marshlight in Edit Mode.");
             if (hudRoot == null || inventoryCanvas == null || objectiveText == null || chapterText == null || coinText == null || promptText == null || toastText == null || dialoguePanel == null || speakerText == null || dialogueText == null || menuPanel == null || menuTitle == null || menuBody == null || primaryLabel == null || damageFlash == null || ledgerText == null || feedbackParticles == null)
                 throw new InvalidOperationException("MarshLevel has missing UI references.");
+            story.ValidateData();
+            if (campaign != null) { campaign.ValidateReferences(); if (campaign.Level != this) throw new InvalidOperationException("Campaign is bound to another level."); }
+            foreach (MarshInteraction interaction in interactions) if (interaction == null || interaction.Owner != this) throw new InvalidOperationException("Missing/misbound interaction reference.");
+        }
+
+        public bool CanReadStory(string id)
+        {
+            MarshStory.Entry entry = story.Get(id);
+            if (entry.oncePerRun && readStories.Contains(id)) return false;
+            if (!string.IsNullOrEmpty(entry.requiredCapability) && (campaign == null || !campaign.HasCapability(entry.requiredCapability))) return false;
+            foreach (string prerequisite in entry.prerequisites) if (!readStories.Contains(prerequisite)) return false;
+            return true;
         }
 
         private void Update()
         {
-            if (State == MarshState.Intro && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))) Begin();
+            if(JournalOpen&&(Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Return)||Input.GetKeyDown(KeyCode.RightArrow)))ChangeJournalPage(1);
+            else if(JournalOpen&&Input.GetKeyDown(KeyCode.LeftArrow))ChangeJournalPage(-1);
+            else if(campaign!=null&&(CanExplore||JournalOpen)&&Input.GetKeyDown(KeyCode.Tab))ToggleJournal();
+            else if (State == MarshState.Intro && (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))) Begin();
             else if (State == MarshState.Dialogue && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.E))) AdvanceStory();
             else if (State == MarshState.Defeat && (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.Return))) RestartCheckpoint();
             else if (State == MarshState.Won && Input.GetKeyDown(KeyCode.R)) RestartRun();
@@ -151,8 +177,21 @@ namespace DuckAdventure.Agent
                     float d = Vector2.Distance(player.transform.position, node.transform.position);
                     if (d < distance) { nearest = node; distance = d; }
                 }
-                promptText.text = nearest == null ? "WASD MOVE   E INTERACT   J / CLICK SWIPE   Q EQUIP   ESC PAUSE" : nearest.Prompt;
-                if (nearest != null && Input.GetKeyDown(KeyCode.E)) nearest.TryInteract();
+                promptText.text = nearest == null ? "WASD MOVE   E INTERACT   J / CLICK SWIPE   Q EQUIP   TAB JOURNAL   ESC PAUSE" : nearest.Prompt;
+                MarshInteraction extension = null;
+                if (nearest != null) distance = Vector2.Distance(player.transform.position, nearest.transform.position);
+                foreach (MarshInteraction interaction in interactions)
+                {
+                    if (!interaction.gameObject.activeInHierarchy || !interaction.IsAvailable) continue;
+                    float d = Vector2.Distance(player.transform.position, interaction.transform.position);
+                    if (d < distance) { extension = interaction; distance = d; }
+                }
+                if (extension != null) promptText.text = extension.Prompt;
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    if (extension != null) extension.TryInteract();
+                    else if (nearest != null) nearest.TryInteract();
+                }
             }
             else promptText.text = "";
             if (player.hitPoints.value < lastHealth) { Pulse(player.transform.position, new Color(1f, 0.35f, 0.27f)); damageFlash.color = new Color(1f, 0.2f, 0.15f, 0.22f); }
@@ -184,14 +223,18 @@ namespace DuckAdventure.Agent
 
         public void PrimaryAction()
         {
-            if (State == MarshState.Intro) Begin();
+            if(JournalOpen)ChangeJournalPage(1);
+            else if (State == MarshState.Intro) Begin();
             else if (State == MarshState.Paused) TogglePause();
             else if (State == MarshState.Defeat) RestartCheckpoint();
             else if (State == MarshState.Won) RestartRun();
         }
 
-        public void ShowStory(string id)
+        public void ShowStory(string id) { TryShowStory(id); }
+
+        public bool TryShowStory(string id)
         {
+            if (!CanReadStory(id)) return false;
             activeEntry = story.Get(id);
             readStories.Add(id);
             page = 0;
@@ -201,6 +244,7 @@ namespace DuckAdventure.Agent
             inventoryCanvas.enabled = true;
             dialoguePanel.SetActive(true);
             RenderPage();
+            return true;
         }
 
         private void RenderPage()
@@ -223,7 +267,7 @@ namespace DuckAdventure.Agent
         public void BellOpened(MarshNode node)
         {
             BellsOpened++;
-            Notify("Bell " + BellsOpened + "/3 rings. Cross east and reclaim your coins.");
+            Notify("Bell " + BellsOpened + "/" + RequiredBells + " rings. Cross east and reclaim your coins.");
         }
 
         public void ReachCheckpoint(MarshNode node, SpawnPoint spawn)
@@ -285,11 +329,12 @@ namespace DuckAdventure.Agent
 
         public void TogglePause()
         {
+            if(JournalOpen){ToggleJournal();return;}
             if (State == MarshState.Playing)
             {
                 State = MarshState.Paused;
                 SetFrozen(true);
-                ShowMenu("TAKE A BREATH", "AT THE WATER'S EDGE", "The tide can wait.\n\nWASD / arrows: move    E: interact    Esc: resume\nJ / left click: swipe    Q: equip or pack\nA swipe borrows one carried coin, then returns it.\nRecover the same three coins at every crossing.\n\nCheckpoint: " + checkpointNames[CheckpointIndex], "RESUME  /  ESC");
+                ShowMenu("TAKE A BREATH", "AT THE WATER'S EDGE", "The tide can wait.\nWASD / arrows: move    E: interact    Esc: resume\nJ / click: swipe    Q: equip / pack    Tab: journal\nPerches: E call / recall; inspect inside to latch.\nLamps: E inspect / refund. Mail: E send / reroute.\nA swipe borrows one coin. Every loan comes back.\nReed Marks: 4 earn a badge; 8 add a closing memory.\nCheckpoint: " + checkpointNames[CheckpointIndex], "RESUME  /  ESC");
             }
             else if (State == MarshState.Paused)
             {
@@ -301,9 +346,32 @@ namespace DuckAdventure.Agent
             }
         }
 
+        public void ToggleJournal()
+        {
+            if(campaign==null)return;
+            if(JournalOpen)
+            {
+                JournalOpen=false;menuPanel.SetActive(false);hudRoot.SetActive(true);inventoryCanvas.enabled=true;State=MarshState.Playing;SetFrozen(false);return;
+            }
+            if(!CanExplore)return;
+            JournalOpen=true;State=MarshState.Paused;SetFrozen(true);
+            JournalPage=0;RenderJournal();
+        }
+
+        public void ChangeJournalPage(int direction)
+        {
+            if(!JournalOpen)return;
+            int count=campaign.JournalPages.Length;JournalPage=(JournalPage+direction%count+count)%count;RenderJournal();
+        }
+        private void RenderJournal()
+        {
+            var pages=campaign.JournalPages;
+            ShowMenu("A POCKET OF MEMORIES","REED JOURNAL "+(JournalPage+1)+" / "+pages.Length,pages[JournalPage],"NEXT / SPACE    CLOSE / TAB");
+        }
+
         public bool TryWin()
         {
-            if (!CanExplore || BellsOpened != 3 || Vector2.Distance(player.transform.position, havenPosition) > 1.7f) return false;
+            if (!CanExplore || BellsOpened != RequiredBells || Vector2.Distance(player.transform.position, havenPosition) > 1.7f) return false;
             if (Vector2.Distance(duck.transform.position, player.transform.position) > 2.2f) { Notify("Wait for Duckduckgoose to catch up, then step into the lantern circle."); return false; }
             foreach (MarshNode node in nodes)
                 if (node.Kind == MarshNodeKind.ReturnTray && !node.Reclaimed)
@@ -312,6 +380,7 @@ namespace DuckAdventure.Agent
                     return false;
                 }
             if (!coinRelay.Completed) { Notify(coinRelay.Objective); return false; }
+            if(campaign!=null){campaign.FreezeLoans();if(campaign.ExtraEscrow!=0){Notify("Recover addressed mail and lamp coins before the reunion.");return false;}}
             weapon.InterruptSwing();
             if (weapon.BorrowedCoins != 0) { Notify("Make inventory space to recover the sword coin before joining the flock."); return false; }
             AssertCoinConservation();
@@ -328,7 +397,7 @@ namespace DuckAdventure.Agent
 #endif
             SetFrozen(true);
             int seconds = Mathf.RoundToInt(elapsed);
-            ShowMenu("THE FLOCK IS HOME", "THREE BELLS. ONE WAY HOME.", "Aiken opened the causeways. Duckduckgoose found the flock.\nAda's bells are ready for whoever comes next.\n\nBells restored: 3 / 3     Notes and voices: " + readStories.Count + " / " + story.Entries.Length + "\nExploration time: " + (seconds / 60) + "m " + (seconds % 60) + "s", "PLAY AGAIN  /  R");
+            ShowMenu("THE FLOCK IS HOME", campaign == null ? "THREE BELLS. ONE WAY HOME." : "FIVE BELLS. ONE WAY HOME.", "Aiken opened the causeways. Duckduckgoose found the flock.\nAda's bells are ready for whoever comes next.\n\nBells restored: " + BellsOpened + " / " + RequiredBells + "     Notes and voices: " + readStories.Count + " / " + story.Entries.Length + "\nExploration time: " + (seconds / 60) + "m " + (seconds % 60) + "s" + (campaign==null?"":("\n\n"+campaign.EndingCoda)), "PLAY AGAIN  /  R");
         }
 
         public void RestartRun()
@@ -340,7 +409,7 @@ namespace DuckAdventure.Agent
 
         private void SetFrozen(bool value)
         {
-            if (value) weapon.InterruptSwing();
+            if (value){weapon.InterruptSwing();if(campaign!=null)campaign.FreezeLoans();}
             movement.SetInputEnabled(!value);
             Time.timeScale = value ? 0f : 1f;
         }
@@ -362,7 +431,13 @@ namespace DuckAdventure.Agent
             int effectiveCoins = carriedCoins + weapon.BorrowedCoins;
             coinText.text = "BRASS  " + carriedCoins.ToString("00") + (weapon.BorrowedCoins > 0 ? " (+" + weapon.BorrowedCoins + ")" : "");
             chapterText.text = "RILL MARSH  /  " + checkpointNames[CheckpointIndex].ToUpperInvariant();
-            ledgerText.text = "BELLS  " + BellsOpened + " / 3";
+            ledgerText.text = "BELLS "+BellsOpened+"/"+RequiredBells+(campaign==null?"":"  MARKS "+campaign.MarkCount+"/8"+(campaign.HasBadge?" BADGE":""));
+            if (campaign != null)
+            {
+                chapterText.text = "RILL MARSH / " + campaign.ChapterName.ToUpperInvariant();
+                objectiveText.text = campaign.Objective;
+                return;
+            }
             if (BellsOpened == 0) objectiveText.text = "Gather three brass coins. Find the first bell to the east.";
             else if (BellsOpened == 3 && effectiveCoins < 3) objectiveText.text = "Cross the last causeway. Recover your coins from its brass return tray.";
             else if (BellsOpened == 3) objectiveText.text = "Reach Lantern Haven in the east. Bring Duckduckgoose into the lantern circle.";
@@ -394,4 +469,3 @@ namespace DuckAdventure.Agent
         }
     }
 }
-

@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97640b36327a649998bbb400236986ea, type: 3}
+  m_Name: Section5
+  m_EditorClassIdentifier: Assembly-CSharp::DuckAdventure.Agent.SectionData
+  mainGate: {fileID: 11400000, guid: 8045ea811f1594b94bda172f4c19b0da, type: 2}
+  encounters:
+  - id: skitter-4
+    data: {fileID: 11400000, guid: d1521bc08513d42748a960b23eb60062, type: 2}
+    position: {x: 128, y: -2}
+    pointA: {x: 127.2, y: -2}
+    pointB: {x: 128.8, y: -2}
+    resetOnCheckpoint: 1
+  - id: crab-4
+    data: {fileID: 11400000, guid: 878da916eff254c4ca79ed85fb308a00, type: 2}
+    position: {x: 133, y: 3}
+    pointA: {x: 132.5, y: 3}
+    pointB: {x: 133.5, y: 3}
+    resetOnCheckpoint: 1
+  - id: legacy-mite-5
+    data: {fileID: 11400000, guid: 1cc38542cd48f4c9fa1f718d6483e220, type: 2}
+    position: {x: 157, y: 3}
+    pointA: {x: 156, y: 3}
+    pointB: {x: 158, y: 3}
+    resetOnCheckpoint: 0
+  - id: moth-4
+    data: {fileID: 11400000, guid: f6456b7abc99144c49cda53e4104730e, type: 2}
+    position: {x: 142, y: 2}
+    pointA: {x: 141.35, y: 2}
+    pointB: {x: 142.65, y: 2}
+    resetOnCheckpoint: 1
+  - id: sprout-4
+    data: {fileID: 11400000, guid: e0d6cd7ad895b442fb6f1e7b9c0c93db, type: 2}
+    position: {x: 146, y: -2}
+    pointA: {x: 145.65, y: -2}
+    pointB: {x: 146.35, y: -2}
+    resetOnCheckpoint: 1
+  id: section-5
+  chapter: {fileID: 11400000, guid: 27d4fed3b4ea24477a51a73a7288e6de, type: 2}
+  objective: Follow the keeper trail. Lend the same three coins to the Haven Bell.
+  start: {x: 120, y: 0}
+  end: {x: 154, y: 0}
+  storyIds:
+  - bell3
+  - ending
+  mechanicPermissions:
+  - perch
+  - lantern
+  - routing

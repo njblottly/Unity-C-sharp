@@ -1,0 +1,11 @@
+{
+  "name": "Marshlight.TestRecording",
+  "references": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": false
+}

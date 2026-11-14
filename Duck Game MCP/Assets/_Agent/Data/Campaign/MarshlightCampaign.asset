@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e83ba59019ef64b42a9b76ace07dd3f8, type: 3}
+  m_Name: MarshlightCampaign
+  m_EditorClassIdentifier: Assembly-CSharp::DuckAdventure.Agent.CampaignData
+  chapters:
+  - {fileID: 11400000, guid: 4d7861c34a58b48659addabb8b9df47c, type: 2}
+  - {fileID: 11400000, guid: 1d8fbeec9a400437a84e08d8bd8329a1, type: 2}
+  - {fileID: 11400000, guid: 34c0022d0d650401fab9fa0f88bbc097, type: 2}
+  - {fileID: 11400000, guid: bb2152fb0ee6c4d77b37a3c4eb10bcaf, type: 2}
+  - {fileID: 11400000, guid: 27d4fed3b4ea24477a51a73a7288e6de, type: 2}
+  sections:
+  - {fileID: 11400000, guid: 3480a6823a402434bb4fc557308c13d3, type: 2}
+  - {fileID: 11400000, guid: 6086aaa99c5cf403ba76911a6481f2b4, type: 2}
+  - {fileID: 11400000, guid: 9b98ab9e48a514c1ea772ee23ceac61c, type: 2}
+  - {fileID: 11400000, guid: e767b582c7e144a7295aafbc21117d9a, type: 2}
+  - {fileID: 11400000, guid: eccd6153e76a147858493731889559c7, type: 2}
+  story: {fileID: 11400000, guid: 751666559aa714a349e5bde5910ce72b, type: 2}
+  archiveGateIndex: 2
+  endingStory: ending

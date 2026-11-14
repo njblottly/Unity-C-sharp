@@ -1,0 +1,54 @@
+{
+    "utc": "2026-11-06T13:39:50.6515070Z",
+    "runId": "20261106-132924-baa17707",
+    "runLabel": "campaign-mechanical",
+    "eventName": "snapshot",
+    "detail": "",
+    "amount": 0,
+    "section": 5,
+    "teleported": false,
+    "sections": [
+        {
+            "name": "Keeper's Landing",
+            "activeSeconds": 111.49995422363281,
+            "readingSeconds": 0.10007095336914063,
+            "deaths": 1,
+            "completed": true
+        },
+        {
+            "name": "Listening Reeds",
+            "activeSeconds": 27.5007381439209,
+            "readingSeconds": 0.0,
+            "deaths": 0,
+            "completed": true
+        },
+        {
+            "name": "The Old Archive",
+            "activeSeconds": 67.50021362304688,
+            "readingSeconds": 0.09975762665271759,
+            "deaths": 0,
+            "completed": true
+        },
+        {
+            "name": "Storm Locks",
+            "activeSeconds": 31.098983764648439,
+            "readingSeconds": 0.0,
+            "deaths": 0,
+            "completed": true
+        },
+        {
+            "name": "Lantern Haven",
+            "activeSeconds": 28.59833526611328,
+            "readingSeconds": 0.0,
+            "deaths": 0,
+            "completed": true
+        },
+        {
+            "name": "Haven reunion",
+            "activeSeconds": 11.00255012512207,
+            "readingSeconds": 0.09981058537960053,
+            "deaths": 0,
+            "completed": true
+        }
+    ]
+}

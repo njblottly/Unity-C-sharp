@@ -1,0 +1,1051 @@
+fileFormatVersion: 2
+guid: f2184667df38b4421b44c20f2e488df8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1611629639520528485
+    second: Topdown RPG 32x32 - Rocks 1.1_0
+  - first:
+      213: 4243500081492597566
+    second: Topdown RPG 32x32 - Rocks 1.1_1
+  - first:
+      213: -3803216653933679297
+    second: Topdown RPG 32x32 - Rocks 1.1_2
+  - first:
+      213: 5856389926991653521
+    second: Topdown RPG 32x32 - Rocks 1.1_3
+  - first:
+      213: 6698197266397290313
+    second: Topdown RPG 32x32 - Rocks 1.1_4
+  - first:
+      213: -4268456185838443258
+    second: Topdown RPG 32x32 - Rocks 1.1_5
+  - first:
+      213: -33350585097926836
+    second: Topdown RPG 32x32 - Rocks 1.1_6
+  - first:
+      213: 2611348502401005391
+    second: Topdown RPG 32x32 - Rocks 1.1_7
+  - first:
+      213: -5685872728814978715
+    second: Topdown RPG 32x32 - Rocks 1.1_8
+  - first:
+      213: 7486598432550231472
+    second: Topdown RPG 32x32 - Rocks 1.1_9
+  - first:
+      213: -6250899171434458364
+    second: Topdown RPG 32x32 - Rocks 1.1_10
+  - first:
+      213: -8242759910228788695
+    second: Topdown RPG 32x32 - Rocks 1.1_11
+  - first:
+      213: -651990733652958016
+    second: Topdown RPG 32x32 - Rocks 1.1_12
+  - first:
+      213: -5212822431782368161
+    second: Topdown RPG 32x32 - Rocks 1.1_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 6}
+        - {x: 9, y: 6}
+        - {x: 6, y: 4}
+        - {x: -7, y: -9}
+        - {x: -7, y: -10}
+        - {x: -11, y: -14}
+        - {x: -11, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: b9753e2b16752a9e0800000000000000
+      internalID: -1611629639520528485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 10, y: -12}
+        - {x: 8, y: -8}
+        - {x: 1, y: -1}
+        - {x: -4, y: -1}
+        - {x: -6, y: 1}
+        - {x: -11, y: 2}
+        - {x: -13, y: 4}
+        - {x: -16, y: 5}
+        - {x: -16, y: -16}
+        - {x: 11, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: e3b15b157d0f3ea30800000000000000
+      internalID: 4243500081492597566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -1}
+        - {x: 14, y: -1}
+        - {x: 6, y: -5}
+        - {x: 3, y: -5}
+        - {x: 2, y: -6}
+        - {x: -3, y: -7}
+        - {x: -6, y: -9}
+        - {x: -8, y: -9}
+        - {x: -10, y: -10}
+        - {x: -15, y: -15}
+        - {x: -15, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f3dee628a92483bc0800000000000000
+      internalID: -3803216653933679297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 9, y: -12}
+        - {x: 8, y: -4}
+        - {x: 6, y: 0}
+        - {x: 2, y: 4}
+        - {x: -3, y: 4}
+        - {x: -6, y: 2}
+        - {x: -13, y: 1}
+        - {x: -16, y: -1}
+        - {x: -16, y: -16}
+        - {x: 9, y: -16}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 19a63803c93164150800000000000000
+      internalID: 5856389926991653521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -10}
+        - {x: 14, y: -9}
+        - {x: 16, y: -10}
+        - {x: 16, y: 9}
+        - {x: 11, y: 8}
+        - {x: 10, y: 7}
+        - {x: 6, y: 7}
+        - {x: 5, y: 6}
+        - {x: -1, y: 6}
+        - {x: -2, y: 5}
+        - {x: -6, y: 5}
+        - {x: -7, y: 4}
+        - {x: -13, y: 4}
+        - {x: -15, y: 2}
+        - {x: -15, y: -8}
+        - {x: -14, y: -9}
+        - {x: -12, y: -10}
+        - {x: -9, y: -10}
+        - {x: -8, y: -11}
+        - {x: -1, y: -11}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 94f5a1bdce6c4fc50800000000000000
+      internalID: 6698197266397290313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -10}
+        - {x: 8, y: -9}
+        - {x: 11, y: -6}
+        - {x: 13, y: -5}
+        - {x: 13, y: 0}
+        - {x: 11, y: 4}
+        - {x: 11, y: 7}
+        - {x: 6, y: 12}
+        - {x: 2, y: 12}
+        - {x: -1, y: 11}
+        - {x: -2, y: 10}
+        - {x: -6, y: 10}
+        - {x: -7, y: 9}
+        - {x: -16, y: 9}
+        - {x: -16, y: -10}
+        - {x: -13, y: -10}
+        - {x: -12, y: -11}
+        - {x: -9, y: -11}
+        - {x: -8, y: -12}
+        - {x: -1, y: -12}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 605e7c7d6b563c4c0800000000000000
+      internalID: -4268456185838443258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 12, y: -12}
+        - {x: 16, y: -12}
+        - {x: 16, y: 3}
+        - {x: 13, y: 3}
+        - {x: 12, y: 2}
+        - {x: 7, y: 2}
+        - {x: 6, y: 1}
+        - {x: 2, y: 1}
+        - {x: 1, y: 0}
+        - {x: -5, y: 0}
+        - {x: -12, y: -7}
+        - {x: -12, y: -11}
+        - {x: -11, y: -12}
+        - {x: -8, y: -13}
+        - {x: 11, y: -13}
+      tessellationDetail: 1
+      bones: []
+      spriteID: c47cf2ec1d3898ff0800000000000000
+      internalID: -33350585097926836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -11}
+        - {x: 13, y: -3}
+        - {x: 13, y: 0}
+        - {x: 12, y: 1}
+        - {x: -4, y: 2}
+        - {x: -5, y: 3}
+        - {x: -16, y: 3}
+        - {x: -16, y: -12}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f473c5e90af5d3420800000000000000
+      internalID: 2611348502401005391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 9, y: -11}
+        - {x: 13, y: -8}
+        - {x: 14, y: -5}
+        - {x: 14, y: 0}
+        - {x: 8, y: 5}
+        - {x: 8, y: 11}
+        - {x: 6, y: 13}
+        - {x: 5, y: 13}
+        - {x: 3, y: 15}
+        - {x: -2, y: 15}
+        - {x: -10, y: 7}
+        - {x: -10, y: 0}
+        - {x: -12, y: -2}
+        - {x: -12, y: -10}
+        - {x: -11, y: -11}
+        - {x: -9, y: -11}
+        - {x: -8, y: -12}
+        - {x: -6, y: -12}
+        - {x: -2, y: -14}
+        - {x: 3, y: -14}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 569f6e0d0e8b711b0800000000000000
+      internalID: -5685872728814978715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -13}
+        - {x: 11, y: -8}
+        - {x: 11, y: -3}
+        - {x: 10, y: -2}
+        - {x: 10, y: 7}
+        - {x: 9, y: 11}
+        - {x: 6, y: 14}
+        - {x: 4, y: 14}
+        - {x: -9, y: 1}
+        - {x: -9, y: 0}
+        - {x: -14, y: -5}
+        - {x: -15, y: -7}
+        - {x: -15, y: -10}
+        - {x: -14, y: -11}
+        - {x: -11, y: -11}
+        - {x: -10, y: -12}
+        - {x: -4, y: -13}
+        - {x: -3, y: -14}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 0bd1724db9db5e760800000000000000
+      internalID: 7486598432550231472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -2, y: -7}
+        - {x: 3, y: -7}
+        - {x: 3, y: -5}
+        - {x: 4, y: -4}
+        - {x: 12, y: -4}
+        - {x: 14, y: -3}
+        - {x: 14, y: -1}
+        - {x: 12, y: 3}
+        - {x: 8, y: 7}
+        - {x: 3, y: 7}
+        - {x: 1, y: 5}
+        - {x: 0, y: 1}
+        - {x: -2, y: 0}
+        - {x: -7, y: 5}
+        - {x: -10, y: 5}
+        - {x: -15, y: 0}
+        - {x: -15, y: -6}
+        - {x: -14, y: -7}
+        - {x: -11, y: -7}
+        - {x: -10, y: -8}
+        - {x: -3, y: -8}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 4039ddf72585049a0800000000000000
+      internalID: -6250899171434458364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 11, y: -11}
+        - {x: 11, y: -7}
+        - {x: 10, y: -6}
+        - {x: 9, y: 4}
+        - {x: 2, y: 11}
+        - {x: -1, y: 11}
+        - {x: -8, y: 4}
+        - {x: -9, y: 0}
+        - {x: -12, y: -5}
+        - {x: -12, y: -8}
+        - {x: -5, y: -10}
+        - {x: -3, y: -10}
+        - {x: 3, y: -13}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 92a7bfd9885db9d80800000000000000
+      internalID: -8242759910228788695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -11, y: 16}
+        - {x: -11, y: 9}
+        - {x: -10, y: 8}
+        - {x: -8, y: 7}
+        - {x: -3, y: 7}
+        - {x: 2, y: 3}
+        - {x: 5, y: 2}
+        - {x: 11, y: -4}
+        - {x: 16, y: -4}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 0c4e4c3d1e9a3f6f0800000000000000
+      internalID: -651990733652958016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -14, y: -3}
+        - {x: -11, y: -3}
+        - {x: -7, y: 0}
+        - {x: -3, y: 0}
+        - {x: -2, y: 1}
+        - {x: 3, y: 1}
+        - {x: 6, y: 2}
+        - {x: 9, y: 5}
+        - {x: 11, y: 6}
+        - {x: 11, y: 8}
+        - {x: 12, y: 9}
+        - {x: 12, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -4}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f5c8c64fd9558a7b0800000000000000
+      internalID: -5212822431782368161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: -15, y: 16}
+        - {x: -15, y: 7}
+        - {x: -14, y: 6}
+        - {x: -11, y: 4}
+        - {x: -8, y: 4}
+        - {x: -7, y: 3}
+        - {x: -4, y: 3}
+        - {x: -3, y: 2}
+        - {x: 3, y: 1}
+        - {x: 13, y: -4}
+        - {x: 16, y: -4}
+      tessellationDetail: 1
+      bones: []
+      spriteID: c9a874960fc65482c95ee9a16fc75b80
+      internalID: -822612026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 9, y: 6}
+        - {x: 11, y: 7}
+        - {x: 11, y: 11}
+        - {x: 10, y: 12}
+        - {x: 10, y: 15}
+        - {x: 9, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -4}
+        - {x: -1, y: -4}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ddc476656b2ab4c22905e18ea445e44c
+      internalID: -513352873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 10}
+        - {x: 14, y: 12}
+        - {x: 12, y: 13}
+        - {x: 8, y: 14}
+        - {x: -8, y: 14}
+        - {x: -14, y: 9}
+        - {x: -14, y: -3}
+        - {x: -12, y: -6}
+        - {x: -11, y: -6}
+        - {x: -8, y: -9}
+        - {x: 5, y: -9}
+        - {x: 9, y: -11}
+        - {x: 16, y: -11}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 17eecbba7382449808cee96794379428
+      internalID: 800887891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 13, y: -11}
+        - {x: 13, y: -2}
+        - {x: 8, y: 3}
+        - {x: 2, y: 5}
+        - {x: -5, y: 5}
+        - {x: -6, y: 6}
+        - {x: -8, y: 6}
+        - {x: -16, y: 10}
+        - {x: -16, y: -11}
+        - {x: -10, y: -11}
+        - {x: -9, y: -12}
+        - {x: 2, y: -12}
+        - {x: 3, y: -13}
+        - {x: 10, y: -13}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 521283f685eba4a4ba607962c3adfb19
+      internalID: -1716893878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -8}
+        - {x: 5, y: -8}
+        - {x: 6, y: -9}
+        - {x: 16, y: -9}
+        - {x: 16, y: 4}
+        - {x: 14, y: 5}
+        - {x: -6, y: 5}
+        - {x: -9, y: 4}
+        - {x: -11, y: 2}
+        - {x: -12, y: -8}
+        - {x: -11, y: -9}
+        - {x: -1, y: -9}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ac9f56c7c38154b08b6533081ba33ff4
+      internalID: 1603406327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 11, y: -7}
+        - {x: 11, y: 0}
+        - {x: 9, y: 2}
+        - {x: 7, y: 3}
+        - {x: -1, y: 4}
+        - {x: -16, y: 4}
+        - {x: -16, y: -9}
+        - {x: 8, y: -9}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 64c115f43b14d4ad092e7c3b12f8deba
+      internalID: 945051092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 6, y: -10}
+        - {x: 8, y: -8}
+        - {x: 12, y: -6}
+        - {x: 12, y: -2}
+        - {x: 10, y: 1}
+        - {x: 10, y: 3}
+        - {x: 9, y: 5}
+        - {x: 4, y: 10}
+        - {x: 2, y: 11}
+        - {x: -5, y: 11}
+        - {x: -10, y: 6}
+        - {x: -10, y: 5}
+        - {x: -14, y: 0}
+        - {x: -14, y: -6}
+        - {x: -13, y: -7}
+        - {x: -9, y: -8}
+        - {x: -6, y: -11}
+        - {x: -4, y: -12}
+        - {x: 3, y: -12}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 38ac763931d734773b99b4d46e5799ef
+      internalID: -1334764211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_21
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 5, y: -10}
+        - {x: 9, y: -7}
+        - {x: 9, y: -5}
+        - {x: 7, y: -3}
+        - {x: 6, y: 0}
+        - {x: 3, y: 3}
+        - {x: 3, y: 4}
+        - {x: -2, y: 9}
+        - {x: -2, y: 10}
+        - {x: -6, y: 14}
+        - {x: -8, y: 14}
+        - {x: -13, y: 9}
+        - {x: -13, y: 4}
+        - {x: -7, y: -2}
+        - {x: -7, y: -3}
+        - {x: -2, y: -8}
+        - {x: -2, y: -9}
+        - {x: 0, y: -11}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 746325d796d0e4b618cb272e70fcb932
+      internalID: 1210592840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 9, y: -4}
+        - {x: 11, y: -4}
+        - {x: 12, y: -3}
+        - {x: 12, y: 0}
+        - {x: 7, y: 5}
+        - {x: 2, y: 7}
+        - {x: -1, y: 7}
+        - {x: -4, y: 9}
+        - {x: -6, y: 9}
+        - {x: -10, y: 5}
+        - {x: -13, y: -1}
+        - {x: -13, y: -4}
+        - {x: -12, y: -5}
+        - {x: -4, y: -5}
+        - {x: -2, y: -7}
+        - {x: 6, y: -7}
+      tessellationDetail: 1
+      bones: []
+      spriteID: ab63a6c861c0749da9c2a5b09d1cef49
+      internalID: 1096184047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Rocks 1.1_23
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 9, y: -5}
+        - {x: 11, y: -5}
+        - {x: 11, y: -3}
+        - {x: 10, y: -2}
+        - {x: 10, y: 4}
+        - {x: 9, y: 7}
+        - {x: 7, y: 9}
+        - {x: 3, y: 9}
+        - {x: 2, y: 8}
+        - {x: 0, y: 8}
+        - {x: -4, y: 6}
+        - {x: -11, y: -1}
+        - {x: -12, y: -4}
+        - {x: -8, y: -5}
+        - {x: -6, y: -7}
+        - {x: 0, y: -8}
+        - {x: 1, y: -9}
+        - {x: 4, y: -9}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 48e5feec5c8d04dacade2e9ed2c22635
+      internalID: -1725767440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a36ac2c70af9e4107ad4fca8d1868a6b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Topdown RPG 32x32 - Rocks 1.1_0: -1611629639520528485
+      Topdown RPG 32x32 - Rocks 1.1_1: 4243500081492597566
+      Topdown RPG 32x32 - Rocks 1.1_10: -6250899171434458364
+      Topdown RPG 32x32 - Rocks 1.1_11: -8242759910228788695
+      Topdown RPG 32x32 - Rocks 1.1_12: -651990733652958016
+      Topdown RPG 32x32 - Rocks 1.1_13: -5212822431782368161
+      Topdown RPG 32x32 - Rocks 1.1_14: -822612026
+      Topdown RPG 32x32 - Rocks 1.1_15: -513352873
+      Topdown RPG 32x32 - Rocks 1.1_16: 800887891
+      Topdown RPG 32x32 - Rocks 1.1_17: -1716893878
+      Topdown RPG 32x32 - Rocks 1.1_18: 1603406327
+      Topdown RPG 32x32 - Rocks 1.1_19: 945051092
+      Topdown RPG 32x32 - Rocks 1.1_2: -3803216653933679297
+      Topdown RPG 32x32 - Rocks 1.1_20: -1334764211
+      Topdown RPG 32x32 - Rocks 1.1_21: 1210592840
+      Topdown RPG 32x32 - Rocks 1.1_22: 1096184047
+      Topdown RPG 32x32 - Rocks 1.1_23: -1725767440
+      Topdown RPG 32x32 - Rocks 1.1_3: 5856389926991653521
+      Topdown RPG 32x32 - Rocks 1.1_4: 6698197266397290313
+      Topdown RPG 32x32 - Rocks 1.1_5: -4268456185838443258
+      Topdown RPG 32x32 - Rocks 1.1_6: -33350585097926836
+      Topdown RPG 32x32 - Rocks 1.1_7: 2611348502401005391
+      Topdown RPG 32x32 - Rocks 1.1_8: -5685872728814978715
+      Topdown RPG 32x32 - Rocks 1.1_9: 7486598432550231472
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

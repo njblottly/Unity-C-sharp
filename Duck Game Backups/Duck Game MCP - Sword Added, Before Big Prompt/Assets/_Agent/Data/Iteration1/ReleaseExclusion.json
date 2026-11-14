@@ -1,0 +1,8 @@
+{
+  "defines": "No UNITY_EDITOR or DEVELOPMENT_BUILD",
+  "diagnostics": [],
+  "telemetryTypePresent": false,
+  "sceneReferencesTelemetryScript": false,
+  "movementSpeed": 1.6,
+  "legacyInput": true
+}

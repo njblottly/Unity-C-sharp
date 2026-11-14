@@ -33,6 +33,15 @@ public class DuckFollower : MonoBehaviour
     private Vector2 smoothMoveVelocity;
 
     private string currentAnimState;
+    private Transform assistanceTarget;
+    public Transform AssistanceTarget=>assistanceTarget;
+    public bool AtPerch=>assistanceTarget!=null&&Vector2.Distance(rb.position,assistanceTarget.position)<=.18f;
+    public void HoldAt(Transform target)
+    {
+        if(target==null||player==null)throw new System.InvalidOperationException("Duck perch requires a real target and player.");
+        assistanceTarget=target;smoothMoveVelocity=Vector2.zero;
+    }
+    public void Recall(){assistanceTarget=null;smoothMoveVelocity=Vector2.zero;if(player!=null)lastPlayerPosition=player.position;}
 
     private void Awake()
     {
@@ -77,6 +86,10 @@ public class DuckFollower : MonoBehaviour
             return;
         }
 
+        if(assistanceTarget!=null)
+        {
+            Vector2 previous=rb.position;Vector2 next=Vector2.MoveTowards(previous,assistanceTarget.position,maxSpeed*Time.fixedDeltaTime);rb.MovePosition(next);lastPlayerPosition=player.position;UpdateAnim((next-previous)/Time.fixedDeltaTime);return;
+        }
         Vector2 playerPosition = player.position;
         Vector2 playerDelta = playerPosition - lastPlayerPosition;
 
@@ -128,6 +141,7 @@ public class DuckFollower : MonoBehaviour
     public void SnapToPlayer()
     {
         if (player == null) throw new System.InvalidOperationException("DuckFollower requires its Player reference.");
+        Recall();
         lastPlayerPosition = player.position;
         lastFollowDirection = Vector2.down;
         TeleportTo((Vector2)player.position + Vector2.down * followBehindDistance);

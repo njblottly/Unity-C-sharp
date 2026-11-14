@@ -1,0 +1,63 @@
+{
+  "scene": "Assets/_Agent/Scenes/Marshlight.unity",
+  "playing": false,
+  "paused": false,
+  "sceneDirty": false,
+  "counts": [
+    {
+      "name": "Player",
+      "count": 1
+    },
+    {
+      "name": "DuckFollower",
+      "count": 1
+    },
+    {
+      "name": "RPGGameManager",
+      "count": 1
+    },
+    {
+      "name": "RPGCameraManager",
+      "count": 1
+    },
+    {
+      "name": "Inventory",
+      "count": 1
+    },
+    {
+      "name": "HealthBar",
+      "count": 1
+    },
+    {
+      "name": "DuckAdventure.Agent.MarshLevel",
+      "count": 1
+    },
+    {
+      "name": "DuckAdventure.Agent.Weapon",
+      "count": 1
+    },
+    {
+      "name": "DuckAdventure.Agent.MarshEquipmentHUD",
+      "count": 1
+    }
+  ],
+  "missingScripts": 0,
+  "colliders": 59,
+  "audioListeners": 1,
+  "baselineSources": 30,
+  "unchangedSources": 25,
+  "modifiedSources": [
+    "Assets/Scripts/MonoBehaviours/Player.cs",
+    "Assets/Scripts/ScriptableObjects/Item.cs",
+    "Assets/_Agent/Scripts/MarshLevel.cs",
+    "Assets/_Agent/Scripts/Editor/MarshVerification.cs",
+    "Assets/_Agent/Tests/PlayMode/MarshCoinRegressionTests.cs"
+  ],
+  "newSources": [
+    "Assets/_Agent/Scripts/MarshEnemyFeedback.cs",
+    "Assets/_Agent/Scripts/MarshEquipmentHUD.cs",
+    "Assets/_Agent/Scripts/Weapon.cs",
+    "Assets/_Agent/Scripts/WeaponData.cs",
+    "Assets/_Agent/Scripts/Editor/MarshSwordBuilder.cs"
+  ]
+}

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0a22dcf580b14354b43c930cbe2a690, type: 3}
+  m_Name: route-storm
+  m_EditorClassIdentifier: Assembly-CSharp::DuckAdventure.Agent.MechanicData
+  id: route-storm
+  title: Storm return mail
+  kind: 2
+  cost: 2
+  hint: Send two coins at the Storm sorting box. E there reroutes the same loan.
+    Claim it at the addressed LOW or HIGH box before paying the main bell.
+  journalText: Ada never trusted a single return route. The sorter held the same
+    two coins for either road; no one had to pay twice to change their mind.
+  prerequisite: 

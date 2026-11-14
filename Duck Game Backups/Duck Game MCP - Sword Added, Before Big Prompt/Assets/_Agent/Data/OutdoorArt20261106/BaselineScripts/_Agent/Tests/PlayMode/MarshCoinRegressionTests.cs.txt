@@ -1,0 +1,252 @@
+using System;
+using System.Collections;
+using System.Linq;
+using System.Reflection;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.TestTools;
+using Object = UnityEngine.Object;
+
+namespace Marshlight.PlayModeTests
+{
+    // Reflection bridges the existing predefined Assembly-CSharp. Production assemblies
+    // and the original game's scripts do not need to be moved or restructured for tests.
+    public sealed class MarshCoinRegressionTests
+    {
+        private Component level;
+        private Component player;
+        private Component inventory;
+        private object relay;
+        private object coinType;
+        private static object Read(object target, string name) => target.GetType().GetProperty(name, BindingFlags.Public | BindingFlags.Instance).GetValue(target);
+        private static object Field(object target, string name) => target.GetType().GetField(name, BindingFlags.Public | BindingFlags.Instance).GetValue(target);
+        private static object Call(object target, string name, params object[] arguments)
+        {
+            MethodInfo[] matches = target.GetType().GetMethods(BindingFlags.Public | BindingFlags.Instance).Where(m => m.Name == name && m.GetParameters().Length == arguments.Length).ToArray();
+            if (matches.Length != 1) throw new InvalidOperationException("Expected one method: " + name);
+            return matches[0].Invoke(target, arguments);
+        }
+        private static Component Find(string type) => Object.FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None).Single(x => x.GetType().FullName == type);
+        private static void Check(bool condition, string message) { Assert.That(condition, Is.True, message); }
+        private int Balance => (int)Call(inventory, "Count", coinType);
+        private int Escrow => (int)Read(level, "CoinsInEscrow");
+        private bool Lent(int index) => (bool)Call(relay, "IsLent", index);
+        private bool Returned(int index) => (bool)Call(relay, "IsReturned", index);
+        private string State => Read(level, "State").ToString();
+        private Component Node(string id) => ((Array)Read(level, "Nodes")).Cast<Component>().Single(n => (string)Read(n, "Id") == id);
+        private void Bind()
+        {
+            level = Find("DuckAdventure.Agent.MarshLevel"); player = (Component)Read(level, "Player"); inventory = (Component)Read(player, "PlayerInventory"); relay = Read(level, "CoinRelay");
+            Type item = AppDomain.CurrentDomain.GetAssemblies().Select(a => a.GetType("Item")).Single(t => t != null);
+            coinType = Enum.Parse(item.GetNestedType("ItemType"), "COIN");
+        }
+        private void Warp(Vector2 destination)
+        {
+            Rigidbody2D body = player.GetComponent<Rigidbody2D>(); body.position = destination; body.linearVelocity = Vector2.zero;
+            player.transform.position = destination; Call(Read(level, "Duck"), "SnapToPlayer"); Physics2D.SyncTransforms();
+        }
+        private void Dismiss()
+        {
+            for (int i = 0; i < 10 && State == "Dialogue"; i++) Call(level, "AdvanceStory");
+            Check(State != "Dialogue", "Story must finish within its authored page limit");
+        }
+        private bool Interact(string id)
+        {
+            Component node = Node(id); Warp(node.transform.position); bool changed = (bool)Call(node, "TryInteract"); Dismiss();
+            Check((int)Read(level, "RecoverableCoins") == 3, "Exactly three coins remain recoverable at " + id);
+            return changed;
+        }
+        private void Use(string id) { Check(Interact(id), "First legitimate interaction must succeed: " + id); }
+        private void RejectDuplicate(string id)
+        {
+            int before = Balance; int outstanding = Escrow;
+            Check(!Interact(id), "Repeated interaction must be rejected: " + id);
+            Check(Balance == before && Escrow == outstanding, "Repeated interaction changes neither carried nor lent coins");
+        }
+        private void ClaimOriginalTrays()
+        {
+            int bells = (int)Read(level, "BellsOpened");
+            for (int i = 0; i < bells; i++) if (!(bool)Read(Node("tray-" + i), "Reclaimed")) Use("tray-" + i);
+        }
+        private void CompleteRelay()
+        {
+            if (!Lent(0)) Use("relay-reed-cup");
+            if (!Lent(1)) Use("relay-spill-cup");
+            if (!Returned(0)) Use("relay-reed-tray");
+            if (!Lent(2)) Use("relay-exit-cup");
+            if (!Returned(1)) Use("relay-spill-tray");
+            if (!Returned(2)) Use("relay-exit-tray");
+            Check((bool)Read(relay, "Completed") && Balance == 3, "Relay settles all three coins");
+        }
+        private void PrepareBell(int index)
+        {
+            for (int i = (int)Read(level, "BellsOpened"); i < index; i++)
+            {
+                if (i == 2) CompleteRelay(); Use("bell-" + i); Use("tray-" + i);
+            }
+            if (index == 2) CompleteRelay();
+        }
+        private void SelectCheckpoint(int index)
+        {
+            Component node = Node("checkpoint-" + index); object spawn = ((Array)Read(level, "Checkpoints")).GetValue(index);
+            Call(level, "ReachCheckpoint", node, spawn); Warp(((Component)spawn).transform.position);
+        }
+        private void DieAndRestart(int checkpoint)
+        {
+            int before = Balance; int outstanding = Escrow;
+            Call(player, "TakeDamage", 999);
+            Check(State == "Defeat" && (bool)Read(player, "IsDead"), "Actual health depletion reaches the defeat flow");
+            Call(level, "RestartCheckpoint");
+            Check(State == "Playing" && !(bool)Read(player, "IsDead"), "Restart returns the same player to play");
+            Component spawn = (Component)((Array)Read(level, "Checkpoints")).GetValue(checkpoint);
+            Check(Vector2.Distance(player.GetComponent<Rigidbody2D>().position, spawn.transform.position) < 0.15f, "Restart position matches the chosen checkpoint");
+            Check(Balance == before && Escrow == outstanding && (int)Read(level, "RecoverableCoins") == 3, "Death preserves carried coins, every loan and the conserved supply");
+        }
+        private void FinishWithThreeCoins()
+        {
+            ClaimOriginalTrays();
+            for (int i = (int)Read(level, "BellsOpened"); i < 3; i++)
+            {
+                if (i == 2) CompleteRelay(); Use("bell-" + i); Use("tray-" + i);
+            }
+            CompleteRelay(); Warp(new Vector2(77, 0));
+            Check((bool)Call(level, "TryWin"), "The recovered coins and following duck permit victory"); Dismiss();
+            Check(State == "Won" && Balance == 3 && Escrow == 0, "Every tested loan state still finishes with exactly three coins");
+        }
+
+        [UnitySetUp]
+        public IEnumerator SetUp()
+        {
+            Time.timeScale = 1; SceneManager.LoadScene("Assets/_Agent/Scenes/Marshlight.unity"); yield return null; yield return null;
+            Bind(); Check(State == "Intro", "Each regression starts from a fresh scene");
+            Call(Read(level, "Pacing"), "SetRunLabel", "regression"); Call(level, "Begin"); Dismiss();
+            MonoBehaviour[] pickups = Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).Where(x => x.GetType().FullName == "Consumable" && Field(Field(x, "item"), "itemType").ToString() == "COIN").ToArray();
+            Check(pickups.Length == 3, "The fixture collects the actual three scene coins");
+            foreach (MonoBehaviour pickup in pickups) { Warp(pickup.transform.position); yield return new WaitForFixedUpdate(); yield return null; }
+            Check(Balance == 3 && (int)Read(level, "RecoverableCoins") == 3, "Actual pickup triggers supply exactly three coins");
+            SelectCheckpoint(0);
+        }
+        [UnityTearDown]
+        public IEnumerator TearDown() { Time.timeScale = 1; yield return null; }
+
+        [TestCase(0)] [TestCase(1)] [TestCase(2)]
+        public void OriginalLoanSurvivesDeathAndReturnsExactlyOnce(int bell)
+        {
+            PrepareBell(bell); SelectCheckpoint(bell); Use("bell-" + bell);
+            Check(Balance == 0 && Escrow == 3, "The original bell holds the three coins");
+            DieAndRestart(bell); Check(!((bool)Read(Node("bell-" + bell), "GateClosed")), "The paid gate stays latched after death");
+            Use("tray-" + bell); RejectDuplicate("tray-" + bell); FinishWithThreeCoins();
+        }
+
+        [TestCase(0)] [TestCase(1)] [TestCase(2)] [TestCase(3)]
+        public void EveryCheckpointCanRestartWithCoinsLent(int checkpoint)
+        {
+            int bell = Mathf.Min(checkpoint, 2); PrepareBell(bell);
+            if (checkpoint < 3) SelectCheckpoint(checkpoint);
+            Use("bell-" + bell);
+            if (checkpoint == 3) SelectCheckpoint(3); // Valid: the last crossing is open, but its tray was skipped.
+            DieAndRestart(checkpoint); Use("tray-" + bell); RejectDuplicate("tray-" + bell); FinishWithThreeCoins();
+        }
+
+        [TestCase(0)] [TestCase(1)] [TestCase(2)]
+        public void EachRelayLoanSurvivesDeathAndCanStillFinish(int phase)
+        {
+            PrepareBell(1); Use("bell-1"); Use("tray-1"); SelectCheckpoint(2);
+            Use("relay-reed-cup");
+            if (phase >= 1) Use("relay-spill-cup");
+            if (phase == 2) { Use("relay-reed-tray"); Use("relay-exit-cup"); }
+            int before = Escrow; DieAndRestart(2);
+            Check(Escrow == before && Lent(0), "Every in-flight relay phase survives restart");
+            CompleteRelay(); RejectDuplicate("relay-reed-tray"); RejectDuplicate("relay-spill-tray"); RejectDuplicate("relay-exit-tray"); FinishWithThreeCoins();
+        }
+
+        [TestCase(true)] [TestCase(false)]
+        public void EitherInitialFundingOrderIsSafe(bool reedFirst)
+        {
+            PrepareBell(1); Use("bell-1"); Use("tray-1"); SelectCheckpoint(2);
+            Use(reedFirst ? "relay-reed-cup" : "relay-spill-cup"); Use(reedFirst ? "relay-spill-cup" : "relay-reed-cup");
+            Check(Balance == 0 && Escrow == 3, "Either order funds exactly the original three coins"); CompleteRelay(); FinishWithThreeCoins();
+        }
+
+        [TestCase(true)] [TestCase(false)]
+        public void SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(bool spillFirst)
+        {
+            PrepareBell(1); Use("bell-1"); Use("tray-1"); SelectCheckpoint(2); Use("relay-reed-cup"); Use("relay-spill-cup"); Use("relay-reed-tray");
+            if (spillFirst) Use("relay-spill-tray");
+            Use("relay-exit-cup"); if (!spillFirst) Use("relay-spill-tray"); Use("relay-exit-tray"); FinishWithThreeCoins();
+        }
+
+        [Test]
+        public void ExitCupRejectsPrematurePaymentWithoutStrandingCoins()
+        {
+            PrepareBell(1); Use("bell-1"); Use("tray-1"); Use("relay-spill-cup");
+            Check(Balance == 2 && Escrow == 1, "Two coins remain after funding the spill cup");
+            Check(!Interact("relay-exit-cup") && Balance == 2 && !Lent(2), "Exit shutter rejects the carried pair until the reed pair is reclaimed");
+            CompleteRelay(); FinishWithThreeCoins();
+        }
+
+        [Test]
+        public void RelayPaymentsAndReturnsCannotBeRepeated()
+        {
+            PrepareBell(1); Use("bell-1"); Use("tray-1");
+            foreach (string id in new[] { "relay-reed-cup", "relay-spill-cup", "relay-reed-tray", "relay-exit-cup", "relay-spill-tray", "relay-exit-tray" }) { Use(id); RejectDuplicate(id); }
+            FinishWithThreeCoins();
+        }
+
+        [Test]
+        public void CarriedCoinsAndPatrolObjectsCannotBypassExchangeProgress()
+        {
+            PrepareBell(1); Use("bell-1"); Use("tray-1");
+            foreach (MonoBehaviour enemy in Object.FindObjectsByType<MonoBehaviour>(FindObjectsSortMode.None).Where(x => x.GetType().FullName == "EnemyHitPoints")) Call(enemy, "TakeDamage", 999);
+            Check(Enumerable.Range(0, 3).All(i => (bool)Call(relay, "GateClosed", i)), "Removing every patrol leaves all exchange gates closed");
+            Check(!Interact("bell-2") && Balance == 3 && (int)Read(level, "BellsOpened") == 2, "Final bell rejects payment before the exchange is settled");
+            Warp(new Vector2(77, 0)); Check(!(bool)Call(level, "TryWin"), "Jumping to the haven does not grant victory");
+            Component[] relayNodes = ((Array)Read(level, "Nodes")).Cast<Component>().Where(n => ((string)Read(n, "Id")).StartsWith("relay-")).ToArray();
+            Check(relayNodes.All(n => !n.CompareTag("Enemy") && !n.GetComponents<Component>().Any(c => c.GetType().Name == "EnemyHitPoints")), "Relay progression is independent of patrol health");
+            CompleteRelay(); FinishWithThreeCoins();
+        }
+
+        [Test]
+        public void AtomicReturnDoesNotPartiallyCreditWhenInventoryIsFull()
+        {
+            Use("bell-0");
+            object source = Read(level, "CoinItem"); ScriptableObject healthItem = Object.Instantiate((ScriptableObject)source);
+            FieldInfo kind = source.GetType().GetField("itemType"); kind.SetValue(healthItem, Enum.Parse(kind.FieldType, "HEALTH")); source.GetType().GetField("stackable").SetValue(healthItem, false);
+            for (int i = 0; i < 5; i++) Check((bool)Call(inventory, "AddItem", healthItem), "Fixture fills a non-currency slot");
+            Check(!Interact("tray-0") && Balance == 0 && Escrow == 3 && !(bool)Read(Node("tray-0"), "Reclaimed"), "Full inventory leaves all coins in the tray without partial credit");
+            Call(inventory, "TrySpend", Enum.Parse(kind.FieldType, "HEALTH"), 1); Use("tray-0"); RejectDuplicate("tray-0"); Object.Destroy(healthItem); FinishWithThreeCoins();
+        }
+
+        [UnityTest]
+        public IEnumerator ReplayAfterVictoryResetsAllLoansAndPickups()
+        {
+            FinishWithThreeCoins(); Call(level, "PrimaryAction"); yield return null; yield return null; Bind();
+            Check(State == "Intro" && Balance == 0 && Escrow == 0 && (int)Read(level, "BellsOpened") == 0, "Replay resets coins, original loans and progression");
+            Check(!Lent(0) && !Lent(1) && !Lent(2) && !(bool)Read(relay, "Completed") && (int)Read(level, "RecoverableCoins") == 3, "Relay resets and actual coin pickups return");
+            Check(Object.FindObjectsByType<MonoBehaviour>(FindObjectsInactive.Include, FindObjectsSortMode.None).Count(x => x.GetType().FullName == "Inventory") == 1, "Replay creates no duplicate inventory");
+        }
+
+        [UnityTest]
+        public IEnumerator TelemetryRecordsSectionDeathsAndExcludesPauseTime()
+        {
+            object pacing = Read(level, "Pacing"); Call(pacing, "ToggleOverlay"); Check((bool)Read(pacing, "OverlayVisible"), "Development overlay toggles on"); Call(pacing, "ToggleOverlay");
+            Array samples = (Array)Read(pacing, "Sections"); object row = samples.GetValue(0);
+            float before = (float)Field(row, "activeSeconds"); yield return null; yield return null;
+            Check((float)Field(row, "activeSeconds") > before, "Playing time is attributed to the current section");
+            Call(level, "TogglePause"); before = (float)Field(row, "activeSeconds"); yield return null; yield return null;
+            Check(Mathf.Abs((float)Field(row, "activeSeconds") - before) < 0.001f, "Pause waiting is excluded"); Call(level, "TogglePause");
+            DieAndRestart(0); Check((int)Field(row, "deaths") == 1, "Actual player death is counted once in the current section");
+            Check(System.IO.File.Exists((string)Read(pacing, "LogPath")), "Local persistent-data log exists");
+        }
+
+        [Test]
+        public void DevelopmentTeleportMarksPacingWithoutGrantingProgress()
+        {
+            Call(level, "DebugTeleport", 3);
+            Check((bool)Read(Read(level, "Pacing"), "Teleported"), "F6-equivalent destination marks the pacing run as teleported");
+            Check((int)Read(level, "BellsOpened") == 0 && Balance == 3 && !(bool)Read(relay, "Completed"), "Teleport grants no coin or exchange progression");
+            Warp(new Vector2(77, 0)); Check(!(bool)Call(level, "TryWin"), "Teleport cannot bypass the level");
+        }
+    }
+}

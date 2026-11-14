@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: 6aead06aea46141b387e8538afeb1c28
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2413584914213582221
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_0
+  - first:
+      213: 6131829914626560559
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_1
+  - first:
+      213: -340794083215044132
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_2
+  - first:
+      213: -3419219479853925094
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_3
+  - first:
+      213: -3198955361912544088
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_4
+  - first:
+      213: -2248730338058753668
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_5
+  - first:
+      213: -1170334406382157938
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_6
+  - first:
+      213: -3181508125809012195
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_7
+  - first:
+      213: -1881244398070327647
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_8
+  - first:
+      213: -5432527454191792666
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_9
+  - first:
+      213: -2609733479145099159
+    second: Topdown RPG 32x32 - Tree Stumps and Logs_10
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 16}
+        - {x: 2, y: 14}
+        - {x: -8, y: 5}
+        - {x: -15, y: -12}
+        - {x: -15, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8531f611b6ce7120800000000000000
+      internalID: 2413584914213582221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 12, y: 4}
+        - {x: -3, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 12, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: f221e6cc1d2a81550800000000000000
+      internalID: 6131829914626560559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 10}
+        - {x: 1, y: 10}
+        - {x: -6, y: 7}
+        - {x: -6, y: -16}
+        - {x: 16, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd199604691454bf0800000000000000
+      internalID: -340794083215044132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 6, y: -7}
+        - {x: 2, y: 3}
+        - {x: -13, y: 8}
+        - {x: -16, y: 8}
+        - {x: -16, y: -16}
+        - {x: 6, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1df536bffd7c80d0800000000000000
+      internalID: -3419219479853925094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -7}
+        - {x: 16, y: 12}
+        - {x: -9, y: 12}
+        - {x: -16, y: 7}
+        - {x: -16, y: -7}
+        - {x: -12, y: -8}
+        - {x: 15, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a42fd01c070b93d0800000000000000
+      internalID: -3198955361912544088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: -3}
+        - {x: 8, y: 11}
+        - {x: 5, y: 13}
+        - {x: -16, y: 13}
+        - {x: -16, y: -7}
+        - {x: 7, y: -7}
+      tessellationDetail: 0
+      bones: []
+      spriteID: c792d5cfba7eac0e0800000000000000
+      internalID: -2248730338058753668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 7, y: -15}
+        - {x: 7, y: 10}
+        - {x: -6, y: 10}
+        - {x: -11, y: 5}
+        - {x: -13, y: -9}
+        - {x: -13, y: -16}
+        - {x: 5, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f7c2fde0322cfe0800000000000000
+      internalID: -1170334406382157938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 9, y: -7}
+        - {x: 3, y: 9}
+        - {x: -5, y: 12}
+        - {x: -11, y: 12}
+        - {x: -16, y: 7}
+        - {x: -16, y: 2}
+        - {x: -10, y: -16}
+        - {x: 9, y: -16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d129227473309d3d0800000000000000
+      internalID: -3181508125809012195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 14, y: -10}
+        - {x: 14, y: -6}
+        - {x: 10, y: 9}
+        - {x: 3, y: 12}
+        - {x: -10, y: 12}
+        - {x: -14, y: 7}
+        - {x: -16, y: -4}
+        - {x: -16, y: -8}
+        - {x: -11, y: -13}
+        - {x: 0, y: -13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6135def2a74e5e0800000000000000
+      internalID: -1881244398070327647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 11, y: 9}
+        - {x: 6, y: 16}
+        - {x: -2, y: 16}
+        - {x: -9, y: 11}
+        - {x: -13, y: -4}
+        - {x: -13, y: -12}
+        - {x: -12, y: -13}
+        - {x: 11, y: -13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed475c2019cb94b0800000000000000
+      internalID: -5432527454191792666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_10
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 1}
+        - {x: 8, y: 8}
+        - {x: -2, y: 8}
+        - {x: -7, y: 4}
+        - {x: -12, y: -9}
+        - {x: -12, y: -11}
+        - {x: -2, y: -11}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960bc194a3d58cbd0800000000000000
+      internalID: -2609733479145099159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_11
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 12, y: -5}
+        - {x: 12, y: 7}
+        - {x: -1, y: 12}
+        - {x: -13, y: 12}
+        - {x: -14, y: 8}
+        - {x: -14, y: 6}
+        - {x: -5, y: -7}
+        - {x: 7, y: -7}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138b3ff852c7242809a90a573ca639df
+      internalID: -2146121077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -11}
+        - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 8}
+        - {x: -12, y: 7}
+        - {x: 7, y: -13}
+        - {x: 12, y: -13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632ac3c28fb0b43bbb61dc81883084df
+      internalID: -252080711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 13, y: -2}
+        - {x: 13, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -8}
+        - {x: 10, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc783b37b847f4032a131d041a298ce3
+      internalID: 515609727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -6}
+        - {x: 16, y: 16}
+        - {x: -6, y: 16}
+        - {x: -14, y: 4}
+        - {x: -14, y: -2}
+        - {x: -2, y: -7}
+        - {x: 14, y: -7}
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b1c4db673ab439693c591d7474372d
+      internalID: -555273706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 8, y: 4}
+        - {x: 3, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -4}
+        - {x: 8, y: -4}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6351f43fa9eef4651b45aabb0370abec
+      internalID: -1951980911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: -5}
+        - {x: 16, y: 4}
+        - {x: 11, y: 4}
+        - {x: -11, y: 3}
+        - {x: -16, y: -1}
+        - {x: -16, y: -5}
+        - {x: -14, y: -8}
+        - {x: -6, y: -8}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78dbb7d5d13eb4f74b3fd23e959efb7b
+      internalID: -1288623445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 11, y: -4}
+        - {x: 11, y: -1}
+        - {x: 9, y: 1}
+        - {x: 11, y: 9}
+        - {x: 11, y: 16}
+        - {x: 1, y: 16}
+        - {x: -16, y: 5}
+        - {x: -16, y: -7}
+        - {x: -3, y: -9}
+        - {x: 7, y: -9}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540451d0c51c444baa50bda3d14fb689
+      internalID: 342432490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 7, y: -6}
+        - {x: 7, y: 14}
+        - {x: 6, y: 16}
+        - {x: -13, y: 16}
+        - {x: -12, y: -6}
+        - {x: -8, y: -10}
+        - {x: 4, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3734623fb47a44e85b172b6b1b151b94
+      internalID: 1870373172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_19
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 13, y: -7}
+        - {x: 13, y: 1}
+        - {x: 8, y: 16}
+        - {x: -10, y: 16}
+        - {x: -10, y: 5}
+        - {x: -1, y: -10}
+        - {x: 12, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df5aafe4c77f43c68c633afb55d5afc
+      internalID: -591129511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 14, y: -6}
+        - {x: 14, y: -4}
+        - {x: 10, y: 12}
+        - {x: 3, y: 15}
+        - {x: -13, y: 15}
+        - {x: -16, y: 13}
+        - {x: -16, y: -10}
+        - {x: 10, y: -10}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b438558eef3d74b8db6a5d468c5430ec
+      internalID: 792580104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_21
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 13, y: 16}
+        - {x: -13, y: 16}
+        - {x: -16, y: 6}
+        - {x: -16, y: -12}
+        - {x: -15, y: -13}
+        - {x: 13, y: -13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce5da82826814712b38a93c3857e4ae
+      internalID: 352783643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 11, y: -1}
+        - {x: 4, y: 12}
+        - {x: -4, y: 12}
+        - {x: -11, y: 0}
+        - {x: -11, y: -13}
+        - {x: 11, y: -13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352e43a4ba2084a9d8e43f7a9bbad64f
+      internalID: -936071596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Topdown RPG 32x32 - Tree Stumps and Logs_23
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 9, y: 0}
+        - {x: -5, y: 10}
+        - {x: -12, y: 10}
+        - {x: -13, y: 9}
+        - {x: -13, y: 6}
+        - {x: -2, y: -9}
+        - {x: 3, y: -13}
+        - {x: 9, y: -13}
+      tessellationDetail: 0
+      bones: []
+      spriteID: af24a008cadf048e5973ed90de4689cd
+      internalID: -912120166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 219b0a6528fb74af684d5e4999026c56
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Topdown RPG 32x32 - Tree Stumps and Logs_0: 2413584914213582221
+      Topdown RPG 32x32 - Tree Stumps and Logs_1: 6131829914626560559
+      Topdown RPG 32x32 - Tree Stumps and Logs_10: -2609733479145099159
+      Topdown RPG 32x32 - Tree Stumps and Logs_11: -2146121077
+      Topdown RPG 32x32 - Tree Stumps and Logs_12: -252080711
+      Topdown RPG 32x32 - Tree Stumps and Logs_13: 515609727
+      Topdown RPG 32x32 - Tree Stumps and Logs_14: -555273706
+      Topdown RPG 32x32 - Tree Stumps and Logs_15: -1951980911
+      Topdown RPG 32x32 - Tree Stumps and Logs_16: -1288623445
+      Topdown RPG 32x32 - Tree Stumps and Logs_17: 342432490
+      Topdown RPG 32x32 - Tree Stumps and Logs_18: 1870373172
+      Topdown RPG 32x32 - Tree Stumps and Logs_19: -591129511
+      Topdown RPG 32x32 - Tree Stumps and Logs_2: -340794083215044132
+      Topdown RPG 32x32 - Tree Stumps and Logs_20: 792580104
+      Topdown RPG 32x32 - Tree Stumps and Logs_21: 352783643
+      Topdown RPG 32x32 - Tree Stumps and Logs_22: -936071596
+      Topdown RPG 32x32 - Tree Stumps and Logs_23: -912120166
+      Topdown RPG 32x32 - Tree Stumps and Logs_3: -3419219479853925094
+      Topdown RPG 32x32 - Tree Stumps and Logs_4: -3198955361912544088
+      Topdown RPG 32x32 - Tree Stumps and Logs_5: -2248730338058753668
+      Topdown RPG 32x32 - Tree Stumps and Logs_6: -1170334406382157938
+      Topdown RPG 32x32 - Tree Stumps and Logs_7: -3181508125809012195
+      Topdown RPG 32x32 - Tree Stumps and Logs_8: -1881244398070327647
+      Topdown RPG 32x32 - Tree Stumps and Logs_9: -5432527454191792666
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

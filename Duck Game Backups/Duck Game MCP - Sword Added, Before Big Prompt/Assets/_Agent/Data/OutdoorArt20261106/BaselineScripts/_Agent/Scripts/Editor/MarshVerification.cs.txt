@@ -1,0 +1,288 @@
+#if UNITY_EDITOR
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
+using UnityEngine;
+using Object = UnityEngine.Object;
+
+namespace DuckAdventure.Agent.Editor
+{
+    /// <summary>
+    /// Editor-only, opt-in mechanical playtest. Walks the actual collidable route
+    /// through MovementController; never grants progression or teleports the route.
+    /// Evidence is held in memory until MCP exports it after exiting Play Mode.
+    /// </summary>
+    public static class MarshVerification
+    {
+        [Serializable]
+        public sealed class Report
+        {
+            public string startedUtc;
+            public string status;
+            public string capture;
+            public int step;
+            public int totalSteps;
+            public float walkedDistance;
+            public List<string> passed = new List<string>();
+            public List<string> failures = new List<string>();
+            public List<string> runtimeErrors = new List<string>();
+            public List<string> codeWarnings = new List<string>();
+        }
+        private sealed class Step
+        {
+            public string name;
+            public Vector2? destination;
+            public Action action;
+            public Func<bool> condition;
+        }
+        private static Report report;
+        private static MarshLevel level;
+        private static MovementController movement;
+        private static Rigidbody2D body;
+        private static readonly List<Step> steps = new List<Step>();
+        private static int cursor;
+        private static double stepStarted;
+        private static int readyFrame;
+        private static bool pumping;
+        private static Vector2 lastPosition;
+        private static bool running;
+        private static bool held;
+        public static string Status => JsonUtility.ToJson(report, true);
+
+        [MenuItem("Tools/Duck Adventure/Start Mechanical Playtest")]
+        public static void Start()
+        {
+            if (!EditorApplication.isPlaying) throw new InvalidOperationException("Enter Play Mode first.");
+            if (running) throw new InvalidOperationException("A mechanical playtest is already running.");
+            level = Object.FindFirstObjectByType<MarshLevel>();
+            if (level == null) throw new InvalidOperationException("Open Marshlight.");
+            if (level.State != MarshState.Intro) throw new InvalidOperationException("Start a fresh play session at the title screen.");
+            level.Pacing.SetRunLabel("mechanical");
+            movement = level.Player.GetComponent<MovementController>();
+            body = level.Player.GetComponent<Rigidbody2D>();
+            report = new Report { startedUtc = DateTime.UtcNow.ToString("o"), status = "Running" };
+            steps.Clear(); cursor = 0; held = false; running = true;
+            Application.logMessageReceived += Log;
+            Check(level.Player.gameObject.activeInHierarchy && !level.Player.IsDead, "Existing player spawns alive");
+            Check(level.Duck.gameObject.activeInHierarchy, "Existing duck spawns");
+            Check(Count<RPGGameManager>() == 1 && Count<RPGCameraManager>() == 1, "One of each existing singleton manager");
+            Check(Count<Inventory>() == 1 && Count<HealthBar>() == 1, "One inventory and one health UI");
+            Check(Time.timeScale == 0f && !movement.InputEnabled, "Title screen freezes movement and simulation");
+            Check(!level.Player.PlayerInventory.GetComponent<Canvas>().enabled, "Inventory hides behind title menus");
+            Check(level.Player.PlayerInventory.Count(Item.ItemType.COIN) == 0, "Fresh inventory starts empty");
+            Check(!level.Player.PlayerInventory.TrySpend(Item.ItemType.COIN, 3), "Unaffordable inventory spend is rejected atomically");
+            level.Begin(); Dismiss();
+            Check(level.HasRead("intro") && level.State == MarshState.Playing, "Intro text advances into gameplay");
+            Check(level.Player.PlayerInventory.GetComponent<Canvas>().enabled && level.Player.PlayerInventory.GetComponentsInChildren<Slot>().Length==5, "Existing five-slot inventory becomes visible in gameplay");
+            level.TogglePause(); Check(level.State == MarshState.Paused && Time.timeScale == 0f && !movement.InputEnabled, "Pause freezes gameplay");
+            level.TogglePause(); Check(level.State == MarshState.Playing && Time.timeScale == 1f && movement.InputEnabled, "Resume restores gameplay");
+            Add("Landing capture", () => { Check(level.HasCheckpoint("checkpoint-0"), "Spawn landing checkpoint fires"); Hold("checkpoint-0"); });
+            Walk(0, 1.4f); Interact("keeper-note");
+            Walk(2, 5.8f); Add("First coin", () => Check(Balance() == 1, "First real trigger pickup reaches inventory"));
+            Walk(8, 5.8f); Walk(8, 2f);
+            steps.Add(new Step{name="Wait for real enemy contact",condition=()=>level.Player.hitPoints.value<level.Player.maxHitPoints});
+            Add("Native enemy damage",()=>Check(level.Player.hitPoints.value>0 && level.Player.hitPoints.value<level.Player.maxHitPoints,"Moving enemy trigger damages the existing Player health system"));
+            Walk(8, -5.8f); Add("Second coin", () => Check(Balance() == 2, "Second trigger pickup stacks in the same inventory"));
+            Walk(15, -5.8f); Walk(15, -4.6f); Add("Third coin", () => Check(Balance() == 3, "Third real pickup completes the reusable coin set"));
+            Walk(16.6f, 0);
+            Add("Insufficient funds at bell", () =>
+            {
+                Check(level.Player.PlayerInventory.TrySpend(Item.ItemType.COIN, 1), "Set up two-coin negative case using inventory API");
+                MarshNode bell = Node("bell-0");
+                Check(!bell.TryInteract() && bell.GateClosed && !bell.Opened && Balance() == 2, "Bell rejects two coins without changing gate, balance or progression");
+                Check(level.Player.PlayerInventory.AddItem(level.CoinItem), "Restore the one test coin without creating extra currency");
+            });
+            Ring(0); Walk(21.6f,-0.35f); Recover(0); Walk(23,0);
+            Add("Reedbank capture", () => { Check(level.HasCheckpoint("checkpoint-1"), "Reedbank trigger updates checkpoint");
+                Check(level.Player.PlayerInventory.GetComponentsInChildren<Slot>().Any(s=>s.itemImage.enabled && s.qtyText.enabled && s.qtyText.text=="3"),"Inventory icon and stack quantity show three recovered coins"); Hold("checkpoint-1"); });
+            Add("Defeat", () =>
+            {
+                level.Player.TakeDamage(999);
+                Check(level.State == MarshState.Defeat && level.Player.IsDead && !level.Player.gameObject.activeSelf, "Real health depletion reaches defeat without destroying player");
+                Check(Time.timeScale == 0f, "Defeat freezes hazards and simulation");
+                Check(!level.Player.PlayerInventory.GetComponent<Canvas>().enabled,"Defeat menu hides inventory without creating or destroying it");
+                Hold("defeat");
+            });
+            Add("Restart from checkpoint", () =>
+            {
+                level.RestartCheckpoint();
+                Check(level.State == MarshState.Playing && level.Player.gameObject.activeSelf && !level.Player.IsDead, "Checkpoint restart reactivates the same player");
+                Check(Vector2.Distance(body.position, level.Checkpoints[1].transform.position)<0.15f, "Restart uses the reached checkpoint");
+                Check(level.Player.hitPoints.value==level.Player.startingHitPoints, "Restart restores full configured health");
+                Check(Balance()==3 && level.BellsOpened==1 && !Node("bell-0").GateClosed, "Death preserves coins and the open causeway");
+                Check(Vector2.Distance(level.Duck.transform.position,body.position)<1.1f, "Duck returns to the player after restart");
+                Check(Count<Inventory>()==1 && Count<HealthBar>()==1, "Restart creates no duplicate UI");
+            });
+            Walk(26,5.8f); Walk(27,5.8f); Interact("reed-note");
+            Walk(32,5.8f); Walk(32,-5.8f); Walk(39,-5.8f); Interact("archive-note");
+            Walk(40.6f,0); Ring(1); Walk(45.6f,-0.35f); Recover(1); Walk(47,0);
+            Add("Archive capture", () => { Check(level.HasCheckpoint("checkpoint-2"), "Old Archive trigger updates checkpoint"); Hold("checkpoint-2"); });
+            Walk(50,4.5f); Relay("relay-reed-cup",1,2);
+            Walk(50,-4.5f); Relay("relay-spill-cup",0,3);
+            Walk(50,5.8f); Walk(56,5.8f); Interact("storm-note");
+            Walk(56,7.1f); Walk(57.8f,6.8f); Interact("archive-pocket"); Walk(56,7.1f); Walk(56,5.8f);
+            Walk(56,-5.8f); Walk(54.8f,-5.8f); Relay("relay-reed-tray",2,1);
+            Walk(57,-5.8f); Relay("relay-exit-cup",0,3);
+            Walk(61.2f,-5.8f); Relay("relay-spill-tray",1,2);
+            Walk(63.4f,-5.8f); Walk(64.2f,-3); Relay("relay-exit-tray",3,0);
+            Add("Exchange settled",()=>Check(level.CoinRelay.Completed,"Archive exchange completes by reclaiming and re-lending the same pair"));
+            Walk(64.6f,0);
+            Ring(2); Walk(69.6f,-0.35f); Recover(2); Walk(71,0);
+            Add("Haven landing capture", () => { Check(level.HasCheckpoint("checkpoint-3"), "Haven landing trigger updates checkpoint"); Hold("checkpoint-3"); });
+            Walk(77,0);
+            Add("Ending", () =>
+            {
+                if (level.State==MarshState.Playing) Check(level.TryWin(), "Haven accepts the player and following duck");
+                Dismiss();
+                Check(level.State==MarshState.Won, "Victory is reachable by the walked route");
+                Check(level.BellsOpened==3 && Balance()==3, "Three bells reuse and return exactly the original three coins");
+                Check(new[]{"intro","letter","bell1","ledger","flood","bell2","promise","bell3","ending"}.All(level.HasRead), "Every story entry fires through its intended interaction or endpoint");
+                Check(level.CheckpointIndex==3, "All four checkpoint triggers traversed");
+                Check(level.HasRead("exchange") && level.HasRead("archive-pocket"),"Both new story entries fire without losing the original nine");
+                Check(level.RecoverableCoins==3 && level.CoinsInEscrow==0,"All original and relay loans settle with exactly three coins");
+                Check(!level.Pacing.Teleported,"Full mechanical run uses no F6 teleport");
+                Check(report.runtimeErrors.Count==0 && report.codeWarnings.Count==0, "Zero runtime errors and zero gameplay-code warnings during the mechanical run");
+                Hold("win");
+                report.status="Passed — awaiting final capture";
+            });
+            report.totalSteps=steps.Count;
+            lastPosition=body.position;stepStarted=Time.time;readyFrame=Time.frameCount+4;
+            EditorApplication.update+=Pump;
+        }
+
+        public static void Continue()
+        {
+            if(!held)throw new InvalidOperationException("No checkpoint capture is pending.");
+            held=false;report.capture="";
+            if(cursor>=steps.Count)
+            {
+                running=false;report.status="Passed";movement.SetDebugInput(Vector2.zero,false);
+                EditorApplication.update-=Pump;Application.logMessageReceived-=Log;return;
+            }
+            if(level.State==MarshState.Playing)Time.timeScale=1f;
+            report.status="Running";stepStarted=Time.time;readyFrame=Time.frameCount+3;
+        }
+
+        public static void Stop()
+        {
+            if(movement!=null)movement.SetDebugInput(Vector2.zero,false);
+            if(level!=null && level.State==MarshState.Playing)Time.timeScale=1f;
+            running=false;held=false;EditorApplication.update-=Pump;Application.logMessageReceived-=Log;
+        }
+        private static int Count<T>() where T:Component => Object.FindObjectsByType<T>(FindObjectsInactive.Include,FindObjectsSortMode.None).Length;
+        private static int Balance() => level.Player.PlayerInventory.Count(Item.ItemType.COIN);
+        private static MarshNode Node(string id) => level.Nodes.Single(n=>n.Id==id);
+        private static void Add(string name,Action action) { steps.Add(new Step{name=name,action=action}); }
+        private static void Walk(float x,float y) { steps.Add(new Step{name="Walk to "+x+", "+y,destination=new Vector2(x,y)}); }
+        private static void Interact(string id)
+        {
+            Add("Interact "+id,()=>{Check(Node(id).TryInteract(),"World interaction fires: "+id);Dismiss();});
+        }
+        private static void Ring(int index)
+        {
+            Add("Ring bell "+index,()=>
+            {
+                Check(Balance()==3,"Bell "+(index+1)+" receives the same three coins");
+                MarshNode bell=Node("bell-"+index);Check(bell.GateClosed,"Crossing "+(index+1)+" is physically blocked before payment");
+                float channel=18+index*24;
+                int blocking=LayerMask.GetMask("Blocking");
+                Check(Physics2D.Raycast(new Vector2(channel-0.5f,0),Vector2.right,2f,blocking).collider!=null,"Closed gate "+(index+1)+" blocks the crossing with a real collider");
+                Check(bell.TryInteract() && bell.Opened && !bell.GateClosed && Balance()==0 && level.BellsOpened==index+1,"Bell "+(index+1)+" spends once and opens the gate");
+                Dismiss();
+                Physics2D.SyncTransforms();
+                Check(Physics2D.Raycast(new Vector2(channel-0.5f,0),Vector2.right,2f,blocking).collider==null,"Paid crossing "+(index+1)+" has no blocking collider on its route");
+                Check(!bell.TryInteract() && Balance()==0,"Bell "+(index+1)+" cannot double-charge");
+            });
+        }
+        private static void Relay(string id,int carried,int escrow)
+        {
+            Add("Archive interaction "+id,()=>
+            {
+                MarshNode node=Node(id);
+                Check(node.TryInteract(),"Archive interaction succeeds: "+id);Dismiss();
+                Check(Balance()==carried && level.CoinsInEscrow==escrow && level.RecoverableCoins==3,"Archive coins remain conserved at "+id);
+                Check(!node.TryInteract() && Balance()==carried && level.CoinsInEscrow==escrow,"Archive interaction cannot duplicate or double-charge: "+id);
+            });
+        }
+        private static void Recover(int index)
+        {
+            Add("Return tray "+index,()=>
+            {
+                MarshNode tray=Node("tray-"+index);Check(tray.TryInteract() && tray.Reclaimed && Balance()==3,"Tray "+(index+1)+" restores three coins");
+                Check(!tray.TryInteract() && Balance()==3,"Tray "+(index+1)+" cannot duplicate coins");
+            });
+        }
+        private static void Dismiss()
+        {
+            int guard=0;while(level.State==MarshState.Dialogue && guard++<10)level.AdvanceStory();
+            if(guard>=10)throw new InvalidOperationException("Dialogue did not finish within ten pages.");
+        }
+        private static void Hold(string capture)
+        {
+            held=true;report.capture=capture;report.status="Awaiting screenshot and console read";
+            movement.SetDebugInput(Vector2.zero,true);body.linearVelocity=Vector2.zero;Time.timeScale=0;
+        }
+        private static void Check(bool condition,string message)
+        {
+            if(!condition)throw new InvalidOperationException("Mechanical verification failed: "+message);
+            report.passed.Add(message);
+        }
+        private static void Log(string message,string trace,LogType type)
+        {
+            if(type==LogType.Error || type==LogType.Exception || type==LogType.Assert)report.runtimeErrors.Add(message);
+            if(type==LogType.Warning && (trace.Contains("Assets/_Agent/") || trace.Contains("Assets/Scripts/")))report.codeWarnings.Add(message);
+        }
+        private static void Pump()
+        {
+            if(pumping || !running || held)return;
+            pumping=true;
+            try
+            {
+                // This remote Editor does not run player frames while unfocused.
+                // Step executes the real Unity player loop, physics and scripts.
+                EditorApplication.Step();Tick();
+            }
+            finally {pumping=false;}
+        }
+        private static void Tick()
+        {
+            if(!EditorApplication.isPlaying){Stop();return;}
+            if(!running || held || Time.frameCount<readyFrame)return;
+            try
+            {
+                Vector2 position=body.position;report.walkedDistance+=Vector2.Distance(position,lastPosition);lastPosition=position;
+                if(cursor>=steps.Count)return;
+                Step step=steps[cursor];report.step=cursor;
+                if(Time.time-stepStarted>28)throw new InvalidOperationException("Route blocked or step timed out: "+step.name+" at "+position);
+                if(step.destination.HasValue)
+                {
+                    if(level.State==MarshState.Dialogue){Dismiss();return;}
+                    if(!level.CanExplore && level.State!=MarshState.Won)throw new InvalidOperationException("Unexpected state while walking: "+level.State);
+                    Vector2 delta=step.destination.Value-position;
+                    if(delta.magnitude>0.16f)
+                    {
+                        if(level.State==MarshState.Won || level.HasRead("ending")){movement.SetDebugInput(Vector2.zero,true);}
+                        else {movement.SetDebugInput(delta.normalized,true);return;}
+                    }
+                    movement.SetDebugInput(Vector2.zero,true);body.linearVelocity=Vector2.zero;
+                }
+                else
+                {
+                    movement.SetDebugInput(Vector2.zero,true);
+                    if(step.condition!=null)
+                    {
+                        if(!step.condition())return;
+                    }
+                    else step.action();
+                }
+                cursor++;report.step=cursor;stepStarted=Time.time;readyFrame=Time.frameCount+3;
+            }
+            catch(Exception exception)
+            {
+                report.failures.Add(exception.Message);report.status="Failed";Stop();Debug.LogError(exception.ToString());
+            }
+        }
+    }
+}
+#endif

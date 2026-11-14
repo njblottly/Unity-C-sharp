@@ -1,0 +1,603 @@
+{
+  "verifiedDate": "2026-11-07 Australia/Melbourne",
+  "job_id": "259ea5f9b8a74c72a497377cc5ebd41e",
+  "status": "succeeded",
+  "summary": {
+    "total": 98,
+    "passed": 98,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 43.5136025,
+    "resultState": "Passed"
+  },
+  "results": [
+    {
+      "name": "ActOneAndTwoEntriesHaveExplicitBindings",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.ActOneAndTwoEntriesHaveExplicitBindings",
+      "state": "Passed",
+      "durationSeconds": 0.2575344
+    },
+    {
+      "name": "CampaignCompletesAndReplayResetsAllFiveGates",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.CampaignCompletesAndReplayResetsAllFiveGates",
+      "state": "Passed",
+      "durationSeconds": 0.3582002
+    },
+    {
+      "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(0)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(0)",
+      "state": "Passed",
+      "durationSeconds": 0.1772682
+    },
+    {
+      "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(1)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(1)",
+      "state": "Passed",
+      "durationSeconds": 0.1784252
+    },
+    {
+      "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(2)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(2)",
+      "state": "Passed",
+      "durationSeconds": 0.1857826
+    },
+    {
+      "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(3)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(3)",
+      "state": "Passed",
+      "durationSeconds": 0.1853268
+    },
+    {
+      "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(4)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(4)",
+      "state": "Passed",
+      "durationSeconds": 0.183633
+    },
+    {
+      "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(5)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(5)",
+      "state": "Passed",
+      "durationSeconds": 0.1821191
+    },
+    {
+      "name": "FiveChaptersUseAssetsAndExistingManagers",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.FiveChaptersUseAssetsAndExistingManagers",
+      "state": "Passed",
+      "durationSeconds": 0.1769005
+    },
+    {
+      "name": "LaterMainGateCannotBypassEarlierPayments(1)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(1)",
+      "state": "Passed",
+      "durationSeconds": 0.1639507
+    },
+    {
+      "name": "LaterMainGateCannotBypassEarlierPayments(2)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(2)",
+      "state": "Passed",
+      "durationSeconds": 0.1635993
+    },
+    {
+      "name": "LaterMainGateCannotBypassEarlierPayments(3)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(3)",
+      "state": "Passed",
+      "durationSeconds": 0.1627819
+    },
+    {
+      "name": "LaterMainGateCannotBypassEarlierPayments(4)",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(4)",
+      "state": "Passed",
+      "durationSeconds": 0.165204
+    },
+    {
+      "name": "StoryOncePolicyAndPrerequisitesDoNotRepeatProgress",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.StoryOncePolicyAndPrerequisitesDoNotRepeatProgress",
+      "state": "Passed",
+      "durationSeconds": 0.1631804
+    },
+    {
+      "name": "TutorialAvailabilityMatchesImplementedCapabilities",
+      "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.TutorialAvailabilityMatchesImplementedCapabilities",
+      "state": "Passed",
+      "durationSeconds": 0.1642743
+    },
+    {
+      "name": "AtomicReturnDoesNotPartiallyCreditWhenInventoryIsFull",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.AtomicReturnDoesNotPartiallyCreditWhenInventoryIsFull",
+      "state": "Passed",
+      "durationSeconds": 0.1880559
+    },
+    {
+      "name": "BellLetterAndLanternArtPreservesInteractionAndLiveStatus",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.BellLetterAndLanternArtPreservesInteractionAndLiveStatus",
+      "state": "Passed",
+      "durationSeconds": 0.2066897
+    },
+    {
+      "name": "CarriedCoinsAndPatrolObjectsCannotBypassExchangeProgress",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.CarriedCoinsAndPatrolObjectsCannotBypassExchangeProgress",
+      "state": "Passed",
+      "durationSeconds": 0.194323
+    },
+    {
+      "name": "CurrentGameCompletesFromTitleWithAllStoriesAndThreeCoins",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.CurrentGameCompletesFromTitleWithAllStoriesAndThreeCoins",
+      "state": "Passed",
+      "durationSeconds": 0.4879882
+    },
+    {
+      "name": "DeathRefundsSwordCoinWhilePreservingRelayLoanAndEquipment",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.DeathRefundsSwordCoinWhilePreservingRelayLoanAndEquipment",
+      "state": "Passed",
+      "durationSeconds": 0.2149739
+    },
+    {
+      "name": "DefeatingAllPatrolsWithSwordCannotBypassAnyCrossing",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.DefeatingAllPatrolsWithSwordCannotBypassAnyCrossing",
+      "state": "Passed",
+      "durationSeconds": 1.5846842
+    },
+    {
+      "name": "DevelopmentTeleportMarksPacingWithoutGrantingProgress",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.DevelopmentTeleportMarksPacingWithoutGrantingProgress",
+      "state": "Passed",
+      "durationSeconds": 0.204222
+    },
+    {
+      "name": "EachRelayLoanSurvivesDeathAndCanStillFinish(0)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(0)",
+      "state": "Passed",
+      "durationSeconds": 0.1915417
+    },
+    {
+      "name": "EachRelayLoanSurvivesDeathAndCanStillFinish(1)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(1)",
+      "state": "Passed",
+      "durationSeconds": 0.1851346
+    },
+    {
+      "name": "EachRelayLoanSurvivesDeathAndCanStillFinish(2)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(2)",
+      "state": "Passed",
+      "durationSeconds": 0.1853663
+    },
+    {
+      "name": "EitherInitialFundingOrderIsSafe(True)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EitherInitialFundingOrderIsSafe(True)",
+      "state": "Passed",
+      "durationSeconds": 0.2067661
+    },
+    {
+      "name": "EitherInitialFundingOrderIsSafe(False)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EitherInitialFundingOrderIsSafe(False)",
+      "state": "Passed",
+      "durationSeconds": 0.1861959
+    },
+    {
+      "name": "EquipmentPanelShowsOwnedEquippedAndPackedStatesWithoutClipping",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EquipmentPanelShowsOwnedEquippedAndPackedStatesWithoutClipping",
+      "state": "Passed",
+      "durationSeconds": 0.2072954
+    },
+    {
+      "name": "EveryCheckpointCanRestartWithCoinsLent(0)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(0)",
+      "state": "Passed",
+      "durationSeconds": 0.1962079
+    },
+    {
+      "name": "EveryCheckpointCanRestartWithCoinsLent(1)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(1)",
+      "state": "Passed",
+      "durationSeconds": 0.1867058
+    },
+    {
+      "name": "EveryCheckpointCanRestartWithCoinsLent(2)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(2)",
+      "state": "Passed",
+      "durationSeconds": 0.190349
+    },
+    {
+      "name": "EveryCheckpointCanRestartWithCoinsLent(3)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(3)",
+      "state": "Passed",
+      "durationSeconds": 0.1883218
+    },
+    {
+      "name": "ExitCupRejectsPrematurePaymentWithoutStrandingCoins",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.ExitCupRejectsPrematurePaymentWithoutStrandingCoins",
+      "state": "Passed",
+      "durationSeconds": 0.2132894
+    },
+    {
+      "name": "FullInventoryHoldsSwordRefundSafelyUntilSpaceReturns",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.FullInventoryHoldsSwordRefundSafelyUntilSpaceReturns",
+      "state": "Passed",
+      "durationSeconds": 0.7672496
+    },
+    {
+      "name": "OriginalLoanSurvivesDeathAndReturnsExactlyOnce(0)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(0)",
+      "state": "Passed",
+      "durationSeconds": 0.1877703
+    },
+    {
+      "name": "OriginalLoanSurvivesDeathAndReturnsExactlyOnce(1)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(1)",
+      "state": "Passed",
+      "durationSeconds": 0.1867498
+    },
+    {
+      "name": "OriginalLoanSurvivesDeathAndReturnsExactlyOnce(2)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(2)",
+      "state": "Passed",
+      "durationSeconds": 0.1884467
+    },
+    {
+      "name": "OutdoorArtReusesProjectSheetsWithoutAddingCollisionOrLogic",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OutdoorArtReusesProjectSheetsWithoutAddingCollisionOrLogic",
+      "state": "Passed",
+      "durationSeconds": 0.180964
+    },
+    {
+      "name": "PauseAndDialogueCancelSwordAndRefundImmediately",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.PauseAndDialogueCancelSwordAndRefundImmediately",
+      "state": "Passed",
+      "durationSeconds": 0.7644569
+    },
+    {
+      "name": "RelayPaymentsAndReturnsCannotBeRepeated",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.RelayPaymentsAndReturnsCannotBeRepeated",
+      "state": "Passed",
+      "durationSeconds": 0.1908935
+    },
+    {
+      "name": "RenamedStoryAndMenusUseAikenAndDuckduckgooseAndFitPanels",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.RenamedStoryAndMenusUseAikenAndDuckduckgooseAndFitPanels",
+      "state": "Passed",
+      "durationSeconds": 0.3816079
+    },
+    {
+      "name": "ReplayAfterVictoryResetsAllLoansAndPickups",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.ReplayAfterVictoryResetsAllLoansAndPickups",
+      "state": "Passed",
+      "durationSeconds": 0.3427197
+    },
+    {
+      "name": "ReturnMailboxesKeepTheCompletePostedSilhouetteAndVisibleCoinMarkers",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.ReturnMailboxesKeepTheCompletePostedSilhouetteAndVisibleCoinMarkers",
+      "state": "Passed",
+      "durationSeconds": 0.1938512
+    },
+    {
+      "name": "SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(True)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(True)",
+      "state": "Passed",
+      "durationSeconds": 0.1859321
+    },
+    {
+      "name": "SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(False)",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(False)",
+      "state": "Passed",
+      "durationSeconds": 0.1848318
+    },
+    {
+      "name": "SwordCannotDamageThroughSolidBanks",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordCannotDamageThroughSolidBanks",
+      "state": "Passed",
+      "durationSeconds": 0.2035695
+    },
+    {
+      "name": "SwordCooldownRejectsRepeatedUseWithoutChargingAgain",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordCooldownRejectsRepeatedUseWithoutChargingAgain",
+      "state": "Passed",
+      "durationSeconds": 1.0276253
+    },
+    {
+      "name": "SwordDefeatsMiteUsingItsExistingDeathFlow",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordDefeatsMiteUsingItsExistingDeathFlow",
+      "state": "Passed",
+      "durationSeconds": 1.5894223
+    },
+    {
+      "name": "SwordHitsEachEnemyOnceEvenWithMultipleColliders",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordHitsEachEnemyOnceEvenWithMultipleColliders",
+      "state": "Passed",
+      "durationSeconds": 0.4709459
+    },
+    {
+      "name": "SwordPickupCannotBeCollectedTwice",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordPickupCannotBeCollectedTwice",
+      "state": "Passed",
+      "durationSeconds": 0.2278604
+    },
+    {
+      "name": "SwordPickupEquipsAndSwipeDamagesExistingHealth",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordPickupEquipsAndSwipeDamagesExistingHealth",
+      "state": "Passed",
+      "durationSeconds": 0.4679966
+    },
+    {
+      "name": "SwordReplayResetsOwnershipPickupLoansAndEnemyHealth",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordReplayResetsOwnershipPickupLoansAndEnemyHealth",
+      "state": "Passed",
+      "durationSeconds": 0.3666044
+    },
+    {
+      "name": "SwordRequiresACarriedCoinAndReturnsItAfterReclaim",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordRequiresACarriedCoinAndReturnsItAfterReclaim",
+      "state": "Passed",
+      "durationSeconds": 0.4798548
+    },
+    {
+      "name": "SwordRespectsRangeAndFacing",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordRespectsRangeAndFacing",
+      "state": "Passed",
+      "durationSeconds": 1.327844
+    },
+    {
+      "name": "TelemetryRecordsSectionDeathsAndExcludesPauseTime",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.TelemetryRecordsSectionDeathsAndExcludesPauseTime",
+      "state": "Passed",
+      "durationSeconds": 0.1945995
+    },
+    {
+      "name": "UnequipCancelsSwingWithoutDuplicatingItsRefund",
+      "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.UnequipCancelsSwingWithoutDuplicatingItsRefund",
+      "state": "Passed",
+      "durationSeconds": 0.2012407
+    },
+    {
+      "name": "AllEnemyDamageSourcesSharePlayerInvincibility",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.AllEnemyDamageSourcesSharePlayerInvincibility",
+      "state": "Passed",
+      "durationSeconds": 1.2313245
+    },
+    {
+      "name": "CheckpointDeathResetsNewEnemiesWithoutLosingMainLoan",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.CheckpointDeathResetsNewEnemiesWithoutLosingMainLoan",
+      "state": "Passed",
+      "durationSeconds": 0.1910631
+    },
+    {
+      "name": "CrabRecoveryIsVulnerableFromTheFront",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.CrabRecoveryIsVulnerableFromTheFront",
+      "state": "Passed",
+      "durationSeconds": 1.1415418
+    },
+    {
+      "name": "CrabRejectsFrontalSwordButAllowsAFlank",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.CrabRejectsFrontalSwordButAllowsAFlank",
+      "state": "Passed",
+      "durationSeconds": 0.757989
+    },
+    {
+      "name": "DefeatedEnemyResetRestoresHealthCollisionAndPhysics",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.DefeatedEnemyResetRestoresHealthCollisionAndPhysics",
+      "state": "Passed",
+      "durationSeconds": 0.1759567
+    },
+    {
+      "name": "DefeatingEveryEnemyCannotPayOrBypassAnyMainGate",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.DefeatingEveryEnemyCannotPayOrBypassAnyMainGate",
+      "state": "Passed",
+      "durationSeconds": 0.1753552
+    },
+    {
+      "name": "MechanicalTelemetryExcludesFrozenCaptureFrames",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.MechanicalTelemetryExcludesFrozenCaptureFrames",
+      "state": "Passed",
+      "durationSeconds": 0.4493721
+    },
+    {
+      "name": "NewEnemiesReadTheirSectionAssetsAndKeepPixelImports",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.NewEnemiesReadTheirSectionAssetsAndKeepPixelImports",
+      "state": "Passed",
+      "durationSeconds": 0.1832102
+    },
+    {
+      "name": "PauseFreezesTheEnemyTelegraphAndMovement",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.PauseFreezesTheEnemyTelegraphAndMovement",
+      "state": "Passed",
+      "durationSeconds": 0.305312
+    },
+    {
+      "name": "RealSkitterAttackDealsOnlyOneProtectedHit",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.RealSkitterAttackDealsOnlyOneProtectedHit",
+      "state": "Passed",
+      "durationSeconds": 1.1524405
+    },
+    {
+      "name": "SkitterTelegraphsAndCommitsToItsMarkedDirection",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.SkitterTelegraphsAndCommitsToItsMarkedDirection",
+      "state": "Passed",
+      "durationSeconds": 1.2583593
+    },
+    {
+      "name": "SwordUsesExistingHealthAndProducesFlashAndKnockback",
+      "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.SwordUsesExistingHealthAndProducesFlashAndKnockback",
+      "state": "Passed",
+      "durationSeconds": 0.2785282
+    },
+    {
+      "name": "AllNewTutorialBeatsFireOnce",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.AllNewTutorialBeatsFireOnce",
+      "state": "Passed",
+      "durationSeconds": 0.1645914
+    },
+    {
+      "name": "AnUnassistedRoomCannotCompleteItsInspectionOrPayAMainGate",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.AnUnassistedRoomCannotCompleteItsInspectionOrPayAMainGate",
+      "state": "Passed",
+      "durationSeconds": 0.164086
+    },
+    {
+      "name": "BlockedLampRefundStaysInEscrowUntilInventoryHasSpace",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.BlockedLampRefundStaysInEscrowUntilInventoryHasSpace",
+      "state": "Passed",
+      "durationSeconds": 0.172584
+    },
+    {
+      "name": "ClosedShutterDoesNotOpenMerelyBecausePlayerApproaches",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.ClosedShutterDoesNotOpenMerelyBecausePlayerApproaches",
+      "state": "Passed",
+      "durationSeconds": 0.1993485
+    },
+    {
+      "name": "DuckWalksToPerchAndInsideInspectionLatchesAFreeExit",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.DuckWalksToPerchAndInsideInspectionLatchesAFreeExit",
+      "state": "Passed",
+      "durationSeconds": 0.8196419
+    },
+    {
+      "name": "EitherMailAddressReturnsExactlyTheSameTwoCoins(0)",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.EitherMailAddressReturnsExactlyTheSameTwoCoins(0)",
+      "state": "Passed",
+      "durationSeconds": 0.1719198
+    },
+    {
+      "name": "EitherMailAddressReturnsExactlyTheSameTwoCoins(1)",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.EitherMailAddressReturnsExactlyTheSameTwoCoins(1)",
+      "state": "Passed",
+      "durationSeconds": 0.1664147
+    },
+    {
+      "name": "EveryReachableCombinedResourceStateCanRecoverAndFinish",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.EveryReachableCombinedResourceStateCanRecoverAndFinish",
+      "state": "Passed",
+      "durationSeconds": 0.170039
+    },
+    {
+      "name": "EveryReturnDestinationStaysBeforeItsMainWaterGate",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.EveryReturnDestinationStaysBeforeItsMainWaterGate",
+      "state": "Passed",
+      "durationSeconds": 0.1814636
+    },
+    {
+      "name": "LampBorrowsOnceAndPauseRefundsWhileKeepingTheClue",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.LampBorrowsOnceAndPauseRefundsWhileKeepingTheClue",
+      "state": "Passed",
+      "durationSeconds": 0.1667366
+    },
+    {
+      "name": "LampDeathRefundAndCheckpointRetainInspectionWithoutOpeningGate",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.LampDeathRefundAndCheckpointRetainInspectionWithoutOpeningGate",
+      "state": "Passed",
+      "durationSeconds": 0.1707367
+    },
+    {
+      "name": "LockedHighRoadCanAlwaysBeReroutedToTheOpenLowRoad",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.LockedHighRoadCanAlwaysBeReroutedToTheOpenLowRoad",
+      "state": "Passed",
+      "durationSeconds": 0.176813
+    },
+    {
+      "name": "MailLoanAndAddressSurviveDeathAtTheirCheckpoint(\"route-storm\",3,0)",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.MailLoanAndAddressSurviveDeathAtTheirCheckpoint(\"route-storm\",3,0)",
+      "state": "Passed",
+      "durationSeconds": 0.1717357
+    },
+    {
+      "name": "MailLoanAndAddressSurviveDeathAtTheirCheckpoint(\"route-storm\",3,1)",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.MailLoanAndAddressSurviveDeathAtTheirCheckpoint(\"route-storm\",3,1)",
+      "state": "Passed",
+      "durationSeconds": 0.1882558
+    },
+    {
+      "name": "MailLoanAndAddressSurviveDeathAtTheirCheckpoint(\"route-haven\",4,0)",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.MailLoanAndAddressSurviveDeathAtTheirCheckpoint(\"route-haven\",4,0)",
+      "state": "Passed",
+      "durationSeconds": 0.184254
+    },
+    {
+      "name": "MailLoanAndAddressSurviveDeathAtTheirCheckpoint(\"route-haven\",4,1)",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.MailLoanAndAddressSurviveDeathAtTheirCheckpoint(\"route-haven\",4,1)",
+      "state": "Passed",
+      "durationSeconds": 0.1857042
+    },
+    {
+      "name": "MechanicAndCollectibleDefinitionsAreUniqueAndGateCostsStayThree",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.MechanicAndCollectibleDefinitionsAreUniqueAndGateCostsStayThree",
+      "state": "Passed",
+      "durationSeconds": 0.1779738
+    },
+    {
+      "name": "MechanicPrerequisitesNeverReplaceMainCoinPayment",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.MechanicPrerequisitesNeverReplaceMainCoinPayment",
+      "state": "Passed",
+      "durationSeconds": 0.1738006
+    },
+    {
+      "name": "PagedJournalUsesExistingMenuAndPausesWithoutSpendingCoins",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.PagedJournalUsesExistingMenuAndPausesWithoutSpendingCoins",
+      "state": "Passed",
+      "durationSeconds": 0.1822013
+    },
+    {
+      "name": "RecallingInsideUnfinishedRoomCannotTrapThePlayer",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.RecallingInsideUnfinishedRoomCannotTrapThePlayer",
+      "state": "Passed",
+      "durationSeconds": 0.8463277
+    },
+    {
+      "name": "ReedMarksAreUniqueCosmeticAndResetOnlyOnReplay",
+      "fullName": "Marshlight.PlayModeTests.MarshMechanicTests.ReedMarksAreUniqueCosmeticAndResetOnlyOnReplay",
+      "state": "Passed",
+      "durationSeconds": 0.3152154
+    },
+    {
+      "name": "AllFourNewKindsHaveConfiguredEncounters",
+      "fullName": "Marshlight.PlayModeTests.MarshRemainingEnemyTests.AllFourNewKindsHaveConfiguredEncounters",
+      "state": "Passed",
+      "durationSeconds": 0.1807418
+    },
+    {
+      "name": "CheckpointResetAndOwnerDeathClearOutstandingSeeds",
+      "fullName": "Marshlight.PlayModeTests.MarshRemainingEnemyTests.CheckpointResetAndOwnerDeathClearOutstandingSeeds",
+      "state": "Passed",
+      "durationSeconds": 2.5715886
+    },
+    {
+      "name": "LaterCurveComesFromAssetsWithoutIncreasingDamage",
+      "fullName": "Marshlight.PlayModeTests.MarshRemainingEnemyTests.LaterCurveComesFromAssetsWithoutIncreasingDamage",
+      "state": "Passed",
+      "durationSeconds": 0.1828598
+    },
+    {
+      "name": "MothUsesExistingHealthAndSharedDamageCooldown",
+      "fullName": "Marshlight.PlayModeTests.MarshRemainingEnemyTests.MothUsesExistingHealthAndSharedDamageCooldown",
+      "state": "Passed",
+      "durationSeconds": 1.5705842
+    },
+    {
+      "name": "MothWarnsLocksItsDiveAndCanBeDodged",
+      "fullName": "Marshlight.PlayModeTests.MarshRemainingEnemyTests.MothWarnsLocksItsDiveAndCanBeDodged",
+      "state": "Passed",
+      "durationSeconds": 1.7059589
+    },
+    {
+      "name": "RealSeedHitsPlayerOnlyOnceAndHonorsInvincibility",
+      "fullName": "Marshlight.PlayModeTests.MarshRemainingEnemyTests.RealSeedHitsPlayerOnlyOnceAndHonorsInvincibility",
+      "state": "Passed",
+      "durationSeconds": 0.8692349
+    },
+    {
+      "name": "SeedExpiresAtItsConfiguredRange",
+      "fullName": "Marshlight.PlayModeTests.MarshRemainingEnemyTests.SeedExpiresAtItsConfiguredRange",
+      "state": "Passed",
+      "durationSeconds": 1.5659701
+    },
+    {
+      "name": "SeedStopsAtWaterBankInsteadOfDamagingAcrossIt",
+      "fullName": "Marshlight.PlayModeTests.MarshRemainingEnemyTests.SeedStopsAtWaterBankInsteadOfDamagingAcrossIt",
+      "state": "Passed",
+      "durationSeconds": 0.9747336
+    },
+    {
+      "name": "SproutWarnsThenHasAtMostOneLiveSeed",
+      "fullName": "Marshlight.PlayModeTests.MarshRemainingEnemyTests.SproutWarnsThenHasAtMostOneLiveSeed",
+      "state": "Passed",
+      "durationSeconds": 3.0013189
+    }
+  ]
+}

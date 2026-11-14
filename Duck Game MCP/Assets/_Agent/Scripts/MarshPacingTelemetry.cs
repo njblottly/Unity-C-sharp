@@ -25,6 +25,7 @@ namespace DuckAdventure.Agent
             public string utc;
             public string runId;
             public string runLabel;
+            public string clock;
             public string eventName;
             public string detail;
             public int amount;
@@ -44,6 +45,13 @@ namespace DuckAdventure.Agent
         private bool teleported;
         private bool configured;
         private bool finished;
+        private bool simulationClock;
+#if UNITY_EDITOR
+        private bool editorPaused;
+        private double editorPausedAt;
+        private float editorPauseDebt;
+#endif
+        public bool SimulationClock => simulationClock;
         public Section[] Sections => sections;
         public string LogPath => logPath;
         public bool Teleported => teleported;
@@ -54,7 +62,7 @@ namespace DuckAdventure.Agent
             if (configured) throw new InvalidOperationException("Pacing telemetry was configured twice.");
             if (owner == null || hud == null || font == null) throw new InvalidOperationException("Pacing telemetry needs explicit level, HUD and font references.");
             level = owner;
-            string[] names = { "Landing to Reedbank", "Reedbank to Archive", "Archive to Haven", "Haven to reunion" };
+            string[] names = owner.PacingSectionNames;
             sections = new Section[names.Length];
             for (int i = 0; i < sections.Length; i++) sections[i] = new Section { name = names[i] };
             foreach (Text existing in hud.GetComponentsInChildren<Text>(true))
@@ -62,7 +70,7 @@ namespace DuckAdventure.Agent
             overlay = new GameObject("MarshPacingOverlay", typeof(RectTransform), typeof(Image));
             RectTransform panel = (RectTransform)overlay.transform;
             panel.SetParent(hud, false); panel.anchorMin = Vector2.one; panel.anchorMax = Vector2.one;
-            panel.pivot = Vector2.one; panel.anchoredPosition = new Vector2(-22, -150); panel.sizeDelta = new Vector2(450, 185);
+            panel.pivot = Vector2.one; panel.anchoredPosition = new Vector2(-22, -150); panel.sizeDelta = new Vector2(450, 110 + names.Length * 20);
             Image background = overlay.GetComponent<Image>(); background.color = new Color(0.04f, 0.09f, 0.12f, 0.97f); background.raycastTarget = false;
             GameObject textObject = new GameObject("MarshPacingOverlayText", typeof(RectTransform), typeof(Text));
             RectTransform textRect = (RectTransform)textObject.transform;
@@ -76,6 +84,10 @@ namespace DuckAdventure.Agent
             Directory.CreateDirectory(directory);
             logPath = Path.Combine(directory, "pacing-" + runId + ".jsonl");
             configured = true;
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.pauseStateChanged += EditorPauseChanged;
+            if(UnityEditor.EditorApplication.isPaused){editorPaused=true;editorPausedAt=UnityEditor.EditorApplication.timeSinceStartup;}
+#endif
             WriteEvent("run_started", 0, "Editor/development only; pause, title and defeat waiting excluded");
         }
 
@@ -84,6 +96,23 @@ namespace DuckAdventure.Agent
             if (!configured) throw new InvalidOperationException("MarshPacingTelemetry must be configured by MarshLevel.");
         }
         public void SetRunLabel(string value) { EnsureConfigured(); runLabel = value; WriteEvent("run_label", 0, value); }
+        public void SetSimulationClock(bool enabled)
+        {
+            EnsureConfigured(); simulationClock=enabled; WriteEvent("clock_mode",0,enabled?"simulation":"unscaled");
+        }
+#if UNITY_EDITOR
+        private void EditorPauseChanged(UnityEditor.PauseState state)
+        {
+            if(state==UnityEditor.PauseState.Paused)
+            {
+                if(!editorPaused){editorPaused=true;editorPausedAt=UnityEditor.EditorApplication.timeSinceStartup;}
+            }
+            else if(editorPaused)
+            {
+                editorPauseDebt+=(float)(UnityEditor.EditorApplication.timeSinceStartup-editorPausedAt);editorPaused=false;
+            }
+        }
+#endif
         public void ToggleOverlay() { EnsureConfigured(); overlay.SetActive(!overlay.activeSelf); RenderOverlay(); }
         public void ReachedCheckpoint(int index)
         {
@@ -102,25 +131,30 @@ namespace DuckAdventure.Agent
         public void WriteEvent(string eventName, int amount, string detail)
         {
             EnsureConfigured();
-            Record record = new Record { utc = DateTime.UtcNow.ToString("o"), runId = runId, runLabel = runLabel, eventName = eventName, detail = detail, amount = amount, section = section, teleported = teleported, sections = sections };
+            Record record = new Record { utc = DateTime.UtcNow.ToString("o"), runId = runId, runLabel = runLabel, eventName = eventName, detail = detail, amount = amount, section = section, teleported = teleported, clock = simulationClock ? "simulation" : "unscaled", sections = sections };
             File.AppendAllText(logPath, JsonUtility.ToJson(record) + Environment.NewLine);
         }
         public string SnapshotJson()
         {
             EnsureConfigured();
-            return JsonUtility.ToJson(new Record { utc = DateTime.UtcNow.ToString("o"), runId = runId, runLabel = runLabel, eventName = "snapshot", section = section, teleported = teleported, sections = sections }, true);
+            return JsonUtility.ToJson(new Record { utc = DateTime.UtcNow.ToString("o"), runId = runId, runLabel = runLabel, eventName = "snapshot", section = section, teleported = teleported, clock = simulationClock ? "simulation" : "unscaled", sections = sections }, true);
         }
         private void Update()
         {
             EnsureConfigured();
-            if (level.State == MarshState.Playing) sections[section].activeSeconds += Time.unscaledDeltaTime;
-            else if (level.State == MarshState.Dialogue) sections[section].readingSeconds += Time.unscaledDeltaTime;
+            float unscaled=Time.unscaledDeltaTime;
+#if UNITY_EDITOR
+            if(editorPauseDebt>0){unscaled=Mathf.Max(0,unscaled-editorPauseDebt);editorPauseDebt=0;}
+#endif
+            if (level.State == MarshState.Playing && Time.timeScale>0) sections[section].activeSeconds += simulationClock?Time.deltaTime:unscaled;
+            else if (level.State == MarshState.Dialogue || level.JournalOpen) sections[section].readingSeconds += unscaled;
             if (Time.unscaledTime >= nextHeartbeat) { nextHeartbeat = Time.unscaledTime + 5; WriteEvent("heartbeat", 0, ""); }
             if (overlay.activeSelf) RenderOverlay();
         }
         private void RenderOverlay()
         {
             StringBuilder text = new StringBuilder("PACING  /  F7 HIDE\n" + runLabel + (teleported ? " — TELEPORTED, EXCLUDE" : " — no teleport") + "\n");
+            text.Append("Clock: ").Append(simulationClock?"simulation":"active real time").Append("\n");
             for (int i = 0; i < sections.Length; i++)
             {
                 Section row = sections[i];
@@ -130,6 +164,9 @@ namespace DuckAdventure.Agent
         }
         private void OnDestroy()
         {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.pauseStateChanged -= EditorPauseChanged;
+#endif
             if (configured) WriteEvent("scene_closed", 0, finished ? "completed" : "incomplete");
         }
     }

@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[DefaultExecutionOrder(-60)]
 public class EnemyHitPoints : MonoBehaviour
 {
     [Header("Health")]
@@ -14,7 +15,14 @@ public class EnemyHitPoints : MonoBehaviour
     private int currentHitPoints;
     private bool isDead;
 
+    public event System.Action<int> Damaged;
+    public event System.Action Died;
     public int CurrentHitPoints => currentHitPoints;
+    public void ConfigureForEncounter(int maximum)
+    {
+        if(maximum<=0)throw new System.ArgumentOutOfRangeException(nameof(maximum));
+        maxHitPoints=maximum;startingHitPoints=maximum;ResetHitPoints();
+    }
     public int MaxHitPoints => maxHitPoints;
     public bool IsDead => isDead;
 
@@ -41,6 +49,8 @@ public class EnemyHitPoints : MonoBehaviour
         currentHitPoints = Mathf.Clamp(currentHitPoints, 0, maxHitPoints);
 
         Debug.Log($"{gameObject.name} took {damageAmount} damage. HP: {currentHitPoints}/{maxHitPoints}");
+
+        Damaged?.Invoke(damageAmount);
 
         if (currentHitPoints <= 0)
         {
@@ -70,6 +80,8 @@ public class EnemyHitPoints : MonoBehaviour
     {
         isDead = false;
         currentHitPoints = startingHitPoints;
+        foreach(Collider2D collider in GetComponents<Collider2D>())collider.enabled=true;
+        Rigidbody2D body=GetComponent<Rigidbody2D>();if(body!=null){body.simulated=true;body.linearVelocity=Vector2.zero;}
         gameObject.SetActive(true);
     }
 
@@ -102,6 +114,8 @@ public class EnemyHitPoints : MonoBehaviour
         {
             animator.SetBool("IsMoving", false);
         }
+
+        Died?.Invoke();
 
         if (disableInsteadOfDestroy)
         {

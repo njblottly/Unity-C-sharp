@@ -1,0 +1,124 @@
+{
+  "screenshots": 21,
+  "allSixDestinationsAndEightGatesInspected": true,
+  "nativeErrors": 0,
+  "nativeWarnings": 0,
+  "initialViewsRecordedInMcpTranscript": true,
+  "remaining": [
+    {
+      "view": "Gate_Main_3",
+      "state": {
+        "gate": "Main gate 3",
+        "closed": true,
+        "bells": 0,
+        "checkpoint": 0
+      },
+      "counts": [
+        0,
+        0,
+        61
+      ],
+      "console": {
+        "success": true,
+        "message": "Retrieved 3 log entries.",
+        "data": [
+          "Trigger hit: checkpoint-0",
+          "Trigger hit: keeper-note",
+          "Trigger hit: ReedkeeperSwordPickup"
+        ]
+      }
+    },
+    {
+      "view": "Gate_Main_4",
+      "state": {
+        "gate": "Main gate 4",
+        "closed": true,
+        "bells": 0,
+        "checkpoint": 0
+      },
+      "counts": [
+        0,
+        0,
+        61
+      ],
+      "console": {
+        "success": true,
+        "message": "Retrieved 3 log entries.",
+        "data": [
+          "Trigger hit: checkpoint-0",
+          "Trigger hit: keeper-note",
+          "Trigger hit: ReedkeeperSwordPickup"
+        ]
+      }
+    },
+    {
+      "view": "Gate_Relay_0",
+      "state": {
+        "gate": "Latched reed arm",
+        "closed": true,
+        "bells": 0,
+        "checkpoint": 0
+      },
+      "counts": [
+        0,
+        0,
+        61
+      ],
+      "console": {
+        "success": true,
+        "message": "Retrieved 3 log entries.",
+        "data": [
+          "Trigger hit: checkpoint-0",
+          "Trigger hit: keeper-note",
+          "Trigger hit: ReedkeeperSwordPickup"
+        ]
+      }
+    },
+    {
+      "view": "Gate_Relay_1",
+      "state": {
+        "gate": "Latched spill arm",
+        "closed": true,
+        "bells": 0,
+        "checkpoint": 0
+      },
+      "counts": [
+        0,
+        0,
+        61
+      ],
+      "console": {
+        "success": true,
+        "message": "Retrieved 3 log entries.",
+        "data": [
+          "Trigger hit: checkpoint-0",
+          "Trigger hit: keeper-note",
+          "Trigger hit: ReedkeeperSwordPickup"
+        ]
+      }
+    },
+    {
+      "view": "Gate_Relay_2",
+      "state": {
+        "gate": "Latched exit arm",
+        "closed": true,
+        "bells": 0,
+        "checkpoint": 0
+      },
+      "counts": [
+        0,
+        0,
+        61
+      ],
+      "console": {
+        "success": true,
+        "message": "Retrieved 3 log entries.",
+        "data": [
+          "Trigger hit: checkpoint-0",
+          "Trigger hit: keeper-note",
+          "Trigger hit: ReedkeeperSwordPickup"
+        ]
+      }
+    }
+  ]
+}

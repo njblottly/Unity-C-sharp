@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Agent/Scenes/Marshlight_Campaign.unity
+    guid: e8aecc4ab64b549d283df0c062dfb98b
+  - enabled: 1
     path: Assets/_Agent/Scenes/Marshlight.unity
     guid: 94d083028cdff465abed874552c0ab31
   - enabled: 1

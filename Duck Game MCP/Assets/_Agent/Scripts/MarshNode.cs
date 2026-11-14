@@ -21,23 +21,23 @@ namespace DuckAdventure.Agent
         [SerializeField] private SpawnPoint spawnPoint;
 
         public MarshNodeKind Kind => kind;
-        public int Cost => cost;
+        public int Cost => level.Campaign!=null&&(kind==MarshNodeKind.Bell||kind==MarshNodeKind.ReturnTray)&&level.Campaign.Gate(kind==MarshNodeKind.Bell?sequence:pairedBell.sequence)!=null?level.Campaign.Gate(kind==MarshNodeKind.Bell?sequence:pairedBell.sequence).cost:cost;
         public string DisplayName => displayName;
-        public int OutstandingCoins => kind == MarshNodeKind.ReturnTray && pairedBell.Opened && !Reclaimed ? cost : 0;
+        public int OutstandingCoins => kind == MarshNodeKind.ReturnTray && pairedBell.Opened && !Reclaimed ? Cost : 0;
         public string Id => nodeId;
         public int Sequence => sequence;
         public bool Opened { get; private set; }
         public bool Reclaimed { get; private set; }
         public bool Visited { get; private set; }
         public bool GateClosed => closedGate != null && closedGate.activeSelf;
-        public bool IsInteractive => kind == MarshNodeKind.Bell || kind == MarshNodeKind.ReturnTray || kind == MarshNodeKind.Note || kind == MarshNodeKind.RelayLoan || kind == MarshNodeKind.RelayReturn;
+        public bool IsInteractive => kind == MarshNodeKind.Bell || kind == MarshNodeKind.ReturnTray || (kind == MarshNodeKind.Note && level.CanReadStory(storyId)) || kind == MarshNodeKind.RelayLoan || kind == MarshNodeKind.RelayReturn;
         public string Prompt
         {
             get
             {
                 if (kind == MarshNodeKind.RelayLoan || kind == MarshNodeKind.RelayReturn) return level.CoinRelay.Prompt(this);
-                if (kind == MarshNodeKind.Bell) return Opened ? displayName + " — causeway latched" : "E  Lend " + cost + " coins to " + displayName;
-                if (kind == MarshNodeKind.ReturnTray) return Reclaimed ? "Coins recovered — keep heading east" : "E  Recover " + cost + " coins from " + displayName;
+                if (kind == MarshNodeKind.Bell) return Opened ? displayName + " — causeway latched" : "E  Lend " + Cost + " coins to " + displayName;
+                if (kind == MarshNodeKind.ReturnTray) return Reclaimed ? "Coins recovered — keep heading east" : "E  Recover " + Cost + " coins from " + displayName;
                 return "E  Read " + displayName;
             }
         }
@@ -50,9 +50,10 @@ namespace DuckAdventure.Agent
             if (kind == MarshNodeKind.Bell)
             {
                 if (Opened) { level.Notify("The causeway is latched. Your coins are in the far-side tray."); return false; }
-                if (sequence == 2 && !level.CoinRelay.Completed) { level.Notify(level.CoinRelay.Objective); return false; }
+                if (level.RequiresArchiveExchange(sequence) && !level.CoinRelay.Completed) { level.Notify(level.CoinRelay.Objective); return false; }
                 if (level.BellsOpened != sequence) { level.Notify("Follow the bells from west to east."); return false; }
-                if (!inventory.TrySpend(Item.ItemType.COIN, cost))
+                if(level.Campaign!=null&&!level.Campaign.GateReady(sequence)){level.Notify(level.Campaign.GateHint(sequence));return false;}
+                if (!inventory.TrySpend(Item.ItemType.COIN, Cost))
                 {
                     level.Notify("This bell needs three coins. Follow the brass glints along the landing trail.");
                     return false;
@@ -63,7 +64,7 @@ namespace DuckAdventure.Agent
                 bridge.color = new Color(0.75f, 0.65f, 0.40f);
                 marker.color = new Color(1f, 0.88f, 0.48f);
                 level.BellOpened(this);
-                level.RecordCoinAction("bell_lend", cost, nodeId);
+                level.RecordCoinAction("bell_lend", Cost, nodeId);
                 level.Pulse(transform.position, new Color(1f, 0.8f, 0.3f));
                 level.ShowStory(storyId);
                 return true;
@@ -72,13 +73,13 @@ namespace DuckAdventure.Agent
             {
                 if (!pairedBell.Opened) { level.Notify("The matching bell has not been rung yet."); return false; }
                 if (Reclaimed) { level.Notify("You already recovered these coins."); return false; }
-                if (!inventory.TryAddItems(level.CoinItem, cost))
+                if (!inventory.TryAddItems(level.CoinItem, Cost))
                 {
                     level.Notify("Make space in the inventory. The tray will keep your coins safe.");
                     return false;
                 }
                 Reclaimed = true;
-                level.RecordCoinAction("bell_reclaim", cost, nodeId);
+                level.RecordCoinAction("bell_reclaim", Cost, nodeId);
                 Visited = true;
                 marker.color = new Color(0.45f, 0.8f, 0.67f);
                 level.Notify("Three coins returned. Lend them to the next bell.");

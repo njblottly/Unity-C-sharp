@@ -146,8 +146,9 @@ namespace DuckAdventure.Agent
                 MarshEnemyFeedback feedback = enemy.GetComponent<MarshEnemyFeedback>();
                 if (feedback == null) throw new InvalidOperationException("A sword target needs its serialized MarshEnemyFeedback: " + enemy.name);
                 hitThisSwipe.Add(enemy);
-                enemy.TakeDamage(data.Damage);
-                feedback.ShowHit();
+                EnemyAgent agent=enemy.GetComponent<EnemyAgent>();
+                if(agent==null)enemy.TakeDamage(data.Damage);
+                else agent.TryReceiveWeaponHit(data.Damage,origin);
             }
         }
 

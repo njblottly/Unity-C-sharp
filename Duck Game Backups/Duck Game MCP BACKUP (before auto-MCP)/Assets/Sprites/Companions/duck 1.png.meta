@@ -1,0 +1,1171 @@
+fileFormatVersion: 2
+guid: e19c53a0b9ee34b5bb8f9724c996af44
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5521503060725269866
+    second: duck 1_0
+  - first:
+      213: -7014647072283987094
+    second: duck 1_1
+  - first:
+      213: 8188730219842850960
+    second: duck 1_2
+  - first:
+      213: -6671606893675919371
+    second: duck 1_3
+  - first:
+      213: 4979710563077899839
+    second: duck 1_4
+  - first:
+      213: 9035949341151826740
+    second: duck 1_5
+  - first:
+      213: -6868708228476860942
+    second: duck 1_6
+  - first:
+      213: -1141653211432779337
+    second: duck 1_7
+  - first:
+      213: 6789395769557949639
+    second: duck 1_8
+  - first:
+      213: 6800205063171406777
+    second: duck 1_9
+  - first:
+      213: 8009549676609810992
+    second: duck 1_10
+  - first:
+      213: 1754148666771173901
+    second: duck 1_11
+  - first:
+      213: -16181795090130844
+    second: duck 1_12
+  - first:
+      213: -6292817923945570200
+    second: duck 1_13
+  - first:
+      213: -4676693737153639257
+    second: duck 1_14
+  - first:
+      213: -5295884631064877240
+    second: duck 1_15
+  - first:
+      213: 8377413863525087539
+    second: duck 1_16
+  - first:
+      213: 2070331721363096588
+    second: duck 1_17
+  - first:
+      213: 3980344299316914160
+    second: duck 1_18
+  - first:
+      213: 502639712251611672
+    second: duck 1_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: duck 1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -9}
+        - {x: 1, y: -8}
+        - {x: 2, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 13, y: 8}
+        - {x: 13, y: 9}
+        - {x: 9, y: 11}
+        - {x: 6, y: 11}
+        - {x: 5, y: 10}
+        - {x: 5, y: 7}
+        - {x: 6, y: 5}
+        - {x: 4, y: 1}
+        - {x: -5, y: 1}
+        - {x: -13, y: 5}
+        - {x: -13, y: 2}
+        - {x: -9, y: -3}
+        - {x: -9, y: -5}
+        - {x: -8, y: -6}
+        - {x: -3, y: -6}
+        - {x: -2, y: -7}
+        - {x: -2, y: -10}
+        - {x: 3, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: a6503c097c150ac40800000000000000
+      internalID: 5521503060725269866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -7}
+        - {x: 3, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -2, y: -6}
+        - {x: -1, y: -8}
+        - {x: -3, y: -9}
+        - {x: -3, y: -10}
+        - {x: 2, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: a6377c727a7f6ae90800000000000000
+      internalID: -7014647072283987094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -9}
+        - {x: 1, y: -8}
+        - {x: 2, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 13, y: 8}
+        - {x: 13, y: 9}
+        - {x: 9, y: 11}
+        - {x: 6, y: 11}
+        - {x: 5, y: 10}
+        - {x: 5, y: 7}
+        - {x: 6, y: 5}
+        - {x: 4, y: 1}
+        - {x: -5, y: 1}
+        - {x: -13, y: 5}
+        - {x: -13, y: 2}
+        - {x: -9, y: -3}
+        - {x: -9, y: -5}
+        - {x: -8, y: -6}
+        - {x: -4, y: -6}
+        - {x: -3, y: -7}
+        - {x: -3, y: -10}
+        - {x: 3, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 0905d3bcfb634a170800000000000000
+      internalID: 8188730219842850960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -7}
+        - {x: 4, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -2, y: -6}
+        - {x: -1, y: -8}
+        - {x: -3, y: -9}
+        - {x: -3, y: -10}
+        - {x: 3, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 5f7466db0e0b963a0800000000000000
+      internalID: -6671606893675919371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -3, y: -7}
+        - {x: -2, y: -6}
+        - {x: 0, y: -7}
+        - {x: 0, y: -10}
+        - {x: 3, y: -10}
+        - {x: 3, y: -9}
+        - {x: 1, y: -8}
+        - {x: 2, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 13, y: 8}
+        - {x: 13, y: 9}
+        - {x: 9, y: 11}
+        - {x: 6, y: 11}
+        - {x: 5, y: 10}
+        - {x: 5, y: 7}
+        - {x: 6, y: 5}
+        - {x: 4, y: 1}
+        - {x: -5, y: 1}
+        - {x: -13, y: 5}
+        - {x: -13, y: 2}
+        - {x: -9, y: -3}
+        - {x: -9, y: -5}
+        - {x: -8, y: -6}
+        - {x: -5, y: -6}
+        - {x: -4, y: -7}
+        - {x: -4, y: -10}
+        - {x: -2, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: f36c48c9f5c7b1540800000000000000
+      internalID: 4979710563077899839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 0, y: -7}
+        - {x: 2, y: -6}
+        - {x: 3, y: -8}
+        - {x: 2, y: -10}
+        - {x: 4, y: -10}
+        - {x: 4, y: -7}
+        - {x: 5, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -2, y: -6}
+        - {x: -1, y: -7}
+        - {x: -1, y: -8}
+        - {x: -3, y: -9}
+        - {x: -3, y: -10}
+        - {x: 0, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 43397cf1d04266d70800000000000000
+      internalID: 9035949341151826740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -9}
+        - {x: 1, y: -8}
+        - {x: 2, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 13, y: 8}
+        - {x: 13, y: 9}
+        - {x: 9, y: 11}
+        - {x: 6, y: 11}
+        - {x: 5, y: 10}
+        - {x: 5, y: 7}
+        - {x: 6, y: 5}
+        - {x: 4, y: 1}
+        - {x: -5, y: 1}
+        - {x: -13, y: 5}
+        - {x: -13, y: 2}
+        - {x: -9, y: -3}
+        - {x: -9, y: -5}
+        - {x: -8, y: -6}
+        - {x: -4, y: -6}
+        - {x: -3, y: -7}
+        - {x: -3, y: -10}
+        - {x: 3, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 2f585d712427da0a0800000000000000
+      internalID: -6868708228476860942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -7}
+        - {x: 4, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -2, y: -6}
+        - {x: -1, y: -8}
+        - {x: -3, y: -9}
+        - {x: -3, y: -10}
+        - {x: 3, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 7b18dd3f3780820f0800000000000000
+      internalID: -1141653211432779337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -9}
+        - {x: 1, y: -8}
+        - {x: 2, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 13, y: 8}
+        - {x: 13, y: 9}
+        - {x: 9, y: 11}
+        - {x: 6, y: 11}
+        - {x: 5, y: 10}
+        - {x: 5, y: 7}
+        - {x: 6, y: 5}
+        - {x: 4, y: 1}
+        - {x: -5, y: 1}
+        - {x: -13, y: 5}
+        - {x: -13, y: 2}
+        - {x: -9, y: -3}
+        - {x: -9, y: -5}
+        - {x: -8, y: -6}
+        - {x: -3, y: -6}
+        - {x: -2, y: -7}
+        - {x: -2, y: -10}
+        - {x: 3, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 7cc9a0c0b77c83e50800000000000000
+      internalID: 6789395769557949639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -7}
+        - {x: 3, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -2, y: -6}
+        - {x: -1, y: -8}
+        - {x: -3, y: -9}
+        - {x: -3, y: -10}
+        - {x: 2, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 9bbf426d97e2f5e50800000000000000
+      internalID: 6800205063171406777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_10
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -9}
+        - {x: 2, y: -8}
+        - {x: 3, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 13, y: 8}
+        - {x: 13, y: 9}
+        - {x: 9, y: 11}
+        - {x: 6, y: 11}
+        - {x: 5, y: 10}
+        - {x: 5, y: 7}
+        - {x: 6, y: 5}
+        - {x: 4, y: 1}
+        - {x: -5, y: 1}
+        - {x: -13, y: 5}
+        - {x: -13, y: 2}
+        - {x: -9, y: -3}
+        - {x: -9, y: -5}
+        - {x: -8, y: -6}
+        - {x: -3, y: -6}
+        - {x: -2, y: -7}
+        - {x: -2, y: -10}
+        - {x: 4, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 0323c259ef2a72f60800000000000000
+      internalID: 8009549676609810992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_11
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -7}
+        - {x: 3, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -3, y: -6}
+        - {x: -2, y: -8}
+        - {x: -4, y: -9}
+        - {x: -4, y: -10}
+        - {x: 2, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: d02fe162becf75810800000000000000
+      internalID: 1754148666771173901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -1, y: -7}
+        - {x: 0, y: -6}
+        - {x: 2, y: -7}
+        - {x: 2, y: -10}
+        - {x: 5, y: -10}
+        - {x: 5, y: -9}
+        - {x: 3, y: -8}
+        - {x: 4, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 13, y: 8}
+        - {x: 13, y: 9}
+        - {x: 9, y: 11}
+        - {x: 6, y: 11}
+        - {x: 5, y: 10}
+        - {x: 5, y: 7}
+        - {x: 6, y: 5}
+        - {x: 4, y: 1}
+        - {x: -5, y: 1}
+        - {x: -13, y: 5}
+        - {x: -13, y: 2}
+        - {x: -9, y: -3}
+        - {x: -9, y: -5}
+        - {x: -8, y: -6}
+        - {x: -3, y: -6}
+        - {x: -2, y: -7}
+        - {x: -2, y: -10}
+        - {x: 0, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 46813db3eb286cff0800000000000000
+      internalID: -16181795090130844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -2, y: -7}
+        - {x: 0, y: -6}
+        - {x: 1, y: -8}
+        - {x: 0, y: -10}
+        - {x: 2, y: -10}
+        - {x: 2, y: -7}
+        - {x: 3, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -4, y: -6}
+        - {x: -3, y: -7}
+        - {x: -3, y: -8}
+        - {x: -5, y: -9}
+        - {x: -5, y: -10}
+        - {x: -2, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 860630f507b6ba8a0800000000000000
+      internalID: -6292817923945570200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 4, y: -9}
+        - {x: 2, y: -8}
+        - {x: 3, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 13, y: 8}
+        - {x: 13, y: 9}
+        - {x: 9, y: 11}
+        - {x: 6, y: 11}
+        - {x: 5, y: 10}
+        - {x: 5, y: 7}
+        - {x: 6, y: 5}
+        - {x: 4, y: 1}
+        - {x: -5, y: 1}
+        - {x: -13, y: 5}
+        - {x: -13, y: 2}
+        - {x: -9, y: -3}
+        - {x: -9, y: -5}
+        - {x: -8, y: -6}
+        - {x: -3, y: -6}
+        - {x: -2, y: -7}
+        - {x: -2, y: -10}
+        - {x: 4, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 7acc9a103db091fb0800000000000000
+      internalID: -4676693737153639257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -7}
+        - {x: 3, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -3, y: -6}
+        - {x: -2, y: -8}
+        - {x: -4, y: -9}
+        - {x: -4, y: -10}
+        - {x: 2, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 8476de1acfc3186b0800000000000000
+      internalID: -5295884631064877240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -9}
+        - {x: 1, y: -8}
+        - {x: 2, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 10, y: -3}
+        - {x: 10, y: 6}
+        - {x: 13, y: 8}
+        - {x: 13, y: 9}
+        - {x: 9, y: 11}
+        - {x: 6, y: 11}
+        - {x: 5, y: 10}
+        - {x: 5, y: 7}
+        - {x: 6, y: 5}
+        - {x: 4, y: 1}
+        - {x: -5, y: 1}
+        - {x: -13, y: 5}
+        - {x: -13, y: 2}
+        - {x: -9, y: -3}
+        - {x: -9, y: -5}
+        - {x: -8, y: -6}
+        - {x: -3, y: -6}
+        - {x: -2, y: -7}
+        - {x: -2, y: -10}
+        - {x: 3, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 33978dff58d824470800000000000000
+      internalID: 8377413863525087539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -7}
+        - {x: 3, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -2, y: -6}
+        - {x: -1, y: -8}
+        - {x: -3, y: -9}
+        - {x: -3, y: -10}
+        - {x: 2, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: c0402134bbb4bbc10800000000000000
+      internalID: 2070331721363096588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 3, y: -7}
+        - {x: 8, y: -7}
+        - {x: 9, y: -6}
+        - {x: 9, y: -4}
+        - {x: 13, y: 1}
+        - {x: 13, y: 4}
+        - {x: 5, y: 0}
+        - {x: -4, y: 0}
+        - {x: -5, y: 1}
+        - {x: -6, y: 5}
+        - {x: -5, y: 6}
+        - {x: -5, y: 9}
+        - {x: -6, y: 10}
+        - {x: -9, y: 10}
+        - {x: -13, y: 8}
+        - {x: -13, y: 7}
+        - {x: -12, y: 7}
+        - {x: -10, y: 5}
+        - {x: -10, y: -4}
+        - {x: -8, y: -7}
+        - {x: -2, y: -7}
+        - {x: -1, y: -8}
+        - {x: -3, y: -9}
+        - {x: -3, y: -10}
+        - {x: 2, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 0f7298c2d060d3730800000000000000
+      internalID: 3980344299316914160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: duck 1_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 2, y: -7}
+        - {x: 3, y: -6}
+        - {x: 8, y: -6}
+        - {x: 9, y: -5}
+        - {x: 9, y: -3}
+        - {x: 13, y: 2}
+        - {x: 13, y: 5}
+        - {x: 5, y: 1}
+        - {x: -4, y: 1}
+        - {x: -5, y: 2}
+        - {x: -6, y: 6}
+        - {x: -5, y: 7}
+        - {x: -5, y: 10}
+        - {x: -6, y: 11}
+        - {x: -9, y: 11}
+        - {x: -13, y: 9}
+        - {x: -13, y: 8}
+        - {x: -12, y: 8}
+        - {x: -10, y: 6}
+        - {x: -10, y: -3}
+        - {x: -8, y: -6}
+        - {x: -2, y: -6}
+        - {x: -1, y: -8}
+        - {x: -3, y: -9}
+        - {x: -3, y: -10}
+        - {x: 2, y: -10}
+      tessellationDetail: 1
+      bones: []
+      spriteID: 81a03cab72cb9f600800000000000000
+      internalID: 502639712251611672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a028fc57bd9ee44478e9754fb492931f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      duck 1_0: 5521503060725269866
+      duck 1_1: -7014647072283987094
+      duck 1_10: 8009549676609810992
+      duck 1_11: 1754148666771173901
+      duck 1_12: -16181795090130844
+      duck 1_13: -6292817923945570200
+      duck 1_14: -4676693737153639257
+      duck 1_15: -5295884631064877240
+      duck 1_16: 8377413863525087539
+      duck 1_17: 2070331721363096588
+      duck 1_18: 3980344299316914160
+      duck 1_19: 502639712251611672
+      duck 1_2: 8188730219842850960
+      duck 1_3: -6671606893675919371
+      duck 1_4: 4979710563077899839
+      duck 1_5: 9035949341151826740
+      duck 1_6: -6868708228476860942
+      duck 1_7: -1141653211432779337
+      duck 1_8: 6789395769557949639
+      duck 1_9: 6800205063171406777
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

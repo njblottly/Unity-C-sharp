@@ -1,0 +1,25 @@
+{
+  "errors": 0,
+  "warnings": 0,
+  "swiping": true,
+  "visible": true,
+  "borrowed": 1,
+  "enemyHP": [
+    {
+      "name": "MarshMite_1",
+      "hp": 2
+    },
+    {
+      "name": "MarshMite_3",
+      "hp": 3
+    },
+    {
+      "name": "MarshMite_2",
+      "hp": 3
+    },
+    {
+      "name": "MarshMite_4",
+      "hp": 3
+    }
+  ]
+}

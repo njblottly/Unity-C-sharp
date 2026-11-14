@@ -1,0 +1,9 @@
+{
+  "state": "Intro",
+  "bells": 0,
+  "coins": 0,
+  "players": 1,
+  "inventories": 1,
+  "healthBars": 1,
+  "scene": "Assets/_Agent/Scenes/Marshlight.unity"
+}

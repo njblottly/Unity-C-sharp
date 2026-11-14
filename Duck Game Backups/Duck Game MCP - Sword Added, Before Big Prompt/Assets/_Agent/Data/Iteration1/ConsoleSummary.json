@@ -1,0 +1,87 @@
+{
+  "final": {
+    "utc": "2026-11-03T22:19:41.253844Z",
+    "playing": false,
+    "paused": false,
+    "compiling": false,
+    "errors": 0,
+    "warnings": 0,
+    "logs": 376,
+    "instances": [
+      {
+        "type": "Player",
+        "count": 1
+      },
+      {
+        "type": "DuckFollower",
+        "count": 1
+      },
+      {
+        "type": "RPGGameManager",
+        "count": 1
+      },
+      {
+        "type": "RPGCameraManager",
+        "count": 1
+      },
+      {
+        "type": "Inventory",
+        "count": 1
+      },
+      {
+        "type": "HealthBar",
+        "count": 1
+      },
+      {
+        "type": "EventSystem",
+        "count": 1
+      },
+      {
+        "type": "DuckAdventure.Agent.MarshLevel",
+        "count": 1
+      },
+      {
+        "type": "DuckAdventure.Agent.MarshCoinRelay",
+        "count": 1
+      },
+      {
+        "type": "DuckAdventure.Agent.MarshPacingTelemetry",
+        "count": 0
+      }
+    ],
+    "sceneDirty": false
+  },
+  "fullWalkerNativeCounts": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "walkerRuntimeErrors": [],
+  "walkerCodeWarnings": [],
+  "F6Verification": {
+    "destinations": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "captures": [
+      "I1_Final_F6_0.png",
+      "I1_Final_F6_1.png",
+      "I1_Final_F6_2.png",
+      "I1_Final_F6_3.png"
+    ],
+    "nativeErrorsAtEach": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "nativeWarningsAtEach": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "note": "Native LogEntries counters are authoritative; this MCP console wrapper labels regular MonoBehaviour.print messages as warnings."
+}

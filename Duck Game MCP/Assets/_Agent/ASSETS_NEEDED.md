@@ -1,5 +1,5 @@
 # Marshlight asset manifest
-Updated 6 November 2026. Current scene: Assets/_Agent/Scenes/Marshlight.unity.
+Updated 6 November 2026. Current campaign: Assets/_Agent/Scenes/Marshlight_Campaign.unity; original scene retained.
 
 This lists the current assets under Placeholder, including the mailbox/signpost/sword and bell/letter/grounding passes. It does not mark the full character-animation or sound overhaul complete. Keep asset GUIDs, sprite names and serialized references when replacing these files. Existing outdoor sheets and original character art remain in use and do not need uploading again.
 
@@ -66,3 +66,41 @@ New enemy/collectible frames: 32x32 at 32 PPU, centre pivot (16,16), Point, unco
 Do not create replacement Aiken/duck animation sheets until the visual adapter and source-frame mismatch are resolved at the relevant art milestone. If matching art is unavailable, use clearly labelled placeholder files with these specifications and record actual delivered counts, rather than claiming final-quality replacements.
 
 Planned sound requests, not files: skitter warning/lunge, crab guard/claw, moth warning/dive, seed fire/impact, boss phase warning/recovery, perch/recall, lamp on/refund, route selector, Reed Mark pickup, journal reward and the previously listed bell/coin/dialogue/hit/defeat/victory set. Keep the existing sword swish. Synthesized or supplied sounds only; no internet downloads. Master volume remains M7 (or an explicitly scoped earlier audio task).
+
+
+## Campaign M2 enemy placeholders (built)
+These are labelled prefab assemblies, not new bitmap sheets or final animation art. Both reuse the unchanged first32x32 frame of Assets/Sprites/Enemies/EnemyIdle_1.png, centre pivot(16,16),32PPU, Point/uncompressed/no mipmaps, black/green/white palette. Outlined limbs use the existing Square sprite with black and the sampled brown family. Scene data selects the body sprite; later replacement must retain prefab/renderer/data references.
+
+| Path | Frame size / count | Animations | Description |
+| --- | --- | --- | --- |
+| Assets/_Agent/Placeholder/Enemies/Skitter_PLACEHOLDER.prefab |32x32 body /1|Static body; procedural patrol, warning line, lunge and recoil|Low reed skitter assembly, five campaign encounters; replace with planned20-frame sheet.|
+| Assets/_Agent/Placeholder/Enemies/Crab_PLACEHOLDER.prefab |32x32 body /1|Static body; procedural guard, warning arc, claw timing and recoil|Wide outlined claw assembly, four campaign encounters; replace with planned23-frame sheet.|
+
+MarshEnemyFlash.mat and Assets/_Agent/Shaders/MarshHitFlash.shader provide a white silhouette flash without changing source textures. HP pips/warnings are geometry; no authored animation clips or new enemy sound files are claimed. Legacy mite still uses its original animation, now section-configured in the campaign. Player/duck/root scales and original imports remain unchanged. ART_ADAPTER.md is the future migration specification.
+
+
+## M3 labelled prefab placeholders
+Existing32x32/32PPU first mite frame remains Point/uncompressed/no mipmaps. No raster files created/edited. All listed prefabs are single-frame geometric assemblies awaiting authored replacements; procedural flight/tells do not substitute for animation sheets.
+
+| Current path | Frame / animation | Replacement specification | Use |
+| --- | --- | --- | --- |
+| Assets/_Agent/Placeholder/Enemies/Moth_PLACEHOLDER.prefab |32x32 source body; one static frame, procedural wings |WickMoth.png,32x32,32PPU,centre16/16, black outline, actor palette; idle4,fly4,tell3,dive3,hit2,defeat4 (20frames)|Archive,Storm,Haven; grey wings around reused mite body|
+| Assets/_Agent/Placeholder/Enemies/Sprout_PLACEHOLDER.prefab |32x32 source body; one static frame |CounterweightSprout.png,32x32,32PPU,centre16/16, black outline, actor palette; idle4,walk4,tell4,fire3,hit2,defeat6 (23frames)|Storm/Haven; tall body and outlined amber pod|
+| Assets/_Agent/Placeholder/Enemies/Seed_PLACEHOLDER.prefab |Square.png32x32,1frame; outlined brass rectangles |MarshSeed.png,8x8,32PPU,centre4/4, black outline and brass shades;static1|Short-range single seed projectile|
+New enemy sounds remain requested in the earlier sound manifest; no new sound assets created in M3.
+
+
+## M4 placeholder assemblies and requested replacements
+No new PNG/audio created. Existing Point/uncompressed/no-mipmap sprites are reused; actor family32x32/32PPU and existing tall prop family32x48/32PPU remain. Black Square outlines label the stand-ins. Room/mark/station objects are stored in Marshlight_Campaign.unity/Marshlight_World/09_CampaignMechanics; definitions under Data/Campaign/Mechanics and Marks. Do not replace the shared FieldLetter with a feather or the shared mailbox with an unrelated prop.
+
+| Current file/reference | Current frames | Requested asset (not created) | Frame/pivot/PPU | Animation specification and depiction |
+| --- | --- | --- | --- | --- |
+| Placeholder/Square.png plus existing duck32px sprite; three perch/rail scene assemblies |Static1 + original duck animation |Assets/_Agent/Placeholder/Mechanics/DuckPerch.png |32x32,(16,16),32 |Idle1; outlined reed lever/perch with duck pictogram; three safe inspection rooms. Actor flat palette/black outline. |
+| Placeholder/Square.png; three toggle shutters/room rails |Static1, shown/hidden |Assets/_Agent/Placeholder/Mechanics/InspectionShutter.png |32x48,(16,2),32 |Closed1/open1; mossy timber inspection shutter. Existing prop palette with black edge; world collision separate. |
+| Placeholder/Props/MarshLantern.png plus Square glow |Static1, runtime tint |Existing shared file retained; dedicated InspectionLamp.png if commissioned |32x48,(16,2),32 |Dark1/lit1 requested; warm brass lamp for Archive and Haven. Match established prop palette; preserve checkpoint shared lamp references. |
+| Placeholder/Props/KeeperMailbox.png;2sorters+4addressed returns |Static1 |Assets/_Agent/Placeholder/Mechanics/SortingBox.png |32x48,(16,6),32 |Static1; two-address sorting face. Current full posted mailbox reused; labels LOW/HIGH separate. |
+| Placeholder/Props/FieldLetter.png plus black Square;8marks |Static1 |Assets/_Agent/Placeholder/Collectibles/ReedMark.png |32x32,(16,16),32 |Static1; carved feather token with black outline and brass/wood shades. Swap mark SO sprites, retain story-letter file. |
+| Existing HUD/journal text BADGE; no badge bitmap |Text only |Assets/_Agent/Placeholder/Collectibles/BrassDuckBadge.png |32x32,(16,16),32 |Static1; tiny brass duck badge, cosmetic4mark reward; outlined actor/prop palette. |
+| Placeholder/Props/FieldLetter.png;3inspection plaques+mail instructions |Static1 |Shared letter remains, dedicated latch plaque optionalM6 |32x32,(16,16),32 |Static1; legible parchment/inspection icon; current stand-in explicitly named PLACEHOLDER in Hierarchy. |
+
+Frame counts above distinguish current stand-ins from requested production assets. No new animation clips were produced in M4. Perch click, lamp warm/refund, addressed-mail tick and Reed Mark chime remain requested audio; there are no new files to replace yet. Sound/volume production remains M7. ART_ADAPTER.md defines mixed actor-frame integration; root movement/collision scales were preserved.

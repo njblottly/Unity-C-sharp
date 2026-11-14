@@ -1,10 +1,10 @@
 # Marshlight: The Borrowed Bells — campaign design
-Version 6, 6 November 2026. Run target: Milestone 0 only.
+Version 8, 6 November 2026. Milestones1–4 complete; stop before5. Current campaign: Assets/_Agent/Scenes/Marshlight_Campaign.unity.
 
 ## Status and deliberate scope change
-This is the plan for a fuller campaign; new chapters, enemies, bosses, mechanics and collectibles below are not implemented in Milestone 0. The playable baseline remains Assets/_Agent/Scenes/Marshlight.unity. Prior design v5 is preserved in Data/Milestone0/Before_DESIGN.md.txt and start commit 229d2d757710c14bd9a008a10550b037db0d582a. The scope changes deliberately from one short level to the user's requested four-act, multi-chapter game. No gameplay asset changes accompany that decision.
+The current build implements the five-chapter progression/story framework, four new normal enemy types, three mechanics and eight Reed Marks from Milestones1–4. Bosses and the expanded climax/resolution remain M5/M6 plans; final balance remains M7. The original playable Assets/_Agent/Scenes/Marshlight.unity is preserved byte-for-byte. M0 inventory and original design proposals below are historical; the later execution/as-built sections record deliberate changes. Prior v5 is preserved in Data/Milestone0/Before_DESIGN.md.txt.
 
-The live project differs from the supplied brief: MovementController reads Horizontal and Vertical and moves a zero-gravity Rigidbody2D on both axes. It is top-down, progressing mainly west to east with upper/lower routes. There are three main bell bridges plus three archive relay gates, four checkpoints, four patrols and twelve story entries. Preserve the working perspective, camera, controller and input. A side-view conversion needs a separate decision; none is assumed by this plan.
+The preserved pre-campaign project differs from the supplied brief: MovementController reads Horizontal and Vertical and moves a zero-gravity Rigidbody2D on both axes. It is top-down, progressing mainly west to east with upper/lower routes. Its baseline has three main bridges/three relays, four checkpoints/four patrols/twelve stories. The current campaign has five main bridges/three relays, six checkpoints, twelve enemies and seventeen stories. Preserve the working perspective, camera, controller and input. A side-view conversion needs a separate decision; none is assumed by this plan.
 
 ## Baseline inventory and system map
 Inventory before this run's evidence: Unity 6000.3.9f1; two scenes (Marshlight first enabled build scene, original Assets/Scenes/LevelOne.unity second); 36 C# sources, 14 prefab assets including the tile palette, 14 animation clips. There are 105 Texture2D source files: 72 historical evidence images and 33 outside those evidence directories, not 105 gameplay sheets. Sprite enumeration gives 41 distinct source paths after evidence exclusion. Data/Milestone0/ProjectInventory.json lists every path, prefab component, scene connection, package and node.
@@ -93,7 +93,7 @@ Target first campaign playthrough: 25–32 minutes including learning, text and 
 
 Future five main bells: existing bell-0, new campaign-bell-reed, existing bell-1, new campaign-bell-storm, existing bell-2. Retain original IDs. Current baseline still has three main bells and four checkpoints.
 
-M1 should create Assets/_Agent/Scenes/Marshlight_Campaign.unity as an isolated copy, retaining the tested baseline. Reuse one level coordinator and existing manager/UI instances. Baseline configuration defaults to three bells; campaign data permits five. Do not change build-scene order or Project Settings without asking. Unbuilt chapters may have functional ordinary coin-gate blockouts and existing patrols, clearly marked incomplete. Author later tutorial definitions/locations but keep their triggers/objectives inactive until their capability ships; never ask players to use an unbuilt control.
+M1 should create Assets/_Agent/Scenes/Marshlight_Campaign.unity as an isolated copy, retaining the tested baseline. Reuse one level coordinator and existing manager/UI instances. Baseline configuration defaults to three bells; campaign data permits five. Build-scene changes are now authorized; M1 adds the campaign first while retaining existing scenes. Unbuilt chapters may have functional ordinary coin-gate blockouts and existing patrols, clearly marked incomplete. Author later tutorial definitions/locations but keep their triggers/objectives inactive until their capability ships; never ask players to use an unbuilt control.
 
 ## Enemy roster and initial data values
 Proposed future EnemyData/BossData values only. HP/damage integer; speed/range world units. M2 extends the existing 1-second contact protection to a common damage gateway so different attack sources cannot double-hit within it.
@@ -173,7 +173,7 @@ Do not normalize/reslice Aiken or retrofit duck outlines in this run. Future nor
 6. Chapter set pieces/environmental story/visuals and complete resolution; deliberate art adapter.
 7. Feedback/readability/audio/volume and measured balance; human validate duration.
 
-Each bounded run reads persistent files and commits at start/end; no package/settings/input/name/folder changes without asking. Extend targeted code, preserve Inspector references, check existing instances, edit only outside Play, compile/read console then tests/debug views/full physical route.
+Each milestone rereads persistent files. The latest user instruction prohibits git commits and authorizes settings/package/folder changes when needed; preserve current input/packages unless a concrete need arises. Extend targeted code, preserve Inspector references, check existing instances, edit only outside Play, compile/read console then tests/debug views/full physical route.
 
 ## Measured baseline and remaining observations
 Fresh Milestone 0 route, 6 November 2026: the existing editor walker started at the real title and reached victory without F6. It passed 97/97 assertions across 70 steps and 159.57 world units. Active telemetry was 106.024 seconds (1:46.02); text advanced immediately, giving about 0.04 seconds recorded reading time. One death/restart was deliberate test input.
@@ -193,3 +193,68 @@ All four existing F6 destinations and six gates were captured/console-read this 
 Baseline 40/40 PlayMode cases; final 41/41, no failures/skips, SDK 15.558s. Compilation, fresh route, gate views and final native console:0 errors/0 warnings. Two initial pre-existing HandleUtility font warnings were recorded before baseline testing; active-scene UI/world font references were present and no TMP text objects loaded. They did not recur. Investigate a recurrence; do not suppress components or change fonts/settings speculatively.
 
 Current game remains the short baseline, not the planned campaign. Human input feel/reading time, other aspect ratios, audio and standalone build remain manual checks. Evidence is under Data/Milestone0.
+
+
+## Milestones 1–4 execution plan — 6 November 2026
+The latest user instruction authorizes sequential M1, M2, M3 and M4 without approval checkpoints and explicitly prohibits git commits. It supersedes the earlier commit/approval wording above. Stop before M5. Preserve the tested baseline scene and legacy input; use an isolated campaign scene. The human reports all M0 manual checks passed; no fresh human timing was supplied.
+
+Campaign coordinates are deliberate content blocks, not a movement slowdown: chapter starts x=0/22/50/86/120, five main bridge channels x=18/46/82/116/150, final checkpoint154 and reunion162. Traversable banks y=-7..7 with continuous outer blocking and solid water banks above/below every bridge. Checkpoints:0,22,50,86,120,154. Main IDs/order: bell-0, campaign-bell-reed, bell-1, campaign-bell-storm, bell-2. Original stable story IDs are retained in a copied story asset. Five ChapterData and five SectionData assets own names/objectives/timing/encounters/mechanic permissions; MarshLevel receives optional campaign configuration and retains three-bell legacy defaults.
+
+M1 extends the existing story entry data with prerequisites, capability requirements and a once-per-run policy. Scene triggers use explicit references and stable IDs. Place all ActI/II entries; perch/lamp tutorials are capability-gated until M4. Existing dialogue/menu UI is reused. M2 composes configurable enemy agents with EnemyHitPoints and MarshEnemyFeedback, uses a common enemy-damage cooldown on Player, and adds Skitter/Crab. M3 adds Moth/Sprout and per-section encounter tuning through assets. M4 adds perches, inspection/refund lamps, reachable selectable mail refunds and eight unique journal marks. Tutorial spaces are safe, followed by combinations; neither tool nor enemy death may open a main bridge.
+
+Boss arenas/engine and final campaign-resolution expansion remain M5/M6. The current reunion remains a playable endpoint during these intermediate milestones. The25–32minute target is a final campaign target; report intermediate measured timings honestly and do not pad them.
+
+
+## M2 implementation detail before build
+EnemyData/SectionData encounters are the tuning authority. Shared EnemyAgent owns patrol/chase-with-leash, locked telegraph, attack, recovery, hit reaction and checkpoint reset; EnemyHitPoints remains HP/death owner and Weapon remains damage source. Skitter:HP2,contact/attack1,move0.9,lunge1.8 for0.35s,warn0.50,recover0.85. Crab:HP4,damage1,move0.55,reach0.70,warn0.75,attack0.15,recover1.10; visible frontal150-degree guard, flanks/recovery vulnerable. All combat uses Player.TryTakeEnemyDamage with the existing1s cooldown; direct TakeDamage keeps scripted/forced-damage semantics. Hit reaction0.20s with1.25s reaction cooldown prevents repeated sword hits from renewing stun indefinitely. Terrain casts and2-unit home leashes prevent attack/knockback through banks.
+
+M2 replaces four scaffold patrols and retains one original MarshPatrol through optional section configuration; baseline patrol mode remains unchanged. Campaign has5Skitter/4Crab plus1configured original mite. New attack warning lines/arcs, health pips, true white silhouette flash and brief player blink are presentation only. New prefab visuals are explicitly labelled placeholder assemblies under Placeholder/Enemies: unchanged first32x32 EnemyIdle frame, Point/uncompressed/32PPU/black outline, plus outlined Square-sprite limbs. No original bitmap edited or new raster art created; proper animated replacement sheets remain in ASSETS_NEEDED.
+
+
+## M3 content specification before build
+Add Wick Moth (HP2, locked amber dive,0.8–0.9s tell) to Archive/Storm/Haven and Counterweight Sprout (HP5, one short-range seed at a time,1.0–1.1s tell) to Storm/Haven. Projectiles collide with Blocking terrain, expire after2.5 units, deal1 through the shared invulnerability and vanish on owner death/checkpoint reset. Enemy defeat never funds/opens a gate. Keep introductions isolated from mechanism tutorial spaces.
+
+Encounter roster changes: Landing1Skitter; Reeds1Skitter+1Crab; Archive1Crab+1Moth; Storm1Moth+1Sprout; Haven1Skitter+1Crab+1Moth+1Sprout+retainedMite. Moth positions(71.5,3.2)/(107,3.2)/(142,2), Sprouts(112,-2)/(146,-2). Moths orbit authored anchors and commit a locked dive. Sprouts pace slowly, fire once along the marked direction and cannot have two live seeds. Seed art is a labelled outlined prefab assembly; no source bitmap change.
+
+| Chapter/type | HP | Move | Attack speed | Tell | Recovery | Range |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Archive Moth |2|0.80|1.60|0.80|1.20|1.8 activation|
+| Storm Moth |2|0.85|1.60|0.85|1.20|1.8 activation|
+| Haven Moth |2|0.85|1.65|0.90|1.25|1.8 activation|
+| Storm Sprout |5|0.45|2.00 seed|1.00|1.25|2.5 seed|
+| Haven Sprout |5|0.45|2.10 seed|1.10|1.35|2.5 seed|
+| Archive Crab |4|0.55|0|0.80|1.20|0.7 claw|
+| Haven Skitter |2|0.95|1.80|0.60|0.90|0.7 + lunge|
+| Haven Crab |4|0.60|0|0.90|1.20|0.7 claw|
+All damage1. Other M2 values retained. Per-section SO tuning only; no mandatory kill counts or HP padding. Bosses remain Milestone5.
+
+
+## M4 construction specification before build
+Keep three reusable coins, sword loans and archive2/1/2 exchange. GateData retains cost3 on all five main crossings; only prerequisite inspections change. New MechanicData assets own type/cost/instructions/journal memory; CollectibleData and JournalRewardData own optional memories/4-and8 thresholds. No runtime mutations of definition assets.
+
+Three duck-held inspection rooms: Reeds pad(28.5,3.5), roomx30.25..33.75/y2.25..4.75; optional Storm pad(98.5,3.5), roomx100.25..103.75; Haven pad(124.5,3.5), roomx126.25..129.75. Each has continuous top/bottom/east walls, west shutter, inside free call/recall control and inspection plaque. Duck walks to the perch; E at the inside plaque while he is settled latches the shutter and recalls him. Death/debug teleport recalls him. Occupied doorway/room keeps an exit open if recalled before completion. Main Reeds gate requires its lesson; Haven requires its own inspection. Optional Storm room offers alternate mailbox/mark. No perch opens a main water crossing.
+
+Inspection lamps at(55,2) and inside Haven room(129,3.5),cost1. Inspect reveals a persistent journal clue, E returns the coin; pause/dialogue/death/journal settle the temporary loan. A blocked refund stays in explicit escrow and retries when there is space. Archive gate requires its lamp clue plus original relay completion. Haven lamp requires its perch inspection.
+
+Storm sorting box(96,-2),cost2, return A(100,-2) open low road, B(102,3.5) optional perch room. Haven sorter(138,0),requires Haven lamp clue; A(142,0),B(143,3.5). E first sends2 to A, E again reroutes the same2 between A/B with no extra spend. Only addressed box can claim once; source cannot borrow again after completion. Both choices remain west of their paid main gate; Storm B can always be rerouted to free A. Mail loans persist through checkpoint death. Storm/Haven main gates require completed mail return, then still charge3 normally.
+
+Eight optional Reed Marks at(11,3.5),(33.5,4),(41,4.5),(58,4.5),(72.5,6.1),(102,3.5),(111,-4.5),(144,4.5). Existing FieldLetter sprite and outlined Square stand-ins, explicitly labelled; no new bitmap art. E keeps each unique ID once. Separate journal avoids inventory/refund obstruction; checkpoint persists, replay clears. Four unlock a cosmetic brass duck badge in the journal; eight add a short closing memory. No coin, health, combat or gate advantage. Tab opens paged journal in existing menu, Space/arrows change pages, Tab/Esc closes. No duplicate UI manager.
+
+Enable existing perch/lamp tutorial stories; add one short mail-route note before sorter, update copied flood note with the injured young duck's wing. Full climax/twist/bosses and expanded ending remain M5/M6. Validate combined resource reachability with a finite state audit (separate from physical collision tests), both destination runtime cases, blocked refunds, each checkpoint death/replay and a real no-debug route. Target25–32minutes remains unproven until final campaign/human pacing passes.
+
+
+## M4 as built and verified
+All planned mechanics/marks above now exist in the campaign. Actual Haven lamp is(128,3.5), Storm HIGH return(102.8,3); these positions separate nearby controls/icons. Reed ledger moved from(32,2) to(32,0) to clear the new room's south rail. Recall labels sit below controls; Haven LOW label sits below its mailbox to avoid the moth's name. Safe-exit protection keeps an already-open occupied doorway open; it never opens a closed shutter merely on approach. Only a settled Duckduckgoose and an inside inspection complete the perch.
+
+Return sources show the current address and next reroute action. Loans never repeat after a route is completed. Four-mark badge is currently a text award on the HUD/journal; production badge icon is still requested. Journal pages use the existing menu with Space/arrows and Tab/Esc, with no duplicated UI coordinator. All new art is an explicitly labelled existing-sprite/geometric stand-in; source actor frames/importers are unchanged. Updated replacements are in ASSETS_NEEDED.md.
+
+| Chapter | M3 active | M4 exploration route | Change |
+| --- | ---: | ---: | ---: |
+| Keeper's Landing | 30.53s | 32.28s | +1.75s |
+| Listening Reeds | 20.76s | 34.36s | +13.60s |
+| The Old Archive | 56.50s | 58.71s | +2.22s |
+| Storm Locks | 22.56s | 40.64s | +18.07s |
+| Lantern Haven | 26.42s | 43.03s | +16.62s |
+| Total | 156.77s | 209.02s | +52.25s |
+
+M4 route includes all8marks, optional Storm HIGH and Haven LOW, active enemies, instant story advancement and1 deliberate loan/death.209.02active seconds is NOT a human first-time duration. Reading/learning/combat experimentation require a human timed run. The final25–32minute target remains unverified pending M5/M6/M7; movement and empty trail distances were not padded. M4 tests98/98;124physical assertions;203abstract resource states all recover/finish. Scene remains an intermediate playable reunion endpoint, not a claim that the planned boss campaign/climax is already built.

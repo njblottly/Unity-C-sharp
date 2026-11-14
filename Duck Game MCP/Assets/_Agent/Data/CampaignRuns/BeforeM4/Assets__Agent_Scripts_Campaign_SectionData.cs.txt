@@ -1,0 +1,44 @@
+using System;
+using UnityEngine;
+namespace DuckAdventure.Agent
+{
+    [CreateAssetMenu(menuName = "Duck Adventure/Campaign Section")]
+    public sealed class SectionData : ScriptableObject
+    {
+        [Serializable] public sealed class Encounter
+        {
+            public string id;
+            public EnemyData data;
+            public Vector2 position;
+            public Vector2 pointA;
+            public Vector2 pointB;
+            public bool resetOnCheckpoint=true;
+        }
+        public Encounter[] encounters=new Encounter[0];
+        public Encounter GetEncounter(string key)
+        {
+            Encounter result=null;
+            foreach(Encounter encounter in encounters)if(encounter.id==key){if(result!=null)throw new InvalidOperationException("Duplicate encounter ID: "+key);result=encounter;}
+            if(result==null)throw new InvalidOperationException("Missing encounter: "+key);return result;
+        }
+        public string id;
+        public ChapterData chapter;
+        [TextArea] public string objective;
+        public Vector2 start;
+        public Vector2 end;
+        public string[] storyIds = new string[0];
+        public string[] mechanicPermissions = new string[0];
+        public void ValidateData()
+        {
+            if (string.IsNullOrWhiteSpace(id) || chapter == null || end.x <= start.x || storyIds == null || mechanicPermissions == null)
+                throw new InvalidOperationException("Invalid campaign section: " + name);
+            chapter.ValidateData();
+            if(encounters==null)throw new InvalidOperationException("Missing section encounter array.");
+            foreach(Encounter encounter in encounters)
+            {
+                if(encounter==null||string.IsNullOrWhiteSpace(encounter.id)||encounter.data==null||Vector2.Distance(encounter.pointA,encounter.pointB)<.1f)throw new InvalidOperationException("Invalid encounter in "+id);
+                encounter.data.ValidateData();GetEncounter(encounter.id);
+            }
+        }
+    }
+}

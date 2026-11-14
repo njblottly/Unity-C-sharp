@@ -1,15 +1,18 @@
 # Progress — Marshlight
 Updated 6 November 2026
 
-## Campaign expansion — Milestone 0
+## Current run — Milestones 1–4
+Status: COMPLETE. M1–M4 verified; stopped before M5. Final98/98 PlayMode cases,124/124 no-F6 route assertions,0errors/0warnings. Campaign saved in Edit Mode. No git commits. Original scene preserved. ART_ADAPTER.md is the finished specification; human campaign timing remains outstanding. Final report: MILESTONES_1_4_REPORT.md.
+
+## Historical Campaign expansion — Milestone 0
 Status: COMPLETE and verified. Run target Milestone 0 only; Milestone 1 has not started. Starting commit 229d2d757710c14bd9a008a10550b037db0d582a checkpoints the existing playable work. The closing commit records this planning, evidence and one additional test. Current report: MILESTONE_0_REPORT.md. Baseline scene remains Assets/_Agent/Scenes/Marshlight.unity, clean/saved in Edit Mode and unpaused.
 
 ### Expansion milestones and acceptance gates
 - [x] 0 — Inventory/art audit, timed route, four-act/five-chapter plan, retained F6, completion regression, gate/checkpoint captures, final tests and closing commit. No gameplay changes.
-- [ ] 1 — Extend MarshStory/MarshLevel with CampaignData/ChapterData/SectionData, stable trigger policy, isolated five-main-gate campaign blockout and Act I/II beats. Keep baseline scene/tests. No new enemies/mechanics/bosses. Ask before build-scene/settings edits.
-- [ ] 2 — Configurable enemy agent composed with EnemyHitPoints/feedback; shared player damage/invincibility path, telegraphs/knockback, Skitter and Crab with safe lessons.
-- [ ] 3 — Wick Moth and Counterweight Sprout; section encounter assets and data-only HP/damage/speed/timing curve.
-- [ ] 4 — Duck Perches, Inspection Lantern, Return Mail Routing, eight unique Reed Marks/journal; tutorials and exhaustive coin-state recovery checks.
+- [x] 1 — Extend MarshStory/MarshLevel with CampaignData/ChapterData/SectionData, stable trigger policy, isolated five-main-gate campaign blockout and Act I/II beats. Keep baseline scene/tests. M1 delivered separately before later authorized content. Historical M0 setting rule superseded by latest authorization; build-scene/settings edits.
+- [x] 2 — Configurable enemy agent composed with EnemyHitPoints/feedback; shared player damage/invincibility path, telegraphs/knockback, Skitter and Crab with safe lessons.
+- [x] 3 — Wick Moth and Counterweight Sprout; section encounter assets and data-only HP/damage/speed/timing curve.
+- [x] 4 — Duck Perches, Inspection Lantern, Return Mail Routing, eight unique Reed Marks/journal; tutorials and exhaustive coin-state recovery checks.
 - [ ] 5 — Siltlock Tender and Storm Bell Engine using BossData, safe pre-boss checkpoints, equipment/coin recovery, phases, climax/twist. Boss death cannot pay a coin gate.
 - [ ] 6 — Chapter set pieces, environmental notes/visuals and full resolution/reunion. Handle source frame mismatch with visual-only adapters, preserve physics/references.
 - [ ] 7 — UI/readability, feedback/audio/master volume and data-only balance using fresh chapter timings; human validate the 25–32 minute target.
@@ -268,3 +271,81 @@ No known gameplay blocker in tested Editor states. Other aspect ratios, hardware
 
 ## Campaign Milestone 0 — analysis checkpoint
 RUN TARGET Milestone 0 only. Started from git 229d2d757710c14bd9a008a10550b037db0d582a (scoped Assets/Packages/ProjectSettings checkpoint of the existing playable work; local logs/layout/connection config excluded). Read all five requested persistent paths (root CHANGELOG missing), all 36 sources, 14 prefab assets and both scene dependencies/component wiring. Baseline 40/40 tests pass. Actual game is top-down XY, not side-view: three main bells plus three relay gates, four checkpoints, four patrols, twelve stories. Preserve current controller/input; no viewpoint conversion in this run. Existing development-only F6 already cycles checkpoints; retain and verify it. Art audit recorded before any art work; no art is created this milestone. Two initial Editor HandleUtility font notices recorded; no missing scene/world text fonts or loaded TMP objects; fresh baseline tests clean. Full timed route, five-chapter/four-act design, milestone plan, basic completion regression, final tests and end commit remain.
+
+
+## Milestone 1 — COMPLETE, 6 November 2026
+Latest scope is M1–M4 without further approval checkpoints, no git commits. M1 complete; M2 complete; M3 active. Human M0 manual checks passed; campaign human timing is not supplied.
+
+- Separate Scenes/Marshlight_Campaign.unity, now the first enabled build scene; original Marshlight.unity verified byte-for-byte unchanged. Existing UI/managers/player/duck/inventory/sword/health reused. Five main bells, six checkpoints, retained physical archive relay, five ChapterData/SectionData assets and one CampaignData.
+- Campaign story copy has16 entries: all12 IDs retained plus perch-intro, reedbank-bell, lantern-intro and sluice-warning. All ActI/II bindings placed. Perch/lamp lessons are capability-gated until M4; fourteen currently available stories fire in the route.
+- Existing script changes: MarshStory.Entry adds oncePerRun/requiredCapability/prerequisites and ValidateData(); MarshLevel adds Campaign/Interactions/RequiredBells/PacingSectionNames, RequiresArchiveExchange(int), CanReadStory(string), TryShowStory(string); retains ShowStory and all prior public methods. Optional campaign mode generalizes counts/HUD/win/checkpoint validation; legacy three-bell/four-checkpoint defaults remain. MarshNode queries the configured archive requirement and story availability; no public API removed. MarshPacingTelemetry reads level-provided section names and sizes its overlay; API unchanged.
+- New ChapterData, SectionData, CampaignData, MarshCampaign configuration component, MarshInteraction, MarshStoryTrigger; editor builder and campaign walker; separate regression fixture. No duplicate managers/UI. No packages/input change. Build settings intentionally add campaign first under the new authorization.
+- Baseline41/41; M1 final56/56, zero failures/skips, jobcd1710101e25488eb6fc8dbbde99fc4d, SDK17.990s. All six checkpoint loan/death recoveries, replay, ordered gates and story policies pass; original41 preserved.
+- Full physical title-to-ending run without F6:75/75 checks,70steps; five paid gates, twelve original plus two active new stories, three coins/zero escrow. One intentional death while coins lent. Six normal checkpoint/win captures plus six F6 destination/eight gate views:21PNGs. Native console0errors/0warnings at all views/final tests.
+- Active chapter seconds: Keeper's Landing 27.98; Listening Reeds 18.40; The Old Archive 52.92; Storm Locks 22.28; Lantern Haven 26.48. Total148.06s, immediate text, holds excluded. First walk used editor frame stepping; subsequent walker uses the focused live PlayerLoop at normal game clock, avoiding idle-editor throttling. Captures pause the Editor so holds cannot inflate telemetry. Respawn relocation is excluded from subsequent distance totals.
+- Corrected opening objective (collect original coins before talking about refunds), next-bell objective after refunds and bridge visual footprint to match the dry corridor. Final56-case rerun after corrections clean. The full collision/story route preceded these presentation-only corrections.
+- Known limits: intermediate campaign scaffold; new enemies/mechanics not yet built in M1, bosses/climax/resolution/set pieces remain M5/M6. Final25–32minute target unmeasured. Actor art mismatch documented in ART_ADAPTER.md; no character reslicing/art changes. Initial asset styles reused, no downloads. Temporary ngrok interruption during debug inspection recovered; completed all remaining captures.
+- Saved scene clean in Edit Mode. Evidence:Data/CampaignRuns/M1. No git command or commit made in this run.
+
+M2 implementation checkpoint: compiled cleanly, scene saved with5Skitter/4Crab and1section-configured original patrol; ALL67/67PlayMode tests pass (job48b7306e11f84084a798ebf876ffe4f9,24.935s). Source extensions: Player.TryTakeEnemyDamage(int)/InvulnerabilityRemaining and shared contact cooldown; EnemyHitPoints.ConfigureForEncounter(int), Damaged/Died events and full collision/physics reset; MarshPatrol optional section/encounter plus Definition; MarshEnemyFeedback event-driven shader flash, scalable pips, ShowGuard()/ResetFeedback(); Weapon routes hits through EnemyAgent guard and relies on HP feedback event; SectionData.Encounter/GetEncounter(); editor walker uses normal focused PlayerLoop with route-planning waypoints. No prior public method removed. Permanent tests cover telegraph lock, real hit/protection, sword/flash/knockback, crab guard/flank/recovery, reset, death/loan recovery, no-bypass and pause. Physical route/debug captures pending; M3 not started. No git actions.
+
+M2 QA correction: first live-loop route passed75/75, but unscaled telemetry included Editor capture-pause gaps on resumed frames (raw277.2s versus158s game elapsed). Preserved that diagnostic under M2/BeforeClockFix. MarshPacingTelemetry now records clock mode, exposes SimulationClock/SetSimulationClock(bool), excludes zero-timescale capture frames and subtracts Editor pause spans from the human clock. Campaign walker explicitly uses simulation seconds. Added permanent hold-time regression: ALL68/68pass, job34af5c7d577542359dc160ccd538785e,25.229s. Enlarged enemy tell/name labels and moved the chapter4crab clear of the promise sign through section data. Corrected full timing rerun pending; M3 not started.
+
+
+## Milestone 2 — COMPLETE, 6 November 2026
+- Shared EnemyData/EnemyAgent with explicit section encounters; Reed Skitter and guarded Silt Crab placed with safe approach lanes. One original MarshPatrol remains configured from SectionData. Existing EnemyHitPoints, Weapon, Player and feedback extended; no replacement of health/inventory/movement.
+- Final ALL PlayMode:68 passed,0 failed/skipped (M1:56), job34af5c7d577542359dc160ccd538785e,25.229s. Includes actual attack/sword/guard/knockback/reset, shared damage immunity, unpaid-gate protection and frozen telemetry-clock regression.
+- Corrected live no-F6 route:75/75 checks,74 steps,240.04 world units, exactly3 coins/zero escrow at victory. Active simulation157.89s:31.19 /20.62 /57.12 /22.43 /26.53 seconds (last combines Haven/reunion). One deliberate loan/death. Text advanced immediately; no human-duration claim.
+- Six debug destinations, all5 main+3 relay gates and each physical checkpoint captured/console-read. Native0 errors/0 warnings throughout. Evidence/screenshots and both the pre-clock-fix diagnostic and corrected timing retained under Data/CampaignRuns/M2. Scene left saved in Edit Mode before M3.
+- Timing QA found unscaled screenshot-hold debt in mechanical telemetry. MarshPacingTelemetry adds SimulationClock/SetSimulationClock(bool), clock field and Editor-pause subtraction; CampaignVerification uses scaled simulation time for its physical route. Human mode remains unscaled with Editor pause excluded. A separate2.2s pause probe and automated frozen-frame test were run. No player speed change.
+- Additional pre-existing API edits: EnemyHitPoints adds ConfigureForEncounter(int), Damaged/Died events; Player adds TryTakeEnemyDamage(int), InvulnerabilityRemaining; MarshPatrol adds optional Definition; MarshEnemyFeedback adds ShowGuard/ResetFeedback; SectionData adds Encounter[]/GetEncounter. Existing methods retained. Weapon respects EnemyAgent guard and delegates hit feedback through health events.
+- Placeholder enemy prefab assemblies reuse the unchanged32px enemy frame and outlined geometric limbs; shader white flash verified. Final animation sheets remain in ASSETS_NEEDED. Counterpart chapter visuals/bosses/art migration remain M5–M7. No git commands or commits.
+
+## Milestone 3 — ACTIVE
+Read persistent records and current enemy/section/health/weapon/scene sources. Baseline68/68 passed at M2 closure. Build Wick Moth/Counterweight Sprout only, tune section data, retain all gates and currency ownership. M4 follows without approval checkpoint; stop before M5.
+
+
+## Milestone 3 — COMPLETE
+68 to77 passing PlayMode cases;0 failures/skips. Final clean jobcaec4731403d4c11850218682ae51bea,38.178s. Physical no-F6 route75/75,240.04units;Timings:30.531 /20.761 /56.496 /22.564 /26.417 seconds,156.768 total. Text advanced immediately,1 deliberate death. All6debug destinations and8gates captured/console-read, plus moth/seed views;0native errors/warnings. Interim capture attempted before SDK scene restoration finished, causing Test Framework RestoreSceneSetupTask error; stopped, restored saved campaign, reran ALL77 clean and captured again. Cause fixed by waiting for scene restoration before Play. Intermittent MCP drop recovered without asset loss.
+
+WickMoth/CounterweightSprout/MarshSeedProjectile new; existing EnemyData appends kinds/seed parameters, EnemyAgent adds OwnerLevel/Position and virtual WarningReach; builder extended with additional placeholder prefabs. Existing enemy fixture now derives expected count from section definitions rather than nine hardcoded actors. Data-only curve recorded in DESIGN. Three Moths/two Sprouts replace three scaffold M2 actors,12 total enemies including retained original mite. New types use HP/damage protection/terrain checks; owner death/reset clears seeds; one live seed per Sprout. No currency drops or gate bypass. Presentation-only prefab layer correction gives outlined grey wings and visible brass pod/seed. Baseline scene unchanged; no commits.
+
+## Milestone 4 — ACTIVE
+All persistent files reread. Baseline77/77. Implement perch/lamp/mail routing/eight Reed Marks, section gate definitions, paged journal and coin recovery audit. Stop before M5; no bosses or unrelated scope.
+
+
+## Milestone 4 — COMPLETE, 6 November 2026
+- Seven data-driven station instances:3 Duck Perches,2 refundable Inspection Lamps,2 selectable Return Mail Routes. GateData requires inspections/returns while all5 main crossings still charge3; archive2/1/2 retained. Eight unique Reed Marks use separate journal storage;4 award a HUD/journal BADGE,8 add an optional closing memory. Paged journal reuses the existing menu. Current campaign has17 story entries, all fire in the full route; original baseline scene is byte-for-byte unchanged.
+- All98 PlayMode cases pass,0failed/skipped; M0/M1/M2/M3 baselines41/56/68/77. Final job45ffb622b3044711a15d64ab82f79e3f,44.4297s. Added21 cases for new content plus updated fixtures. Existing41 baseline cases retained. Case totals are separate from walker assertions.
+- Full live no-F6 title-to-ending route:124/124 assertions,130steps,312.44world units, all8marks/all7mechanics/all17stories,5paid main bridges+3relay gates,6checkpoints,3coins/0escrow at victory. One deliberate checkpoint death with coins lent. Text advances immediately; patrols remain active and movement speed is unchanged. The run takes the optional Storm HIGH route and Haven LOW route.
+- Finite resource audit:203reachable states,783transitions,2ending resource states,203recoverable; all11main payment/refund stages, every3-phase relay loan, both4-phase addressed loans and all4lamp-held combinations covered. Actual configured costs: sword1,lamps1,mail2,main3,relay2/1/2. This proves recovery in the abstract resource model; physical collision/duck motion are covered by runtime regressions and the full walker. Cosmetic mark bits are independent. It does not claim a proof of all physics trajectories or arbitrary future definitions.
+- Six F6 destinations and all8gates captured/read; physical checkpoint/win images and extra perch/lamp/mail/pause/journal/BADGE views reviewed. Final labels separated, current mail address explicit, journal button fits and pause checkpoint line visible. These last presentation changes preserve the verified physical layout/resource rules. Native0errors/0warnings throughout final route and final visual review. Earlier transient MCP WebSocket warning recovered; no new source warnings remain.
+- QA: first resource test expected an arbitrary>1000states although the complete model has203. Replaced that guessed count with explicit stage/phase/combination coverage assertions. A CS0252 fixture reference warning was corrected before Play. Review tightened the safe-exit rule so proximity cannot open a closed shutter; a permanent regression protects it. A named lookup containing slash was corrected to exact TextMesh-name selection before the label edit. No error suppression or disabled components.
+
+| Chapter | M3 active | M4 exploration route | Change |
+| --- | ---: | ---: | ---: |
+| Keeper's Landing | 30.53s | 32.28s | +1.75s |
+| Listening Reeds | 20.76s | 34.36s | +13.60s |
+| The Old Archive | 56.50s | 58.71s | +2.22s |
+| Storm Locks | 22.56s | 40.64s | +18.07s |
+| Lantern Haven | 26.42s | 43.03s | +16.62s |
+| Total | 156.77s | 209.02s | +52.25s |
+
+Times are scaled active simulation seconds, excluding screenshot/Editor holds and menus; reading is separately logged. Reeds +13.60s, Storm +18.07s and Haven +16.62s reflect actual new inspections/routes/detours. Archive +2.22s adds lamp/mark stops; Landing +1.75s adds a mark detour. Full human first-time time is not measured. The final25–32minute campaign target has NOT been demonstrated; M5/M6 content and M7 balance remain. Do not pad walking or slow movement to meet it.
+
+### M4 changes to existing contracts
+- DuckFollower: additive AssistanceTarget/AtPerch properties, HoldAt(Transform), Recall(); SnapToPlayer now recalls assistance before its preserved physical teleport. Existing following remains the default.
+- MarshLevel: adds JournalOpen/JournalPage, ToggleJournal(), ChangeJournalPage(int); existing menu/PrimaryAction/pause handle journal, CoinsInEscrow includes station loans, freezes settle temporary lamps, victory checks station escrow. Existing signatures retained. HUD/title/pause controls updated.
+- MarshNode: Cost reads optional GateData in campaign; spend/return/outstanding accounting uses that same value. Paid main interaction additionally checks configured mechanic prerequisites; stable IDs and legacy defaults retained.
+- MarshPacingTelemetry: journal pages count as reading. Existing developer-only compilation boundary retained.
+- Classes introduced earlier in this run: SectionData adds optional mainGate; MarshCampaign adds station/mark references, unique token/collection queries, gate readiness/hints, ExtraEscrow, journal pages/rewards and FreezeLoans. CampaignVerification physically walks each new task and all8marks. MarshCampaignTests fixture prepares actual settled-duck/inside-plaque and station interactions for existing completion/checkpoint cases. No production inventory/controller/manager rewrite.
+
+### Final run audit
+36pre-run scripts compared to backups:26unchanged,10extended (DuckFollower,EnemyHitPoints,Player,MarshEnemyFeedback,MarshLevel,MarshNode,MarshPacingTelemetry,MarshPatrol,MarshStory,Weapon).35new C#files under Assets/_Agent. Original scene SHA256 024CBE0337605493CF34DDC44398E29EE5CD3F57DA634A6BD0FF2BF25870DA89. Exactly1each original level/campaign/game/camera/player/duck/inventory/health/weapon/equipment coordinator;12enemies,0missing scripts,0temporary test scenes. Legacy Input Manager activeInputHandler0 retained. Scene clean/saved in Edit Mode, unpaused. No git commands or commits in the authorized M1–M4 run.
+
+### Completed scope and remaining limits
+M1/M2/M3/M4 complete. STOP before M5. Bosses, full climax/twist/resolution expansion, final chapter visuals, production animations/audio, standalone build and final human balance remain M5–M7. Current new visuals are labelled prefab/scene assemblies in the manifest; badge currently uses HUD/journal text. ART_ADAPTER.md is the completed specification, not an actor-art migration. No known gameplay blocker in the tested Editor configuration; human input feel, other aspect ratios and campaign duration need manual testing. Evidence: Data/CampaignRuns/M1..M4; final report MILESTONES_1_4_REPORT.md.
+
+
+## Resumption verification — 7 November 2026 (Melbourne)
+The supplied screenshot showed an earlier M2 stage; disk records/source/scene/evidence confirm M1–M4 already complete. Read DESIGN,PROGRESS,BACKLOG,ASSETS_NEEDED,CHANGELOG and final report. Enemy collision/physics reset and white hit flash are already present. Fresh ALL98/98passed,0failed/skipped,43.5136s, job259ea5f9b8a74c72a497377cc5ebd41e. After SDK scene restoration: saved campaign in Edit Mode/unpaused,0errors/0warnings/0missing scripts; original scene byte-for-byte unchanged. Fresh resource audit203/203states recover/finish. Prior124/124 physical route and28captures preserved; no duplicate full walk needed for this unchanged gameplay state. No gameplay scripts changed; no git commits. Stop beforeM5 remains in force. Evidence Data/CampaignRuns/Resume20261107 and RESUME_VERIFICATION.md.

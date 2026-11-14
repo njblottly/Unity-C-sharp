@@ -1,0 +1,126 @@
+[
+  {
+    "capture": "checkpoint-0",
+    "position": "(0.00, 0.00, 0.00)",
+    "counts": [
+      0,
+      0,
+      2
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 1 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0"
+      ]
+    }
+  },
+  {
+    "capture": "checkpoint-1",
+    "position": "(22.50, 0.11, 0.00)",
+    "counts": [
+      0,
+      0,
+      32
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 3 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup"
+      ]
+    }
+  },
+  {
+    "capture": "checkpoint-2",
+    "position": "(50.05, 0.01, 0.00)",
+    "counts": [
+      0,
+      0,
+      37
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 3 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup"
+      ]
+    }
+  },
+  {
+    "capture": "checkpoint-3",
+    "position": "(86.05, -0.04, 0.00)",
+    "counts": [
+      0,
+      0,
+      57
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 3 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup"
+      ]
+    }
+  },
+  {
+    "capture": "checkpoint-4",
+    "position": "(120.04, 0.01, 0.00)",
+    "counts": [
+      0,
+      0,
+      61
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 3 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup"
+      ]
+    }
+  },
+  {
+    "capture": "checkpoint-5",
+    "position": "(154.09, 0.02, 0.00)",
+    "counts": [
+      0,
+      0,
+      64
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 3 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup"
+      ]
+    }
+  },
+  {
+    "capture": "win",
+    "position": "(160.50, 0.00, 0.00)",
+    "counts": [
+      0,
+      0,
+      65
+    ],
+    "console": {
+      "success": true,
+      "message": "Retrieved 3 log entries.",
+      "data": [
+        "Trigger hit: checkpoint-0",
+        "Trigger hit: keeper-note",
+        "Trigger hit: ReedkeeperSwordPickup"
+      ]
+    }
+  }
+]

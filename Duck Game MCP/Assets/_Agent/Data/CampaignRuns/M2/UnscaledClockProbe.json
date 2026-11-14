@@ -1,0 +1,12 @@
+{
+  "before": {
+    "seconds": 10.4995337,
+    "elapsed": 10.1218281
+  },
+  "after": {
+    "seconds": 12.05081,
+    "elapsed": 10.9436779
+  },
+  "deliberatePausedMilliseconds": 2200,
+  "note": "MCP calls add wall time around resume; 2.2s deliberate Editor pause excluded. Automated frozen-frame case also passes."
+}

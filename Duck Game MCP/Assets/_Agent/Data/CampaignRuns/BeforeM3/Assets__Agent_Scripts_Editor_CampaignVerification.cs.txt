@@ -1,0 +1,116 @@
+#if UNITY_EDITOR
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
+using UnityEngine;
+using Object = UnityEngine.Object;
+namespace DuckAdventure.Agent.Editor
+{
+    public static class CampaignVerification
+    {
+        [Serializable] public sealed class Report
+        {
+            public string startedUtc,status,capture;
+            public int step,totalSteps;
+            public float walkedDistance;
+            public List<string> passed=new List<string>();
+            public List<string> failures=new List<string>();
+            public List<string> runtimeErrors=new List<string>();
+            public List<string> warnings=new List<string>();
+        }
+        private sealed class Step { public string name;public Vector2? target;public Action action; }
+        private static Report report;
+        private static MarshLevel level;
+        private static MovementController movement;
+        private static Rigidbody2D body;
+        private static readonly List<Step> steps=new List<Step>();
+        private static bool running,held,pumping,previousBackground;
+        private static int cursor,ready;
+        private static float began;
+        private static Vector2 previous;
+        public static string Status => JsonUtility.ToJson(report,true);
+        private static int Balance => level.Player.PlayerInventory.Count(Item.ItemType.COIN);
+        private static MarshNode Node(string id)=>level.Nodes.Single(n=>n.Id==id);
+        private static void Check(bool condition,string message){if(!condition)throw new InvalidOperationException(message);report.passed.Add(message);}
+        private static void Add(string name,Action action)=>steps.Add(new Step{name=name,action=action});
+        private static void Walk(float x,float y)=>steps.Add(new Step{name="Walk "+x+", "+y,target=new Vector2(x,y)});
+        private static void Dismiss(){for(int i=0;i<12&&level.State==MarshState.Dialogue;i++)level.AdvanceStory();if(level.State==MarshState.Dialogue)throw new InvalidOperationException("Story exceeded authored page bound.");}
+        private static void Use(string id)=>Add("Interact "+id,()=>{Check(Node(id).TryInteract(),"World interaction "+id);Dismiss();Check(level.RecoverableCoins==3,"Conserved currency at "+id);});
+        private static void Capture(int cp)=>Add("Checkpoint "+cp,()=>{Check(level.HasCheckpoint("checkpoint-"+cp),"Physical checkpoint "+cp);Hold("checkpoint-"+cp);});
+        private static void Bell(int index)
+        {
+            Add("Main bell "+index,()=>{
+                var node=level.Campaign.MainGates[index];float x=new[]{18,46,82,116,150}[index];int mask=LayerMask.GetMask("Blocking");
+                Check(node.GateClosed&&Physics2D.Raycast(new Vector2(x-.7f,0),Vector2.right,1.4f,mask).collider!=null,"Unpaid physical main barrier "+index);
+                Check(Balance==3&&node.TryInteract(),"Paid main bell "+index);Dismiss();Physics2D.SyncTransforms();
+                Check(!node.GateClosed&&level.BellsOpened==index+1&&Balance==0,"Main bell latches only after its payment "+index);
+                Check(Physics2D.Raycast(new Vector2(x-.7f,0),Vector2.right,1.4f,mask).collider==null,"Paid bridge route is clear "+index);
+                Check(!node.TryInteract()&&Balance==0,"Main bell rejects duplicate payment "+index);
+            });
+        }
+        [MenuItem("Tools/Duck Adventure/Campaign/Start Mechanical Walk")]
+        public static void Start()
+        {
+            if(!EditorApplication.isPlaying||running)throw new InvalidOperationException("Start a fresh campaign Play session.");
+            level=Object.FindFirstObjectByType<MarshLevel>();if(level==null||level.Campaign==null||level.State!=MarshState.Intro)throw new InvalidOperationException("Campaign must be at its title.");
+            previousBackground=Application.runInBackground;Application.runInBackground=true;
+            var gameView=Type.GetType("UnityEditor.GameView,UnityEditor");if(gameView==null)throw new InvalidOperationException("Game View unavailable for the mechanical walker.");
+            EditorWindow.GetWindow(gameView).Focus();EditorApplication.isPaused=false;Time.captureDeltaTime=0;
+            level.Pacing.SetRunLabel("campaign-mechanical");level.Pacing.SetSimulationClock(true);movement=level.Player.GetComponent<MovementController>();body=level.Player.GetComponent<Rigidbody2D>();
+            report=new Report{startedUtc=DateTime.UtcNow.ToString("o"),status="Running"};steps.Clear();cursor=0;running=true;held=false;
+            Application.logMessageReceived+=Log;
+            Check(!level.Player.IsDead&&level.Duck.gameObject.activeInHierarchy,"Player and duck spawn");Check(Balance==0&&level.RecoverableCoins==3,"Fresh title currency");Check(Time.timeScale==0&&!movement.InputEnabled,"Title freezes simulation");
+            level.Begin();Dismiss();Capture(0);
+            Walk(0,1.4f);Use("keeper-note");Walk(1.5f,1.5f);Walk(2,0);Walk(5,2);Walk(8,-2);
+            Add("Original pickups",()=>{Check(Balance==3,"Three real coin pickups");Check(level.Weapon.HasSword&&level.HasRead("sword"),"Real sword pickup and story");});
+            Walk(11,-3.5f);Walk(14,-3.5f);Walk(16.6f,0);Bell(0);
+            Add("Outstanding-loan defeat",()=>{level.Player.TakeDamage(999);Check(level.State==MarshState.Defeat,"Health reaches defeat with main coins lent");level.RestartCheckpoint();previous=body.position;Check(level.State==MarshState.Playing&&level.CoinsInEscrow==3&&level.RecoverableCoins==3,"Checkpoint restart preserves the loan");});
+            Walk(16.6f,0);Walk(20.4f,-.35f);Use("tray-0");Walk(22,0);Capture(1);
+            Walk(27,2);Walk(32,2);Use("reed-note");Walk(34,4);Walk(42,4);Walk(44.6f,0);Bell(1);Walk(48.4f,-.35f);Use("campaign-tray-reed");Walk(50,0);Capture(2);
+            Walk(54,-2);Use("archive-note");Walk(55,2);Walk(64,4.5f);Use("relay-reed-cup");Walk(64,-4.5f);Use("relay-spill-cup");
+            Walk(64,5.8f);Walk(70,5.8f);Walk(71.8f,6.1f);Use("archive-pocket");Walk(70,5.8f);Walk(70,-5.8f);Walk(68.8f,-5.8f);Use("relay-reed-tray");Walk(71,-5.8f);Use("relay-exit-cup");Walk(75.2f,-5.8f);Use("relay-spill-tray");Walk(77.4f,-5.8f);Walk(78.2f,-3);Use("relay-exit-tray");
+            Walk(80.6f,0);Bell(2);Walk(84.4f,-.35f);Use("tray-1");Walk(84,2);Walk(86,0);Capture(3);
+            Walk(110,2);Use("storm-note");Walk(114.6f,0);Bell(3);Walk(118.4f,-.35f);Use("campaign-tray-storm");Walk(120,0);Capture(4);
+            Walk(148.6f,0);Bell(4);Walk(152.4f,-.35f);Use("tray-2");Walk(154,0);Capture(5);Walk(162,0);
+            Add("Ending",()=>{
+                if(level.State==MarshState.Playing)Check(level.TryWin(),"Haven accepts the walked route");Dismiss();
+                Check(level.State==MarshState.Won,"Campaign reaches victory");Check(level.BellsOpened==5&&Balance==3&&level.CoinsInEscrow==0,"All five paid gates finish with exactly three coins");
+                Check(new[]{"intro","letter","sword","bell1","ledger","reedbank-bell","flood","exchange","archive-pocket","bell2","sluice-warning","promise","bell3","ending"}.All(level.HasRead),"All available Act I/II and retained endpoint entries fire");
+                Check(!level.Pacing.Teleported,"Full route never uses F6");Check(report.runtimeErrors.Count==0&&report.warnings.Count==0,"No runtime errors or warnings");Hold("win");
+            });
+            report.totalSteps=steps.Count;previous=body.position;began=Time.time;ready=Time.frameCount+4;EditorApplication.update+=Pump;
+        }
+        private static void Hold(string name){held=true;report.capture=name;report.status="Awaiting capture";movement.SetDebugInput(Vector2.zero,true);body.linearVelocity=Vector2.zero;Time.timeScale=0;EditorApplication.isPaused=true;}
+        public static void Continue()
+        {
+            if(!held)throw new InvalidOperationException("No capture pending.");held=false;report.capture="";
+            if(cursor>=steps.Count){report.status="Passed";Stop();return;}
+            report.status="Running";if(level.CanExplore)Time.timeScale=1;EditorApplication.isPaused=false;began=Time.time;ready=Time.frameCount+1;
+        }
+        public static void Stop(){Application.runInBackground=previousBackground;running=false;held=false;EditorApplication.update-=Pump;Application.logMessageReceived-=Log;if(movement!=null)movement.SetDebugInput(Vector2.zero,false);if(level!=null&&level.CanExplore)Time.timeScale=1;}
+        private static void Log(string message,string trace,LogType type){if(type==LogType.Error||type==LogType.Exception||type==LogType.Assert)report.runtimeErrors.Add(message);if(type==LogType.Warning)report.warnings.Add(message);}
+        private static void Pump(){if(pumping||!running||held)return;pumping=true;try{if(EditorApplication.isPaused)EditorApplication.Step();Tick();}finally{pumping=false;}}
+        private static void Tick()
+        {
+            if(!EditorApplication.isPlaying){Stop();return;}if(Time.frameCount<ready)return;
+            try
+            {
+                report.walkedDistance+=Vector2.Distance(body.position,previous);previous=body.position;if(cursor>=steps.Count)return;var step=steps[cursor];report.step=cursor;
+                if(Time.time-began>35)throw new InvalidOperationException("Blocked route at "+step.name+" position "+body.position);
+                if(step.target.HasValue)
+                {
+                    if(level.State==MarshState.Dialogue){Dismiss();return;}
+                    if(!level.CanExplore&&level.State!=MarshState.Won)throw new InvalidOperationException("Unexpected state: "+level.State);
+                    Vector2 delta=step.target.Value-body.position;
+                    if(delta.magnitude>.16f&&level.State!=MarshState.Won){movement.SetDebugInput(Vector2.ClampMagnitude(delta/Mathf.Max(.02f,Time.deltaTime*movement.movementSpeed),1f),true);return;}
+                    movement.SetDebugInput(Vector2.zero,true);body.linearVelocity=Vector2.zero;
+                }
+                else{movement.SetDebugInput(Vector2.zero,true);step.action();}
+                cursor++;report.step=cursor;began=Time.time;ready=Time.frameCount+1;
+            }
+            catch(Exception error){report.failures.Add(error.Message);report.status="Failed";Stop();Debug.LogError(error);}
+        }
+    }
+}
+#endif

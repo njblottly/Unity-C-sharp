@@ -1,0 +1,94 @@
+{
+  "scene": "Assets/_Agent/Scenes/Marshlight.unity",
+  "rootObjects": [
+    "HealthBarObject",
+    "Actors",
+    "Services",
+    "Cameras",
+    "Marshlight_World",
+    "EventSystem",
+    "InventoryObject"
+  ],
+  "gameObjects": 894,
+  "missingScripts": 0,
+  "relayInstances": 1,
+  "relayLoans": 3,
+  "nodes": 22,
+  "stories": 11,
+  "storyIds": [
+    "intro",
+    "letter",
+    "bell1",
+    "ledger",
+    "flood",
+    "bell2",
+    "promise",
+    "bell3",
+    "ending",
+    "exchange",
+    "archive-pocket"
+  ],
+  "buildScenes": [
+    {
+      "path": "Assets/_Agent/Scenes/Marshlight.unity",
+      "enabled": true
+    },
+    {
+      "path": "Assets/Scenes/LevelOne.unity",
+      "enabled": true
+    }
+  ],
+  "validationPassed": true,
+  "finalState": {
+    "utc": "2026-11-03T22:19:41.253844Z",
+    "playing": false,
+    "paused": false,
+    "compiling": false,
+    "errors": 0,
+    "warnings": 0,
+    "logs": 376,
+    "instances": [
+      {
+        "type": "Player",
+        "count": 1
+      },
+      {
+        "type": "DuckFollower",
+        "count": 1
+      },
+      {
+        "type": "RPGGameManager",
+        "count": 1
+      },
+      {
+        "type": "RPGCameraManager",
+        "count": 1
+      },
+      {
+        "type": "Inventory",
+        "count": 1
+      },
+      {
+        "type": "HealthBar",
+        "count": 1
+      },
+      {
+        "type": "EventSystem",
+        "count": 1
+      },
+      {
+        "type": "DuckAdventure.Agent.MarshLevel",
+        "count": 1
+      },
+      {
+        "type": "DuckAdventure.Agent.MarshCoinRelay",
+        "count": 1
+      },
+      {
+        "type": "DuckAdventure.Agent.MarshPacingTelemetry",
+        "count": 0
+      }
+    ],
+    "sceneDirty": false
+  }
+}

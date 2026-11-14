@@ -1,0 +1,664 @@
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Test job status retrieved.\",\"error\":null,\"data\":{\"job_id\":\"34af5c7d577542359dc160ccd538785e\",\"status\":\"succeeded\",\"mode\":\"PlayMode\",\"started_unix_ms\":1793973285958,\"finished_unix_ms\":1793973317305,\"last_update_unix_ms\":1793973317305,\"progress\":{\"completed\":68,\"total\":68,\"current_test_full_name\":null,\"current_test_started_unix_ms\":1793973317010,\"last_finished_test_full_name\":\"Marshlight.PlayModeTests.MarshEnemyTests.SwordUsesExistingHealthAndProducesFlashAndKnockback\",\"last_finished_unix_ms\":1793973317283,\"stuck_suspected\":false,\"editor_is_focused\":false,\"blocked_reason\":null,\"failures_so_far\":[],\"failures_capped\":false},\"error\":null,\"result\":{\"mode\":\"PlayMode\",\"summary\":{\"total\":68,\"passed\":68,\"failed\":0,\"skipped\":0,\"durationSeconds\":25.2285791,\"resultState\":\"Passed\"},\"results\":[{\"name\":\"ActOneAndTwoEntriesHaveExplicitBindings\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.ActOneAndTwoEntriesHaveExplicitBindings\",\"state\":\"Passed\",\"durationSeconds\":0.2326048,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"CampaignCompletesAndReplayResetsAllFiveGates\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.CampaignCompletesAndReplayResetsAllFiveGates\",\"state\":\"Passed\",\"durationSeconds\":0.314328,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nCamera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\n\"},{\"name\":\"EveryCampaignCheckpointRecoversAnOutstandingMainLoan(0)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(0)\",\"state\":\"Passed\",\"durationSeconds\":0.1760658,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EveryCampaignCheckpointRecoversAnOutstandingMainLoan(1)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(1)\",\"state\":\"Passed\",\"durationSeconds\":0.1708811,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EveryCampaignCheckpointRecoversAnOutstandingMainLoan(2)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(2)\",\"state\":\"Passed\",\"durationSeconds\":0.1577617,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EveryCampaignCheckpointRecoversAnOutstandingMainLoan(3)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(3)\",\"state\":\"Passed\",\"durationSeconds\":0.1667555,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EveryCampaignCheckpointRecoversAnOutstandingMainLoan(4)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(4)\",\"state\":\"Passed\",\"durationSeconds\":0.1727415,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EveryCampaignCheckpointRecoversAnOutstandingMainLoan(5)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(5)\",\"state\":\"Passed\",\"durationSeconds\":0.1616711,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"FiveChaptersUseAssetsAndExistingManagers\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.FiveChaptersUseAssetsAndExistingManagers\",\"state\":\"Passed\",\"durationSeconds\":0.1687628,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"LaterMainGateCannotBypassEarlierPayments(1)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(1)\",\"state\":\"Passed\",\"durationSeconds\":0.1572453,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"LaterMainGateCannotBypassEarlierPayments(2)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(2)\",\"state\":\"Passed\",\"durationSeconds\":0.163023,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"LaterMainGateCannotBypassEarlierPayments(3)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(3)\",\"state\":\"Passed\",\"durationSeconds\":0.1711944,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"LaterMainGateCannotBypassEarlierPayments(4)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(4)\",\"state\":\"Passed\",\"durationSeconds\":0.1590697,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"StoryOncePolicyAndPrerequisitesDoNotRepeatProgress\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.StoryOncePolicyAndPrerequisitesDoNotRepeatProgress\",\"state\":\"Passed\",\"durationSeconds\":0.1624076,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"TutorialAvailabilityMatchesImplementedCapabilities\",\"fullName\":\"Marshlight.PlayModeTests.MarshCampaignTests.TutorialAvailabilityMatchesImplementedCapabilities\",\"state\":\"Passed\",\"durationSeconds\":0.1571395,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"AtomicReturnDoesNotPartiallyCreditWhenInventoryIsFull\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.AtomicReturnDoesNotPartiallyCreditWhenInventoryIsFull\",\"state\":\"Passed\",\"durationSeconds\":0.1987659,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"BellLetterAndLanternArtPreservesInteractionAndLiveStatus\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.BellLetterAndLanternArtPreservesInteractionAndLiveStatus\",\"state\":\"Passed\",\"durationSeconds\":0.1979179,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: checkpoint-1\\n\"},{\"name\":\"CarriedCoinsAndPatrolObjectsCannotBypassExchangeProgress\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.CarriedCoinsAndPatrolObjectsCannotBypassExchangeProgress\",\"state\":\"Passed\",\"durationSeconds\":0.1884621,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nMarshMite_2 took 999 damage. HP: 0/3\\nMarshMite_2 died.\\nMarshMite_3 took 999 damage. HP: 0/3\\nMarshMite_3 died.\\nMarshMite_1 took 999 damage. HP: 0/3\\nMarshMite_1 died.\\nMarshMite_4 took 999 damage. HP: 0/3\\nMarshMite_4 died.\\n\"},{\"name\":\"CurrentGameCompletesFromTitleWithAllStoriesAndThreeCoins\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.CurrentGameCompletesFromTitleWithAllStoriesAndThreeCoins\",\"state\":\"Passed\",\"durationSeconds\":0.4597126,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nCamera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nTrigger hit: checkpoint-0\\nTrigger hit: checkpoint-1\\nTrigger hit: checkpoint-2\\nTrigger hit: checkpoint-3\\n\"},{\"name\":\"DeathRefundsSwordCoinWhilePreservingRelayLoanAndEquipment\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.DeathRefundsSwordCoinWhilePreservingRelayLoanAndEquipment\",\"state\":\"Passed\",\"durationSeconds\":0.2060798,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"DefeatingAllPatrolsWithSwordCannotBypassAnyCrossing\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.DefeatingAllPatrolsWithSwordCannotBypassAnyCrossing\",\"state\":\"Passed\",\"durationSeconds\":1.5884022,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nMarshMite_4 took 1 damage. HP: 2/3\\nMarshMite_2 took 1 damage. HP: 2/3\\nMarshMite_1 took 1 damage. HP: 2/3\\nMarshMite_3 took 1 damage. HP: 2/3\\nMarshMite_4 took 1 damage. HP: 1/3\\nMarshMite_2 took 1 damage. HP: 1/3\\nMarshMite_1 took 1 damage. HP: 1/3\\nMarshMite_3 took 1 damage. HP: 1/3\\nMarshMite_4 took 1 damage. HP: 0/3\\nMarshMite_4 died.\\nMarshMite_2 took 1 damage. HP: 0/3\\nMarshMite_2 died.\\nMarshMite_1 took 1 damage. HP: 0/3\\nMarshMite_1 died.\\nMarshMite_3 took 1 damage. HP: 0/3\\nMarshMite_3 died.\\n\"},{\"name\":\"DevelopmentTeleportMarksPacingWithoutGrantingProgress\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.DevelopmentTeleportMarksPacingWithoutGrantingProgress\",\"state\":\"Passed\",\"durationSeconds\":0.1879604,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"EachRelayLoanSurvivesDeathAndCanStillFinish(0)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(0)\",\"state\":\"Passed\",\"durationSeconds\":0.1902286,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EachRelayLoanSurvivesDeathAndCanStillFinish(1)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(1)\",\"state\":\"Passed\",\"durationSeconds\":0.1936373,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EachRelayLoanSurvivesDeathAndCanStillFinish(2)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(2)\",\"state\":\"Passed\",\"durationSeconds\":0.1871277,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EitherInitialFundingOrderIsSafe(True)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EitherInitialFundingOrderIsSafe(True)\",\"state\":\"Passed\",\"durationSeconds\":0.1915805,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"EitherInitialFundingOrderIsSafe(False)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EitherInitialFundingOrderIsSafe(False)\",\"state\":\"Passed\",\"durationSeconds\":0.1809358,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"EquipmentPanelShowsOwnedEquippedAndPackedStatesWithoutClipping\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EquipmentPanelShowsOwnedEquippedAndPackedStatesWithoutClipping\",\"state\":\"Passed\",\"durationSeconds\":0.2009342,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\n\"},{\"name\":\"EveryCheckpointCanRestartWithCoinsLent(0)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(0)\",\"state\":\"Passed\",\"durationSeconds\":0.1881901,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EveryCheckpointCanRestartWithCoinsLent(1)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(1)\",\"state\":\"Passed\",\"durationSeconds\":0.1788671,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EveryCheckpointCanRestartWithCoinsLent(2)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(2)\",\"state\":\"Passed\",\"durationSeconds\":0.1809067,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"EveryCheckpointCanRestartWithCoinsLent(3)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(3)\",\"state\":\"Passed\",\"durationSeconds\":0.181598,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"ExitCupRejectsPrematurePaymentWithoutStrandingCoins\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.ExitCupRejectsPrematurePaymentWithoutStrandingCoins\",\"state\":\"Passed\",\"durationSeconds\":0.1834663,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"FullInventoryHoldsSwordRefundSafelyUntilSpaceReturns\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.FullInventoryHoldsSwordRefundSafelyUntilSpaceReturns\",\"state\":\"Passed\",\"durationSeconds\":0.7666204,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nTrigger hit: relay-reed-cup\\n\"},{\"name\":\"OriginalLoanSurvivesDeathAndReturnsExactlyOnce(0)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(0)\",\"state\":\"Passed\",\"durationSeconds\":0.1939365,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"OriginalLoanSurvivesDeathAndReturnsExactlyOnce(1)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(1)\",\"state\":\"Passed\",\"durationSeconds\":0.180988,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"OriginalLoanSurvivesDeathAndReturnsExactlyOnce(2)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(2)\",\"state\":\"Passed\",\"durationSeconds\":0.1843859,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"OutdoorArtReusesProjectSheetsWithoutAddingCollisionOrLogic\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.OutdoorArtReusesProjectSheetsWithoutAddingCollisionOrLogic\",\"state\":\"Passed\",\"durationSeconds\":0.1933635,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"PauseAndDialogueCancelSwordAndRefundImmediately\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.PauseAndDialogueCancelSwordAndRefundImmediately\",\"state\":\"Passed\",\"durationSeconds\":0.7641104,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\n\"},{\"name\":\"RelayPaymentsAndReturnsCannotBeRepeated\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.RelayPaymentsAndReturnsCannotBeRepeated\",\"state\":\"Passed\",\"durationSeconds\":0.1901819,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"RenamedStoryAndMenusUseAikenAndDuckduckgooseAndFitPanels\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.RenamedStoryAndMenusUseAikenAndDuckduckgooseAndFitPanels\",\"state\":\"Passed\",\"durationSeconds\":0.3822418,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nCamera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"ReplayAfterVictoryResetsAllLoansAndPickups\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.ReplayAfterVictoryResetsAllLoansAndPickups\",\"state\":\"Passed\",\"durationSeconds\":0.3403878,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nCamera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\n\"},{\"name\":\"ReturnMailboxesKeepTheCompletePostedSilhouetteAndVisibleCoinMarkers\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.ReturnMailboxesKeepTheCompletePostedSilhouetteAndVisibleCoinMarkers\",\"state\":\"Passed\",\"durationSeconds\":0.1884694,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(True)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(True)\",\"state\":\"Passed\",\"durationSeconds\":0.1768782,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(False)\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(False)\",\"state\":\"Passed\",\"durationSeconds\":0.1814523,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"SwordCannotDamageThroughSolidBanks\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordCannotDamageThroughSolidBanks\",\"state\":\"Passed\",\"durationSeconds\":0.2000084,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\n\"},{\"name\":\"SwordCooldownRejectsRepeatedUseWithoutChargingAgain\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordCooldownRejectsRepeatedUseWithoutChargingAgain\",\"state\":\"Passed\",\"durationSeconds\":1.0258956,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nTrigger hit: checkpoint-0\\n\"},{\"name\":\"SwordDefeatsMiteUsingItsExistingDeathFlow\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordDefeatsMiteUsingItsExistingDeathFlow\",\"state\":\"Passed\",\"durationSeconds\":1.5850278,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nMarshMite_1 took 1 damage. HP: 2/3\\nMarshMite_1 took 1 damage. HP: 1/3\\nMarshMite_1 took 1 damage. HP: 0/3\\nMarshMite_1 died.\\n\"},{\"name\":\"SwordHitsEachEnemyOnceEvenWithMultipleColliders\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordHitsEachEnemyOnceEvenWithMultipleColliders\",\"state\":\"Passed\",\"durationSeconds\":0.4565999,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nMarshMite_1 took 1 damage. HP: 2/3\\n\"},{\"name\":\"SwordPickupCannotBeCollectedTwice\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordPickupCannotBeCollectedTwice\",\"state\":\"Passed\",\"durationSeconds\":0.2243285,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\n\"},{\"name\":\"SwordPickupEquipsAndSwipeDamagesExistingHealth\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordPickupEquipsAndSwipeDamagesExistingHealth\",\"state\":\"Passed\",\"durationSeconds\":0.4688967,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nMarshMite_1 took 1 damage. HP: 2/3\\n\"},{\"name\":\"SwordReplayResetsOwnershipPickupLoansAndEnemyHealth\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordReplayResetsOwnershipPickupLoansAndEnemyHealth\",\"state\":\"Passed\",\"durationSeconds\":0.342225,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nCamera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\n\"},{\"name\":\"SwordRequiresACarriedCoinAndReturnsItAfterReclaim\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordRequiresACarriedCoinAndReturnsItAfterReclaim\",\"state\":\"Passed\",\"durationSeconds\":0.4808709,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nTrigger hit: tray-0\\n\"},{\"name\":\"SwordRespectsRangeAndFacing\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordRespectsRangeAndFacing\",\"state\":\"Passed\",\"durationSeconds\":1.3281331,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nMarshMite_1 took 1 damage. HP: 2/3\\n\"},{\"name\":\"TelemetryRecordsSectionDeathsAndExcludesPauseTime\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.TelemetryRecordsSectionDeathsAndExcludesPauseTime\",\"state\":\"Passed\",\"durationSeconds\":0.1976509,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"UnequipCancelsSwingWithoutDuplicatingItsRefund\",\"fullName\":\"Marshlight.PlayModeTests.MarshCoinRegressionTests.UnequipCancelsSwingWithoutDuplicatingItsRefund\",\"state\":\"Passed\",\"durationSeconds\":0.1982603,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: BrassCoin_1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: BrassCoin_3\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\n\"},{\"name\":\"AllEnemyDamageSourcesSharePlayerInvincibility\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.AllEnemyDamageSourcesSharePlayerInvincibility\",\"state\":\"Passed\",\"durationSeconds\":1.2312515,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 1. New HP: 4\\nPlayer took damage: 1. New HP: 3\\n\"},{\"name\":\"CheckpointDeathResetsNewEnemiesWithoutLosingMainLoan\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.CheckpointDeathResetsNewEnemiesWithoutLosingMainLoan\",\"state\":\"Passed\",\"durationSeconds\":0.1742902,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nskitter-0 took 999 damage. HP: 0/2\\nskitter-0 died.\\nPlayer took damage: 999. New HP: 0\\nPlayer died.\\nPlayer died, but respawnPlayerOnDeath is disabled.\\nPlayer respawned. HP restored to: 5\\nCamera Follow target set to: PlayerObject\\nPlayer respawned at spawn point.\\n\"},{\"name\":\"CrabRecoveryIsVulnerableFromTheFront\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.CrabRecoveryIsVulnerableFromTheFront\",\"state\":\"Passed\",\"durationSeconds\":1.1134292,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\ncrab-1 took 1 damage. HP: 3/4\\n\"},{\"name\":\"CrabRejectsFrontalSwordButAllowsAFlank\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.CrabRejectsFrontalSwordButAllowsAFlank\",\"state\":\"Passed\",\"durationSeconds\":0.7523284,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\ncrab-1 took 1 damage. HP: 3/4\\n\"},{\"name\":\"DefeatedEnemyResetRestoresHealthCollisionAndPhysics\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.DefeatedEnemyResetRestoresHealthCollisionAndPhysics\",\"state\":\"Passed\",\"durationSeconds\":0.1685331,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nskitter-0 took 999 damage. HP: 0/2\\nskitter-0 died.\\n\"},{\"name\":\"DefeatingEveryEnemyCannotPayOrBypassAnyMainGate\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.DefeatingEveryEnemyCannotPayOrBypassAnyMainGate\",\"state\":\"Passed\",\"durationSeconds\":0.1650604,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\ncrab-3 took 999 damage. HP: 0/4\\ncrab-3 died.\\nskitter-4 took 999 damage. HP: 0/2\\nskitter-4 died.\\ncrab-2 took 999 damage. HP: 0/4\\ncrab-2 died.\\nskitter-2 took 999 damage. HP: 0/2\\nskitter-2 died.\\nskitter-1 took 999 damage. HP: 0/2\\nskitter-1 died.\\ncrab-1 took 999 damage. HP: 0/4\\ncrab-1 died.\\ncrab-4 took 999 damage. HP: 0/4\\ncrab-4 died.\\nCampaignMite_4 took 999 damage. HP: 0/3\\nCampaignMite_4 died.\\nskitter-3 took 999 damage. HP: 0/2\\nskitter-3 died.\\nskitter-0 took 999 damage. HP: 0/2\\nskitter-0 died.\\n\"},{\"name\":\"MechanicalTelemetryExcludesFrozenCaptureFrames\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.MechanicalTelemetryExcludesFrozenCaptureFrames\",\"state\":\"Passed\",\"durationSeconds\":0.4472962,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"NewEnemiesReadTheirSectionAssetsAndKeepPixelImports\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.NewEnemiesReadTheirSectionAssetsAndKeepPixelImports\",\"state\":\"Passed\",\"durationSeconds\":0.1617585,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"PauseFreezesTheEnemyTelegraphAndMovement\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.PauseFreezesTheEnemyTelegraphAndMovement\",\"state\":\"Passed\",\"durationSeconds\":0.2976317,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"RealSkitterAttackDealsOnlyOneProtectedHit\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.RealSkitterAttackDealsOnlyOneProtectedHit\",\"state\":\"Passed\",\"durationSeconds\":1.1478381,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nPlayer took damage: 1. New HP: 4\\nTrigger hit: skitter-0\\n\"},{\"name\":\"SkitterTelegraphsAndCommitsToItsMarkedDirection\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.SkitterTelegraphsAndCommitsToItsMarkedDirection\",\"state\":\"Passed\",\"durationSeconds\":1.239795,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\n\"},{\"name\":\"SwordUsesExistingHealthAndProducesFlashAndKnockback\",\"fullName\":\"Marshlight.PlayModeTests.MarshEnemyTests.SwordUsesExistingHealthAndProducesFlashAndKnockback\",\"state\":\"Passed\",\"durationSeconds\":0.2729359,\"message\":null,\"stackTrace\":null,\"output\":\"Camera Follow target set to: PlayerObject\\nTrigger hit: checkpoint-0\\nTrigger hit: Campaign brass coin 2\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 1\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: Campaign brass coin 0\\nTag matched\\nItem type: COIN, stackable: True\\nAddItem returned: True\\nTrigger hit: ReedkeeperSwordPickup\\nTag matched\\nItem type: SWORD, stackable: False\\nAddItem returned: True\\nskitter-0 took 1 damage. HP: 1/2\\n\"}]}},\"hint\":null}"
+    }
+  ],
+  "structuredContent": {
+    "result": {
+      "success": true,
+      "message": "Test job status retrieved.",
+      "error": null,
+      "data": {
+        "job_id": "34af5c7d577542359dc160ccd538785e",
+        "status": "succeeded",
+        "mode": "PlayMode",
+        "started_unix_ms": 1793973285958,
+        "finished_unix_ms": 1793973317305,
+        "last_update_unix_ms": 1793973317305,
+        "progress": {
+          "completed": 68,
+          "total": 68,
+          "current_test_full_name": null,
+          "current_test_started_unix_ms": 1793973317010,
+          "last_finished_test_full_name": "Marshlight.PlayModeTests.MarshEnemyTests.SwordUsesExistingHealthAndProducesFlashAndKnockback",
+          "last_finished_unix_ms": 1793973317283,
+          "stuck_suspected": false,
+          "editor_is_focused": false,
+          "blocked_reason": null,
+          "failures_so_far": [],
+          "failures_capped": false
+        },
+        "error": null,
+        "result": {
+          "mode": "PlayMode",
+          "summary": {
+            "total": 68,
+            "passed": 68,
+            "failed": 0,
+            "skipped": 0,
+            "durationSeconds": 25.2285791,
+            "resultState": "Passed"
+          },
+          "results": [
+            {
+              "name": "ActOneAndTwoEntriesHaveExplicitBindings",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.ActOneAndTwoEntriesHaveExplicitBindings",
+              "state": "Passed",
+              "durationSeconds": 0.2326048,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "CampaignCompletesAndReplayResetsAllFiveGates",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.CampaignCompletesAndReplayResetsAllFiveGates",
+              "state": "Passed",
+              "durationSeconds": 0.314328,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nCamera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\n"
+            },
+            {
+              "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(0)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(0)",
+              "state": "Passed",
+              "durationSeconds": 0.1760658,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(1)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(1)",
+              "state": "Passed",
+              "durationSeconds": 0.1708811,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(2)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(2)",
+              "state": "Passed",
+              "durationSeconds": 0.1577617,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(3)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(3)",
+              "state": "Passed",
+              "durationSeconds": 0.1667555,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(4)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(4)",
+              "state": "Passed",
+              "durationSeconds": 0.1727415,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EveryCampaignCheckpointRecoversAnOutstandingMainLoan(5)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.EveryCampaignCheckpointRecoversAnOutstandingMainLoan(5)",
+              "state": "Passed",
+              "durationSeconds": 0.1616711,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "FiveChaptersUseAssetsAndExistingManagers",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.FiveChaptersUseAssetsAndExistingManagers",
+              "state": "Passed",
+              "durationSeconds": 0.1687628,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "LaterMainGateCannotBypassEarlierPayments(1)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(1)",
+              "state": "Passed",
+              "durationSeconds": 0.1572453,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "LaterMainGateCannotBypassEarlierPayments(2)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(2)",
+              "state": "Passed",
+              "durationSeconds": 0.163023,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "LaterMainGateCannotBypassEarlierPayments(3)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(3)",
+              "state": "Passed",
+              "durationSeconds": 0.1711944,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "LaterMainGateCannotBypassEarlierPayments(4)",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.LaterMainGateCannotBypassEarlierPayments(4)",
+              "state": "Passed",
+              "durationSeconds": 0.1590697,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "StoryOncePolicyAndPrerequisitesDoNotRepeatProgress",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.StoryOncePolicyAndPrerequisitesDoNotRepeatProgress",
+              "state": "Passed",
+              "durationSeconds": 0.1624076,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "TutorialAvailabilityMatchesImplementedCapabilities",
+              "fullName": "Marshlight.PlayModeTests.MarshCampaignTests.TutorialAvailabilityMatchesImplementedCapabilities",
+              "state": "Passed",
+              "durationSeconds": 0.1571395,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "AtomicReturnDoesNotPartiallyCreditWhenInventoryIsFull",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.AtomicReturnDoesNotPartiallyCreditWhenInventoryIsFull",
+              "state": "Passed",
+              "durationSeconds": 0.1987659,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "BellLetterAndLanternArtPreservesInteractionAndLiveStatus",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.BellLetterAndLanternArtPreservesInteractionAndLiveStatus",
+              "state": "Passed",
+              "durationSeconds": 0.1979179,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: checkpoint-1\n"
+            },
+            {
+              "name": "CarriedCoinsAndPatrolObjectsCannotBypassExchangeProgress",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.CarriedCoinsAndPatrolObjectsCannotBypassExchangeProgress",
+              "state": "Passed",
+              "durationSeconds": 0.1884621,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nMarshMite_2 took 999 damage. HP: 0/3\nMarshMite_2 died.\nMarshMite_3 took 999 damage. HP: 0/3\nMarshMite_3 died.\nMarshMite_1 took 999 damage. HP: 0/3\nMarshMite_1 died.\nMarshMite_4 took 999 damage. HP: 0/3\nMarshMite_4 died.\n"
+            },
+            {
+              "name": "CurrentGameCompletesFromTitleWithAllStoriesAndThreeCoins",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.CurrentGameCompletesFromTitleWithAllStoriesAndThreeCoins",
+              "state": "Passed",
+              "durationSeconds": 0.4597126,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nCamera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nTrigger hit: checkpoint-0\nTrigger hit: checkpoint-1\nTrigger hit: checkpoint-2\nTrigger hit: checkpoint-3\n"
+            },
+            {
+              "name": "DeathRefundsSwordCoinWhilePreservingRelayLoanAndEquipment",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.DeathRefundsSwordCoinWhilePreservingRelayLoanAndEquipment",
+              "state": "Passed",
+              "durationSeconds": 0.2060798,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "DefeatingAllPatrolsWithSwordCannotBypassAnyCrossing",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.DefeatingAllPatrolsWithSwordCannotBypassAnyCrossing",
+              "state": "Passed",
+              "durationSeconds": 1.5884022,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nMarshMite_4 took 1 damage. HP: 2/3\nMarshMite_2 took 1 damage. HP: 2/3\nMarshMite_1 took 1 damage. HP: 2/3\nMarshMite_3 took 1 damage. HP: 2/3\nMarshMite_4 took 1 damage. HP: 1/3\nMarshMite_2 took 1 damage. HP: 1/3\nMarshMite_1 took 1 damage. HP: 1/3\nMarshMite_3 took 1 damage. HP: 1/3\nMarshMite_4 took 1 damage. HP: 0/3\nMarshMite_4 died.\nMarshMite_2 took 1 damage. HP: 0/3\nMarshMite_2 died.\nMarshMite_1 took 1 damage. HP: 0/3\nMarshMite_1 died.\nMarshMite_3 took 1 damage. HP: 0/3\nMarshMite_3 died.\n"
+            },
+            {
+              "name": "DevelopmentTeleportMarksPacingWithoutGrantingProgress",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.DevelopmentTeleportMarksPacingWithoutGrantingProgress",
+              "state": "Passed",
+              "durationSeconds": 0.1879604,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "EachRelayLoanSurvivesDeathAndCanStillFinish(0)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(0)",
+              "state": "Passed",
+              "durationSeconds": 0.1902286,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EachRelayLoanSurvivesDeathAndCanStillFinish(1)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(1)",
+              "state": "Passed",
+              "durationSeconds": 0.1936373,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EachRelayLoanSurvivesDeathAndCanStillFinish(2)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EachRelayLoanSurvivesDeathAndCanStillFinish(2)",
+              "state": "Passed",
+              "durationSeconds": 0.1871277,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EitherInitialFundingOrderIsSafe(True)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EitherInitialFundingOrderIsSafe(True)",
+              "state": "Passed",
+              "durationSeconds": 0.1915805,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "EitherInitialFundingOrderIsSafe(False)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EitherInitialFundingOrderIsSafe(False)",
+              "state": "Passed",
+              "durationSeconds": 0.1809358,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "EquipmentPanelShowsOwnedEquippedAndPackedStatesWithoutClipping",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EquipmentPanelShowsOwnedEquippedAndPackedStatesWithoutClipping",
+              "state": "Passed",
+              "durationSeconds": 0.2009342,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\n"
+            },
+            {
+              "name": "EveryCheckpointCanRestartWithCoinsLent(0)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(0)",
+              "state": "Passed",
+              "durationSeconds": 0.1881901,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EveryCheckpointCanRestartWithCoinsLent(1)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(1)",
+              "state": "Passed",
+              "durationSeconds": 0.1788671,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EveryCheckpointCanRestartWithCoinsLent(2)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(2)",
+              "state": "Passed",
+              "durationSeconds": 0.1809067,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "EveryCheckpointCanRestartWithCoinsLent(3)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.EveryCheckpointCanRestartWithCoinsLent(3)",
+              "state": "Passed",
+              "durationSeconds": 0.181598,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "ExitCupRejectsPrematurePaymentWithoutStrandingCoins",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.ExitCupRejectsPrematurePaymentWithoutStrandingCoins",
+              "state": "Passed",
+              "durationSeconds": 0.1834663,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "FullInventoryHoldsSwordRefundSafelyUntilSpaceReturns",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.FullInventoryHoldsSwordRefundSafelyUntilSpaceReturns",
+              "state": "Passed",
+              "durationSeconds": 0.7666204,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nTrigger hit: relay-reed-cup\n"
+            },
+            {
+              "name": "OriginalLoanSurvivesDeathAndReturnsExactlyOnce(0)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(0)",
+              "state": "Passed",
+              "durationSeconds": 0.1939365,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "OriginalLoanSurvivesDeathAndReturnsExactlyOnce(1)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(1)",
+              "state": "Passed",
+              "durationSeconds": 0.180988,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "OriginalLoanSurvivesDeathAndReturnsExactlyOnce(2)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OriginalLoanSurvivesDeathAndReturnsExactlyOnce(2)",
+              "state": "Passed",
+              "durationSeconds": 0.1843859,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "OutdoorArtReusesProjectSheetsWithoutAddingCollisionOrLogic",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.OutdoorArtReusesProjectSheetsWithoutAddingCollisionOrLogic",
+              "state": "Passed",
+              "durationSeconds": 0.1933635,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "PauseAndDialogueCancelSwordAndRefundImmediately",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.PauseAndDialogueCancelSwordAndRefundImmediately",
+              "state": "Passed",
+              "durationSeconds": 0.7641104,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\n"
+            },
+            {
+              "name": "RelayPaymentsAndReturnsCannotBeRepeated",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.RelayPaymentsAndReturnsCannotBeRepeated",
+              "state": "Passed",
+              "durationSeconds": 0.1901819,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "RenamedStoryAndMenusUseAikenAndDuckduckgooseAndFitPanels",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.RenamedStoryAndMenusUseAikenAndDuckduckgooseAndFitPanels",
+              "state": "Passed",
+              "durationSeconds": 0.3822418,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nCamera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "ReplayAfterVictoryResetsAllLoansAndPickups",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.ReplayAfterVictoryResetsAllLoansAndPickups",
+              "state": "Passed",
+              "durationSeconds": 0.3403878,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nCamera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\n"
+            },
+            {
+              "name": "ReturnMailboxesKeepTheCompletePostedSilhouetteAndVisibleCoinMarkers",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.ReturnMailboxesKeepTheCompletePostedSilhouetteAndVisibleCoinMarkers",
+              "state": "Passed",
+              "durationSeconds": 0.1884694,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(True)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(True)",
+              "state": "Passed",
+              "durationSeconds": 0.1768782,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(False)",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SpillCoinCanBeReclaimedBeforeOrAfterRelendingThePair(False)",
+              "state": "Passed",
+              "durationSeconds": 0.1814523,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "SwordCannotDamageThroughSolidBanks",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordCannotDamageThroughSolidBanks",
+              "state": "Passed",
+              "durationSeconds": 0.2000084,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\n"
+            },
+            {
+              "name": "SwordCooldownRejectsRepeatedUseWithoutChargingAgain",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordCooldownRejectsRepeatedUseWithoutChargingAgain",
+              "state": "Passed",
+              "durationSeconds": 1.0258956,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nTrigger hit: checkpoint-0\n"
+            },
+            {
+              "name": "SwordDefeatsMiteUsingItsExistingDeathFlow",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordDefeatsMiteUsingItsExistingDeathFlow",
+              "state": "Passed",
+              "durationSeconds": 1.5850278,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nMarshMite_1 took 1 damage. HP: 2/3\nMarshMite_1 took 1 damage. HP: 1/3\nMarshMite_1 took 1 damage. HP: 0/3\nMarshMite_1 died.\n"
+            },
+            {
+              "name": "SwordHitsEachEnemyOnceEvenWithMultipleColliders",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordHitsEachEnemyOnceEvenWithMultipleColliders",
+              "state": "Passed",
+              "durationSeconds": 0.4565999,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nMarshMite_1 took 1 damage. HP: 2/3\n"
+            },
+            {
+              "name": "SwordPickupCannotBeCollectedTwice",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordPickupCannotBeCollectedTwice",
+              "state": "Passed",
+              "durationSeconds": 0.2243285,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\n"
+            },
+            {
+              "name": "SwordPickupEquipsAndSwipeDamagesExistingHealth",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordPickupEquipsAndSwipeDamagesExistingHealth",
+              "state": "Passed",
+              "durationSeconds": 0.4688967,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nMarshMite_1 took 1 damage. HP: 2/3\n"
+            },
+            {
+              "name": "SwordReplayResetsOwnershipPickupLoansAndEnemyHealth",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordReplayResetsOwnershipPickupLoansAndEnemyHealth",
+              "state": "Passed",
+              "durationSeconds": 0.342225,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nCamera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\n"
+            },
+            {
+              "name": "SwordRequiresACarriedCoinAndReturnsItAfterReclaim",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordRequiresACarriedCoinAndReturnsItAfterReclaim",
+              "state": "Passed",
+              "durationSeconds": 0.4808709,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nTrigger hit: tray-0\n"
+            },
+            {
+              "name": "SwordRespectsRangeAndFacing",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.SwordRespectsRangeAndFacing",
+              "state": "Passed",
+              "durationSeconds": 1.3281331,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nMarshMite_1 took 1 damage. HP: 2/3\n"
+            },
+            {
+              "name": "TelemetryRecordsSectionDeathsAndExcludesPauseTime",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.TelemetryRecordsSectionDeathsAndExcludesPauseTime",
+              "state": "Passed",
+              "durationSeconds": 0.1976509,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "UnequipCancelsSwingWithoutDuplicatingItsRefund",
+              "fullName": "Marshlight.PlayModeTests.MarshCoinRegressionTests.UnequipCancelsSwingWithoutDuplicatingItsRefund",
+              "state": "Passed",
+              "durationSeconds": 0.1982603,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: BrassCoin_1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: BrassCoin_3\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\n"
+            },
+            {
+              "name": "AllEnemyDamageSourcesSharePlayerInvincibility",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.AllEnemyDamageSourcesSharePlayerInvincibility",
+              "state": "Passed",
+              "durationSeconds": 1.2312515,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 1. New HP: 4\nPlayer took damage: 1. New HP: 3\n"
+            },
+            {
+              "name": "CheckpointDeathResetsNewEnemiesWithoutLosingMainLoan",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.CheckpointDeathResetsNewEnemiesWithoutLosingMainLoan",
+              "state": "Passed",
+              "durationSeconds": 0.1742902,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nskitter-0 took 999 damage. HP: 0/2\nskitter-0 died.\nPlayer took damage: 999. New HP: 0\nPlayer died.\nPlayer died, but respawnPlayerOnDeath is disabled.\nPlayer respawned. HP restored to: 5\nCamera Follow target set to: PlayerObject\nPlayer respawned at spawn point.\n"
+            },
+            {
+              "name": "CrabRecoveryIsVulnerableFromTheFront",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.CrabRecoveryIsVulnerableFromTheFront",
+              "state": "Passed",
+              "durationSeconds": 1.1134292,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\ncrab-1 took 1 damage. HP: 3/4\n"
+            },
+            {
+              "name": "CrabRejectsFrontalSwordButAllowsAFlank",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.CrabRejectsFrontalSwordButAllowsAFlank",
+              "state": "Passed",
+              "durationSeconds": 0.7523284,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\ncrab-1 took 1 damage. HP: 3/4\n"
+            },
+            {
+              "name": "DefeatedEnemyResetRestoresHealthCollisionAndPhysics",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.DefeatedEnemyResetRestoresHealthCollisionAndPhysics",
+              "state": "Passed",
+              "durationSeconds": 0.1685331,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nskitter-0 took 999 damage. HP: 0/2\nskitter-0 died.\n"
+            },
+            {
+              "name": "DefeatingEveryEnemyCannotPayOrBypassAnyMainGate",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.DefeatingEveryEnemyCannotPayOrBypassAnyMainGate",
+              "state": "Passed",
+              "durationSeconds": 0.1650604,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\ncrab-3 took 999 damage. HP: 0/4\ncrab-3 died.\nskitter-4 took 999 damage. HP: 0/2\nskitter-4 died.\ncrab-2 took 999 damage. HP: 0/4\ncrab-2 died.\nskitter-2 took 999 damage. HP: 0/2\nskitter-2 died.\nskitter-1 took 999 damage. HP: 0/2\nskitter-1 died.\ncrab-1 took 999 damage. HP: 0/4\ncrab-1 died.\ncrab-4 took 999 damage. HP: 0/4\ncrab-4 died.\nCampaignMite_4 took 999 damage. HP: 0/3\nCampaignMite_4 died.\nskitter-3 took 999 damage. HP: 0/2\nskitter-3 died.\nskitter-0 took 999 damage. HP: 0/2\nskitter-0 died.\n"
+            },
+            {
+              "name": "MechanicalTelemetryExcludesFrozenCaptureFrames",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.MechanicalTelemetryExcludesFrozenCaptureFrames",
+              "state": "Passed",
+              "durationSeconds": 0.4472962,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "NewEnemiesReadTheirSectionAssetsAndKeepPixelImports",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.NewEnemiesReadTheirSectionAssetsAndKeepPixelImports",
+              "state": "Passed",
+              "durationSeconds": 0.1617585,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "PauseFreezesTheEnemyTelegraphAndMovement",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.PauseFreezesTheEnemyTelegraphAndMovement",
+              "state": "Passed",
+              "durationSeconds": 0.2976317,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "RealSkitterAttackDealsOnlyOneProtectedHit",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.RealSkitterAttackDealsOnlyOneProtectedHit",
+              "state": "Passed",
+              "durationSeconds": 1.1478381,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nPlayer took damage: 1. New HP: 4\nTrigger hit: skitter-0\n"
+            },
+            {
+              "name": "SkitterTelegraphsAndCommitsToItsMarkedDirection",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.SkitterTelegraphsAndCommitsToItsMarkedDirection",
+              "state": "Passed",
+              "durationSeconds": 1.239795,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\n"
+            },
+            {
+              "name": "SwordUsesExistingHealthAndProducesFlashAndKnockback",
+              "fullName": "Marshlight.PlayModeTests.MarshEnemyTests.SwordUsesExistingHealthAndProducesFlashAndKnockback",
+              "state": "Passed",
+              "durationSeconds": 0.2729359,
+              "message": null,
+              "stackTrace": null,
+              "output": "Camera Follow target set to: PlayerObject\nTrigger hit: checkpoint-0\nTrigger hit: Campaign brass coin 2\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 1\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: Campaign brass coin 0\nTag matched\nItem type: COIN, stackable: True\nAddItem returned: True\nTrigger hit: ReedkeeperSwordPickup\nTag matched\nItem type: SWORD, stackable: False\nAddItem returned: True\nskitter-0 took 1 damage. HP: 1/2\n"
+            }
+          ]
+        }
+      },
+      "hint": null
+    }
+  },
+  "isError": false
+}

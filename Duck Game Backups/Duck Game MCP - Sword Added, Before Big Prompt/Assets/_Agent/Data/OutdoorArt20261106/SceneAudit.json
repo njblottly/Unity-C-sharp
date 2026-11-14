@@ -1,0 +1,51 @@
+{
+  "scene": "Assets/_Agent/Scenes/Marshlight.unity",
+  "playing": false,
+  "paused": false,
+  "compiling": false,
+  "dirty": false,
+  "errors": 0,
+  "warnings": 0,
+  "missingScripts": 0,
+  "instances": [
+    {
+      "type": "Player",
+      "count": 1
+    },
+    {
+      "type": "DuckFollower",
+      "count": 1
+    },
+    {
+      "type": "RPGGameManager",
+      "count": 1
+    },
+    {
+      "type": "RPGCameraManager",
+      "count": 1
+    },
+    {
+      "type": "Inventory",
+      "count": 1
+    },
+    {
+      "type": "HealthBar",
+      "count": 1
+    },
+    {
+      "type": "EventSystem",
+      "count": 1
+    },
+    {
+      "type": "MarshLevel",
+      "count": 1
+    },
+    {
+      "type": "MarshCoinRelay",
+      "count": 1
+    }
+  ],
+  "assembledSprites": 13,
+  "scriptCount": 30,
+  "temporaryPreferencesCaptured": false
+}

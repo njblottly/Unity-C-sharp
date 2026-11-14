@@ -1,0 +1,181 @@
+{
+  "baseline": 29,
+  "unchanged": 25,
+  "modified": 4,
+  "scripts": [
+    {
+      "path": "Assets/Scripts/RoundCameraPos.cs",
+      "unchanged": true,
+      "beforeSha256": "5e733582d5c755e28e59dc81052302519d76da58dea3b1dff4c001ed6e00e64e",
+      "afterSha256": "5e733582d5c755e28e59dc81052302519d76da58dea3b1dff4c001ed6e00e64e"
+    },
+    {
+      "path": "Assets/Scripts/Managers/RPGCameraManager.cs",
+      "unchanged": true,
+      "beforeSha256": "cd23ec5ca56619d1c62971a970b3218d6f9aafff244d73ae89dfc3ec7cb702b3",
+      "afterSha256": "cd23ec5ca56619d1c62971a970b3218d6f9aafff244d73ae89dfc3ec7cb702b3"
+    },
+    {
+      "path": "Assets/Scripts/Managers/RPGGameManager.cs",
+      "unchanged": true,
+      "beforeSha256": "99fd2c829f8197cf462639590802f1ffcf2096428477865c52282f3ebb28fd11",
+      "afterSha256": "99fd2c829f8197cf462639590802f1ffcf2096428477865c52282f3ebb28fd11"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/Character.cs",
+      "unchanged": true,
+      "beforeSha256": "5e518a92ce4db06e933c19b18d8db3cc508e5f0e68ed6b0341bc000276336039",
+      "afterSha256": "5e518a92ce4db06e933c19b18d8db3cc508e5f0e68ed6b0341bc000276336039"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/Consumable.cs",
+      "unchanged": true,
+      "beforeSha256": "fcf0956f60daef184ae0967353c722dc2799bd7e3723ca10240da1d90128cdf7",
+      "afterSha256": "fcf0956f60daef184ae0967353c722dc2799bd7e3723ca10240da1d90128cdf7"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/DuckFollower.cs",
+      "unchanged": true,
+      "beforeSha256": "8f4d49299c8f193b5344b1f9418b347d4e2956e6a578cad72531840589387b6e",
+      "afterSha256": "8f4d49299c8f193b5344b1f9418b347d4e2956e6a578cad72531840589387b6e"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/EnemyAnimationDriver.cs",
+      "unchanged": true,
+      "beforeSha256": "86bc20d87d89aa7af0220ca6f0f98d43878125c10c51ff1ddaa94c9fbeb983be",
+      "afterSha256": "86bc20d87d89aa7af0220ca6f0f98d43878125c10c51ff1ddaa94c9fbeb983be"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/EnemyHitPoints.cs",
+      "unchanged": true,
+      "beforeSha256": "b9f4e6c1ca2ee9ac600837697183e0eeda3be35b2032bd2177a36865e1bbd0ae",
+      "afterSha256": "b9f4e6c1ca2ee9ac600837697183e0eeda3be35b2032bd2177a36865e1bbd0ae"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/HealthBar.cs",
+      "unchanged": true,
+      "beforeSha256": "e7e70d43b5b7caac260c6b0630ed1ff3f37550cc5d187ee7f0ea041abc59a13c",
+      "afterSha256": "e7e70d43b5b7caac260c6b0630ed1ff3f37550cc5d187ee7f0ea041abc59a13c"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/MovementController.cs",
+      "unchanged": true,
+      "beforeSha256": "f9421df7dc048d576ead9315dbb9d50e8860e05606b6d5899fbd5dd6a63d8523",
+      "afterSha256": "f9421df7dc048d576ead9315dbb9d50e8860e05606b6d5899fbd5dd6a63d8523"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/Player.cs",
+      "unchanged": true,
+      "beforeSha256": "6996705a35af00b472feb5f563aa7869ce3268470e7ee73c638d19b5cbca4353",
+      "afterSha256": "6996705a35af00b472feb5f563aa7869ce3268470e7ee73c638d19b5cbca4353"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/Slot.cs",
+      "unchanged": true,
+      "beforeSha256": "37e85b02061cf13d63f40d162246c79870d5ce8f6326a5fd6520801a584bcf23",
+      "afterSha256": "37e85b02061cf13d63f40d162246c79870d5ce8f6326a5fd6520801a584bcf23"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/SpawnPoint.cs",
+      "unchanged": true,
+      "beforeSha256": "f29550e3d0ff57049c7e049ab41ae5191f747002fe08b99840ba7cb792030b1b",
+      "afterSha256": "f29550e3d0ff57049c7e049ab41ae5191f747002fe08b99840ba7cb792030b1b"
+    },
+    {
+      "path": "Assets/Scripts/ScriptableObjects/HitPoints.cs",
+      "unchanged": true,
+      "beforeSha256": "afbdad9743e8d7be5d8588e9f310b7aa3272a3dbbfbb93dd60c08b83de78a9b8",
+      "afterSha256": "afbdad9743e8d7be5d8588e9f310b7aa3272a3dbbfbb93dd60c08b83de78a9b8"
+    },
+    {
+      "path": "Assets/Scripts/ScriptableObjects/Item.cs",
+      "unchanged": true,
+      "beforeSha256": "94f1f86ce30688df135c1c51707c2f5766ef2f2d769797fb5a368722d3926057",
+      "afterSha256": "94f1f86ce30688df135c1c51707c2f5766ef2f2d769797fb5a368722d3926057"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/MarshCoinRelay.cs",
+      "unchanged": true,
+      "beforeSha256": "717d74044d68fbba888ee6607d0d33c99c3211151ab0b4b473ecfe7408d47a3d",
+      "afterSha256": "717d74044d68fbba888ee6607d0d33c99c3211151ab0b4b473ecfe7408d47a3d"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/MarshLevel.cs",
+      "unchanged": false,
+      "beforeSha256": "ea01873ac8a860cdc84ce845944ba24871bb6d9759a09d552ac56c4e373e89ff",
+      "afterSha256": "10c8a0a96c2452958f0c90d3b84becc7ca6d1d984c31ad25c3dcf44af4f969db"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/MarshNode.cs",
+      "unchanged": true,
+      "beforeSha256": "26e6083ee6d0a0ad9883b7ccb01275d4171b019ab917396d50d933c65f87a007",
+      "afterSha256": "26e6083ee6d0a0ad9883b7ccb01275d4171b019ab917396d50d933c65f87a007"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/MarshPacingTelemetry.cs",
+      "unchanged": true,
+      "beforeSha256": "067e35e33a1d2a73d2eed10b3b0dd538aa09cdae5458b87dcb375d2d78665235",
+      "afterSha256": "067e35e33a1d2a73d2eed10b3b0dd538aa09cdae5458b87dcb375d2d78665235"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/MarshPatrol.cs",
+      "unchanged": true,
+      "beforeSha256": "45e6b32db75937a7f74de6bf6ff219067fd467cf5b22895bb2185c95fe2b4fa9",
+      "afterSha256": "45e6b32db75937a7f74de6bf6ff219067fd467cf5b22895bb2185c95fe2b4fa9"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/MarshStory.cs",
+      "unchanged": true,
+      "beforeSha256": "165c6712448547b1084b1e8c30f5ba827e2b09bb69ff7915a7ebd3fa0b90e529",
+      "afterSha256": "165c6712448547b1084b1e8c30f5ba827e2b09bb69ff7915a7ebd3fa0b90e529"
+    },
+    {
+      "path": "Assets/Scripts/MonoBehaviours/Inventory/Inventory.cs",
+      "unchanged": true,
+      "beforeSha256": "d05c1d50f28bca451dafa509f0d5074c0605013ce48c62a455262cd8604a91bd",
+      "afterSha256": "d05c1d50f28bca451dafa509f0d5074c0605013ce48c62a455262cd8604a91bd"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/Editor/MarshBuilder.cs",
+      "unchanged": false,
+      "beforeSha256": "9b2feb243971007d84949b29fe3f2c62572f52f42d1d066a70f41468e49c722f",
+      "afterSha256": "2299288bb1ee38b75f6c9761af8d9c2a9081a98b56cb15eead507fce1140fa86"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/Editor/MarshCapture.cs",
+      "unchanged": true,
+      "beforeSha256": "b1f3823705f54d86ac882a401c5901cd497d4511afca2517ae545304ecfe6ca6",
+      "afterSha256": "b1f3823705f54d86ac882a401c5901cd497d4511afca2517ae545304ecfe6ca6"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/Editor/MarshIteration1Builder.cs",
+      "unchanged": false,
+      "beforeSha256": "6cea0b51ab909da98b9ab149d439cc970d003c718b9f7cc4aa29dc43cfe8d693",
+      "afterSha256": "08e14889d9afc9c184bd147f476d05a592984934d67027794c364e285c379747"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/Editor/MarshPolish.cs",
+      "unchanged": true,
+      "beforeSha256": "488464559a641f7576fa72117284778fa6955aa803dcbe54ca41a4e2d0755908",
+      "afterSha256": "488464559a641f7576fa72117284778fa6955aa803dcbe54ca41a4e2d0755908"
+    },
+    {
+      "path": "Assets/_Agent/Scripts/Editor/MarshVerification.cs",
+      "unchanged": true,
+      "beforeSha256": "6422d560a3bbeee4a378126b7b735e3aa9bdb783116e7814c4c68d3d26ee0186",
+      "afterSha256": "6422d560a3bbeee4a378126b7b735e3aa9bdb783116e7814c4c68d3d26ee0186"
+    },
+    {
+      "path": "Assets/_Agent/Tests/Editor/MarshTestResultRecorder.cs",
+      "unchanged": true,
+      "beforeSha256": "bb2ae0bbc6a6af6e5fe35cc98593b1879aa7c09ce3193403954af905f7e62969",
+      "afterSha256": "bb2ae0bbc6a6af6e5fe35cc98593b1879aa7c09ce3193403954af905f7e62969"
+    },
+    {
+      "path": "Assets/_Agent/Tests/PlayMode/MarshCoinRegressionTests.cs",
+      "unchanged": false,
+      "beforeSha256": "057c59864358da2a0c93bc67754e8f9f32effcd8f232f5bd8682e3e087d343b3",
+      "afterSha256": "d8948df08faeed4535c5f699b332354394ff528aebd8059864e5cc1579309c14"
+    }
+  ]
+}

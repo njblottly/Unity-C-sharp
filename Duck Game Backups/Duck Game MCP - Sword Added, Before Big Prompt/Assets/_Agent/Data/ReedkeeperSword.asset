@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e9a09a787314c6db19806abd5d28f8, type: 3}
+  m_Name: ReedkeeperSword
+  m_EditorClassIdentifier: Assembly-CSharp::DuckAdventure.Agent.WeaponData
+  displayName: Reedkeeper Sword
+  inventoryItem: {fileID: 11400000, guid: 0077f3a08858e4f20a0703a3ab11feb6, type: 2}
+  damage: 1
+  cooldown: 0.5
+  range: 1.15
+  arcDegrees: 100
+  swipeDuration: 0.2
+  coinCost: 1
+  sprite: {fileID: 21300000, guid: f4e9e06342417485aaa3ac7b1d4eea8a, type: 3}
+  sound: {fileID: 8300000, guid: 3e30ccc149c244a3aaf7f925e5212c05, type: 3}
+  soundVolume: 0.25
+  projectilePrefab: {fileID: 0}

@@ -1,0 +1,116 @@
+[
+  {
+    "name": "KeeperMailbox",
+    "size": [
+      32,
+      48
+    ],
+    "pixelsPerUnit": 32,
+    "palette": [
+      "transparent",
+      "#142E39",
+      "#244653",
+      "#385E4A",
+      "#567546",
+      "#7D914D",
+      "#342F26",
+      "#665039",
+      "#927044",
+      "#B79758",
+      "#E2C57C",
+      "#F4E7C0",
+      "#71858B",
+      "#A8B6B0",
+      "#D45E46",
+      "#FFF7DC"
+    ],
+    "source": "exec-75246f32-bef9-4da0-abbc-1138cd6b7e5d.png",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "nontransparentColors": 11,
+    "sourceCrop": [
+      209,
+      150,
+      767,
+      1425
+    ]
+  },
+  {
+    "name": "TrailSignpost",
+    "size": [
+      32,
+      48
+    ],
+    "pixelsPerUnit": 32,
+    "palette": [
+      "transparent",
+      "#142E39",
+      "#244653",
+      "#385E4A",
+      "#567546",
+      "#7D914D",
+      "#342F26",
+      "#665039",
+      "#927044",
+      "#B79758",
+      "#E2C57C",
+      "#F4E7C0",
+      "#71858B",
+      "#A8B6B0",
+      "#D45E46",
+      "#FFF7DC"
+    ],
+    "source": "exec-46e7541f-4e9d-481a-a846-fe66bc5d42ca.png",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "nontransparentColors": 10,
+    "sourceCrop": [
+      74,
+      151,
+      962,
+      1499
+    ]
+  },
+  {
+    "name": "ReedkeeperSword",
+    "size": [
+      32,
+      32
+    ],
+    "pixelsPerUnit": 32,
+    "palette": [
+      "transparent",
+      "#142E39",
+      "#244653",
+      "#385E4A",
+      "#567546",
+      "#7D914D",
+      "#342F26",
+      "#665039",
+      "#927044",
+      "#B79758",
+      "#E2C57C",
+      "#F4E7C0",
+      "#71858B",
+      "#A8B6B0",
+      "#D45E46",
+      "#FFF7DC"
+    ],
+    "source": "exec-b7b6447a-ef70-49eb-84b7-b1b489ba6342.png",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "nontransparentColors": 8,
+    "sourceCrop": [
+      431,
+      76,
+      824,
+      1219
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac222fef2560400fb945a612bf56eae, type: 3}
+  m_Name: ReedMark_2
+  m_EditorClassIdentifier: Assembly-CSharp::DuckAdventure.Agent.CollectibleData
+  id: reed-mark-2
+  title: A patient perch
+  memory: A notch in the rail is polished by generations of duck feet. Waiting here
+    has always been part of the work.
+  sprite: {fileID: 21300000, guid: 5556200aa66cd4717bac7187d44e8f61, type: 3}

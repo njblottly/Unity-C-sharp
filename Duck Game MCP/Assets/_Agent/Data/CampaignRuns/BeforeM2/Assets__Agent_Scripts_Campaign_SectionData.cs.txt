@@ -1,0 +1,22 @@
+using System;
+using UnityEngine;
+namespace DuckAdventure.Agent
+{
+    [CreateAssetMenu(menuName = "Duck Adventure/Campaign Section")]
+    public sealed class SectionData : ScriptableObject
+    {
+        public string id;
+        public ChapterData chapter;
+        [TextArea] public string objective;
+        public Vector2 start;
+        public Vector2 end;
+        public string[] storyIds = new string[0];
+        public string[] mechanicPermissions = new string[0];
+        public void ValidateData()
+        {
+            if (string.IsNullOrWhiteSpace(id) || chapter == null || end.x <= start.x || storyIds == null || mechanicPermissions == null)
+                throw new InvalidOperationException("Invalid campaign section: " + name);
+            chapter.ValidateData();
+        }
+    }
+}
